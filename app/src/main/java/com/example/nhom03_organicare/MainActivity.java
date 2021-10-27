@@ -2,8 +2,11 @@ package com.example.nhom03_organicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
                 Fragment fragment = null;
                 //Check condition
                 switch (item.getId()) {
@@ -54,12 +59,25 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new NotiFragment();
                         break;
                     case 5:
-                        fragment = new Accountragment();
+                        fragment = new AccountFragment();
                         break;
                 }
+                transaction.replace(R.id.layoutContainer, fragment);
+                transaction.commit();
+
+
+                //Set notification count
+                bottomNavigation.setCount(4, "10");
+                //Set home fragment initially selected
+                //bottomNavigation.show(1, true);
+
+                bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
+                    @Override
+                    public void onClickItem(MeowBottomNavigation.Model item) {
+//                        Toast.makeText(getApplicationContext(), "You clicked " + item.getId(), Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }
-
-
 }

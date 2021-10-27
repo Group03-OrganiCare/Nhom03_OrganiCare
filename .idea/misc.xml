@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_only_you.xml" value="0.1" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_cart.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_home.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_noti.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_only_you.xml" value="0.264" />
       </map>
     </option>
   </component>
