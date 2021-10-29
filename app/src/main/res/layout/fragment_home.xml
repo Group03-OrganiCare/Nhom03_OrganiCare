@@ -12,6 +12,7 @@
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:src="@drawable/logo"
+        android:contentDescription="@string/logo"
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:text="Xin chào, Minh Anh"
+        android:text="@string/hello_Minh_Anh"
         android:textSize="18sp"
         android:textStyle="italic"
         android:textColor="@color/dark_green"
@@ -33,9 +34,11 @@
         android:id="@+id/edtSearch"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="Search here"
+        android:hint="@string/search_here"
         android:drawableEnd="@drawable/ic_search"
         android:background="@drawable/search_bar"
+        android:autofillHints="no"
+        android:inputType="text"
         android:paddingHorizontal="15dp"
         app:layout_constraintTop_toBottomOf="@+id/imvLogo"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,14 +58,15 @@
             android:id="@+id/imvBanner"
             android:layout_width="match_parent"
             android:layout_height="130dp"
+            android:contentDescription="@string/banner"
             android:src="@drawable/banner"/>
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/txtCategories"
+        android:id="@+id/txtCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Danh mục"
+        android:text="@string/category"
         android:textColor="@color/dark_green"
         android:textStyle="bold"
         android:textSize="20sp"
@@ -71,12 +75,12 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <GridView
-        android:id="@+id/gvCategories"
+        android:id="@+id/gvCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="3"
+        android:numColumns="4"
         android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/txtCategories"
+        app:layout_constraintTop_toBottomOf="@id/txtCategory"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -84,12 +88,12 @@
         android:id="@+id/txtBestSeller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sản phẩm bán chạy"
+        android:text="@string/best_seller"
         android:textColor="@color/dark_green"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/gvCategories"
+        app:layout_constraintTop_toBottomOf="@+id/gvCategory"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
