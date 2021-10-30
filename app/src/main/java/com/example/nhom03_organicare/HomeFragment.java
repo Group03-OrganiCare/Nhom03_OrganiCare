@@ -12,16 +12,20 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import com.example.adapter.CategoryAdapter;
+import com.example.adapter.ProductAdapter;
 import com.example.model.Category;
+import com.example.model.Product;
 
 import java.util.ArrayList;
 
 
 public class HomeFragment extends Fragment {
 
-    GridView gvCategory;
+    GridView gvCategory, gvBestSeller;
     ArrayList<Category> categories;
-    CategoryAdapter adapter;
+    ArrayList<Product> products;
+    CategoryAdapter categoryAdapter;
+    ProductAdapter productAdapter;
 
     @Nullable
     @Override
@@ -29,9 +33,14 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         //Link Views
         gvCategory = view.findViewById(R.id.gvCategory);
+        gvBestSeller = view.findViewById(R.id.gvBestSeller);
+
         //loadData
-        adapter = new CategoryAdapter(getContext(), R.layout.category_layout, initData());
-        gvCategory.setAdapter(adapter);
+        categoryAdapter = new CategoryAdapter(getContext(), R.layout.category_layout, initData());
+        gvCategory.setAdapter(categoryAdapter);
+
+        productAdapter = new ProductAdapter(getContext(), R.layout.item_layout, initData2());
+        gvBestSeller.setAdapter(productAdapter);
 
         return view;
     }
@@ -46,6 +55,20 @@ public class HomeFragment extends Fragment {
         return categories;
     }
 
+    private ArrayList<Product> initData2() {
+        products = new ArrayList<Product>();
+        products.add(new Product(R.drawable.kiwi, "Kiwi", 150000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.apple_fuji, "Táo Fuji", 180000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.carrot, "Cà rốt", 100000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.green_cabbage, "Bắp cải xanh", 120000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.juice_apple, "Nước ép táo", 200000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.cacao, "Bột cacao", 150000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.milk_canxi, "Sữa canxi", 180000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.egg, "Trứng", 90000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.potato, "Khoai tây", 140000, "USDA", "JAS"));
+
+        return products;
+    }
 
 
 

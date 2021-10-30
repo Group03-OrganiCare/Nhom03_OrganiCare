@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+
     <LinearLayout
         android:id="@+id/layoutContainer"
         android:layout_width="match_parent"
@@ -24,6 +25,5 @@
         app:mbn_countBackgroundColor="@color/pink"
         app:mbn_defaultIconColor="@color/white"
         app:mbn_backgroundBottomColor="@color/dark_green"/>
-
 
 </LinearLayout>
