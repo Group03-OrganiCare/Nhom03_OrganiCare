@@ -11,14 +11,15 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/kiwi"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="Image"/>
 
     <TextView
         android:id="@+id/txtProductName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kiwi"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
@@ -27,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="150.000VND"
-        android:textSize="12dp"
+        android:textSize="12sp"
         android:textColor="@color/black"/>
 
     <LinearLayout
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="USDA"
             android:textColor="@color/white"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:padding="2dp"
             android:gravity="center"
             android:background="@drawable/certification_background"/>
@@ -54,7 +55,7 @@
             android:layout_marginStart="5dp"
             android:text="JAS"
             android:textColor="@color/white"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:padding="2dp"
             android:gravity="center"
             android:background="@drawable/certification_background"/>
