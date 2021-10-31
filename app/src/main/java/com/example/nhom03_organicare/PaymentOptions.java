@@ -36,7 +36,7 @@ public class PaymentOptions extends AppCompatActivity {
     }
 
     private void loadData() {
-        paymentAdapter = new PaymentAdapter(this,R.layout.item_payment,payments);
+        paymentAdapter = new PaymentAdapter(this,R.layout.item_payment_delivery,payments);
         lvPaymentOptions.setAdapter(paymentAdapter);
     }
 }
