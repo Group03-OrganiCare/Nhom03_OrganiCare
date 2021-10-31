@@ -8,9 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Nhom03_OrganiCare" >
+        android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
-            android:name=".OrderDetails"
+            android:name=".ConfirmOrder"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,27 +18,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".OrderDetails"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".DeliveryActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".PaymentOptions"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".PaymentType"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

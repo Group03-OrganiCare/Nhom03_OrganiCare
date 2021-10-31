@@ -32,6 +32,12 @@
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_layout.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_order.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_payment.xml" value="0.21403508771929824" />
+        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/drawable/certification_background.xml" value="0.2611111111111111" />
+        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_confirm_order.xml" value="0.264" />
+        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery.xml" value="0.25833333333333336" />
+        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_order_details.xml" value="0.264" />
+        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/item_order.xml" value="0.25833333333333336" />
+        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/item_payment.xml" value="0.25833333333333336" />
       </map>
     </option>
   </component>
