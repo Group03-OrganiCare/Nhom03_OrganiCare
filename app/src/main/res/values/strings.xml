@@ -10,4 +10,6 @@
     <string name="category">Danh mục</string>
     <string name="best_seller">Sản phẩm bán chạy</string>
     <string name="fruits">Trái cây</string>
+    <string name="edit"><u>Chỉnh sửa</u></string>
+    <string name="click_here"><u><i>Bấm tại đây để chọn</i></u></string>
 </resources>

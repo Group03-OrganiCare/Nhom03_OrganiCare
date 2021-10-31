@@ -8,16 +8,17 @@
 
     <ImageView
         android:id="@+id/imvProductThumb"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/kiwi"/>
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/kiwi"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/txtProductName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kiwi"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
@@ -26,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="150.000VND"
-        android:textSize="15dp"
+        android:textSize="12dp"
         android:textColor="@color/black"/>
 
     <LinearLayout
@@ -37,24 +38,27 @@
 
         <TextView
             android:id="@+id/txtProductCert1"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:text="USDA"
             android:textColor="@color/white"
+            android:textSize="12dp"
             android:padding="2dp"
             android:gravity="center"
             android:background="@drawable/certification_background"/>
 
         <TextView
             android:id="@+id/txtProductCert2"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="JAS"
             android:textColor="@color/white"
+            android:textSize="12dp"
             android:padding="2dp"
             android:gravity="center"
             android:background="@drawable/certification_background"/>
 
     </LinearLayout>
+
 </LinearLayout>

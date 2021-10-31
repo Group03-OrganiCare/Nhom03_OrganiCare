@@ -4,9 +4,11 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
@@ -41,6 +43,16 @@ public class HomeFragment extends Fragment {
 
         productAdapter = new ProductAdapter(getContext(), R.layout.item_layout, initData2());
         gvBestSeller.setAdapter(productAdapter);
+
+//        gvBestSeller.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if (event.getAction() == MotionEvent.ACTION_MOVE) {
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
 
         return view;
     }
