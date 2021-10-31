@@ -12,4 +12,6 @@
     <string name="fruits">Trái cây</string>
     <string name="edit"><u>Chỉnh sửa</u></string>
     <string name="click_here"><u><i>Bấm tại đây để chọn</i></u></string>
+    <string name="order_info"><b><i>Thông tin đơn hàng</i></b></string>
+    <string name="confirm_order"><b>Đơn hàng của bạn đã được xác nhận</b></string>
 </resources>
