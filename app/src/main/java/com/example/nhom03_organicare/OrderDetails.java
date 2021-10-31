@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+
 import com.example.adapter.ItemOrderAdapter;
 import com.example.model.ItemOrder;
 
@@ -47,4 +48,5 @@ public class OrderDetails extends AppCompatActivity {
         adapter = new ItemOrderAdapter(getApplicationContext(), itemOrders);
         rcvOrderItem.setAdapter(adapter);
     }
+
 }
