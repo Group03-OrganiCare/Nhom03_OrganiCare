@@ -45,23 +45,42 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction = manager.beginTransaction();
                 Fragment fragment = null;
                 //Check condition
-                switch (item.getId()) {
-                    case 1:
-                        fragment = new HomeFragment();
-                        break;
-                    case 2:
-                        fragment = new OnlyYouFragment();
-                        break;
-                    case 3:
-                        fragment = new CartFragment();
-                        break;
-                    case 4:
-                        fragment = new NotiFragment();
-                        break;
-                    case 5:
-                        fragment = new AccountFragment();
-                        break;
+                if (item.getId() == 1) {
+                    fragment = new HomeFragment();
                 }
+                else if (item.getId() == 2) {
+                    fragment = new OnlyYouFragment();
+                }
+                else if (item.getId() == 3) {
+                    fragment = new CartFragment();
+                }
+                else if (item.getId() == 4) {
+                    fragment = new NotiFragment();
+                }
+                else if (item.getId() == 5) {
+                    fragment = new AccountFragment();
+                }
+                else {
+                    fragment = new HomeFragment();
+                }
+
+//                switch (item.getId()) {
+//                    case 1:
+//                        fragment = new HomeFragment();
+//                        break;
+//                    case 2:
+//                        fragment = new OnlyYouFragment();
+//                        break;
+//                    case 3:
+//                        fragment = new CartFragment();
+//                        break;
+//                    case 4:
+//                        fragment = new NotiFragment();
+//                        break;
+//                    case 5:
+//                        fragment = new AccountFragment();
+//                        break;
+//                }
                 transaction.replace(R.id.layoutContainer, fragment);
                 transaction.commit();
 

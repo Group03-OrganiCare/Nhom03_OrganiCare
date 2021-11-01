@@ -44,15 +44,6 @@ public class HomeFragment extends Fragment {
         productAdapter = new ProductAdapter(getContext(), R.layout.item_layout, initData2());
         gvBestSeller.setAdapter(productAdapter);
 
-//        gvBestSeller.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if (event.getAction() == MotionEvent.ACTION_MOVE) {
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
 
         return view;
     }

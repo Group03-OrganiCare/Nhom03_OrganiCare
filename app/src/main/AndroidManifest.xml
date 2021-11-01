@@ -24,6 +24,7 @@
         <activity
             android:name=".OrderDetails"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DeliveryActivity"
             android:exported="true" />
@@ -35,9 +36,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
