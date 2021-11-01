@@ -12,4 +12,15 @@
     <string name="fruits">Trái cây</string>
     <string name="edit"><u>Chỉnh sửa</u></string>
     <string name="click_here"><u><i>Bấm tại đây để chọn</i></u></string>
+    <string name="account">Tài khoản</string>
+    <string name="password">Mật khẩu</string>
+    <string name="passwordchecked">Nhập lại mật khẩu</string>
+    <string name="phonenumber">Số điện thoại</string>
+    <string name="email">Email</string>
+    <string name="register">Đăng ký</string>
+    <string name="confirmed_order">XÁC NHẬN ĐƠN HÀNG</string>
+    <string name="login">Đăng nhập</string>
+    <string name="order_info">Thông tin đơn hàng</string>
+    <string name="registerAccount">ĐĂNG KÝ TÀI KHOẢN</string>
+    <string name="forgot"><u>Quên mật khẩu</u></string>
 </resources>

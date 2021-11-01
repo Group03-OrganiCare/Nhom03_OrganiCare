@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/confirm_order"
+            android:text="@string/confirmed_order"
             android:textSize="35dp"
             android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@id/imvCheck"/>
