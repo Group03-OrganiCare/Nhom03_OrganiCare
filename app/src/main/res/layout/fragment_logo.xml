@@ -12,7 +12,7 @@
         android:id="@+id/txtWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chào mừng đến với OrganiCare!"
+        android:text="Chào mừng bạn đến với"
         android:textSize="20sp"
         android:textStyle="italic"
         android:textColor="#005959"/>

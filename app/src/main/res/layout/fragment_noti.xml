@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotiFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Noti" />
+    tools:context=".NotiFragment"
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/txtNotice"
@@ -18,12 +14,11 @@
         android:text="Notification"
         android:textSize="26sp"
         android:textColor="#009688"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold"/>
 
     <ListView
         android:id="@+id/lvNotice"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</FrameLayout>
+</LinearLayout>
