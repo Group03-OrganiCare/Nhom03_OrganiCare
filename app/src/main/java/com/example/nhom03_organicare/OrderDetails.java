@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -22,6 +23,7 @@ public class OrderDetails extends AppCompatActivity {
 
     RecyclerView rcvOrderItem;
     TextView txtChoosePayment, txtChooseShipment;
+    Button btnConfirm;
     ItemOrderAdapter adapter;
     Intent intent;
 
@@ -42,6 +44,7 @@ public class OrderDetails extends AppCompatActivity {
         rcvOrderItem = findViewById(R.id.rcvOrderItem);
         txtChoosePayment =findViewById(R.id.txtChoosePayment);
         txtChooseShipment = findViewById(R.id.txtChooseShipment);
+        btnConfirm = findViewById(R.id.btnConfirm);
 
     }
 
@@ -76,6 +79,13 @@ public class OrderDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(OrderDetails.this, DeliveryActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(OrderDetails.this, ConfirmOrder.class);
                 startActivity(intent);
             }
         });

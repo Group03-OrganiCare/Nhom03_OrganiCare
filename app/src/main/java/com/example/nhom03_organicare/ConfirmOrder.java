@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.adapter.ItemOrderAdapter;
 import com.example.model.ItemOrder;
@@ -15,6 +18,7 @@ import java.util.ArrayList;
 public class ConfirmOrder extends AppCompatActivity {
     RecyclerView rcvOrderItem1;
     ItemOrderAdapter adapter1;
+    Button btnBackHome;
 
 
     @Override
@@ -24,9 +28,11 @@ public class ConfirmOrder extends AppCompatActivity {
         linkViews();
         configRecyclerView();
         initData();
+        addEvents();
     }
 
     private void linkViews() { rcvOrderItem1 = findViewById(R.id.rcvOrderItem1);
+    btnBackHome = findViewById(R.id.btnBackHome);
     }
 
     private void configRecyclerView() {
@@ -44,5 +50,15 @@ public class ConfirmOrder extends AppCompatActivity {
 
         adapter1 = new ItemOrderAdapter(getApplicationContext(), itemOrders);
         rcvOrderItem1.setAdapter(adapter1);
+    }
+
+    private void addEvents() {
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConfirmOrder.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
