@@ -10,16 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
+            android:name=".Cart"
+            android:exported="true" ></activity>
+        <activity
             android:name=".ConfirmOrder"
-            android:exported="true" >
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".OrderDetails"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".DeliveryActivity"
             android:exported="true" />
