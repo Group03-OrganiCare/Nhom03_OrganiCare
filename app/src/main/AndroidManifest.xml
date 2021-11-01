@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
+            android:name=".Sale"
+            android:exported="true" />
+        <activity
             android:name=".LogoActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,10 +23,9 @@
         </activity>
         <activity
             android:name=".ConfirmOrder"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".OrderDetails"
-            android:exported="true"></activity>
             android:exported="true" />
         <activity
             android:name=".DeliveryActivity"
