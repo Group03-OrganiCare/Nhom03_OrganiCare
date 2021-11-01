@@ -43,7 +43,7 @@ public class OrderDetails extends AppCompatActivity {
     private void initData() {
         ArrayList<ItemOrder> itemOrders = new ArrayList<>();
         itemOrders.add(new ItemOrder(R.drawable.red_cabbage, "Bắp cải tím",45000,5,225000));
-        itemOrders.add(new ItemOrder(R.drawable.apple_rose,"Táo Rose Dazzle", 120000,5,750000));
+        itemOrders.add(new ItemOrder(R.drawable.apple_rose,"Táo Rose Dazzle", 120000,5,600000));
 
         adapter = new ItemOrderAdapter(getApplicationContext(), itemOrders);
         rcvOrderItem.setAdapter(adapter);
