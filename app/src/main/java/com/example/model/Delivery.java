@@ -1,8 +1,13 @@
 package com.example.model;
 
-public class Delivery {
+
+
+public class Delivery  {
     int deliveryThumb;
     double deliveryPrice;
+
+    public Delivery() {
+    }
 
     public Delivery(int deliveryThumb, double deliveryPrice) {
         this.deliveryThumb = deliveryThumb;
