@@ -21,4 +21,6 @@
     <string name="login">Đăng nhập</string>
     <string name="registerAccount">ĐĂNG KÝ TÀI KHOẢN</string>
     <string name="forgot"><u>Quên mật khẩu</u></string>
+    <string name="confirm_order">Đơn hàng của bạn đã được xác nhận</string>
+    <string name="order_info">Thông tin đơn hàng</string>
 </resources>
