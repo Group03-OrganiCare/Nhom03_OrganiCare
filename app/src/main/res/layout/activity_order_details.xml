@@ -239,7 +239,7 @@
         android:id="@+id/txtTotalData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="975.000VND"
+        android:text="825.000VND"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -264,6 +264,7 @@
             android:backgroundTint="@color/light_blue"/>
 
         <Button
+            android:id="@+id/btnConfirm"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="Xác nhận"

@@ -29,7 +29,7 @@ public class NotiFragment extends Fragment {
         //Link view
         lvNotice = view.findViewById(R.id.lvNotice);
         arrayNotice = new ArrayList<>();
-        arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arrayNotice );
+        arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, initData() );
         lvNotice.setAdapter(arrayAdapter);
         return view;
     }
