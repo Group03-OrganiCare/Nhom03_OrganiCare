@@ -4,6 +4,7 @@ public class Payment {
     private int paymentThumb;
     private String paymentName;
 
+
     public Payment(int paymentThumb, String paymentName) {
         this.paymentThumb = paymentThumb;
         this.paymentName = paymentName;
