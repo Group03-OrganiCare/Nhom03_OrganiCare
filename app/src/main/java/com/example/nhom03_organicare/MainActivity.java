@@ -6,7 +6,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new HomeFragment();
                 }
                 else if (item.getId() == 2) {
-                    fragment = new OnlyYouFragment();
+                    fragment = new SaleFragment();
                 }
                 else if (item.getId() == 3) {
                     fragment = new CartFragment();

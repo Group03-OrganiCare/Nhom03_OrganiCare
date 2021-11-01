@@ -7,12 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Switch;
 
 import com.example.adapter.ItemPayAndShipAdapter;
-import com.example.adapter.PaymentAdapter;
 import com.example.model.ItemPaymentAndShipment;
-import com.example.model.Payment;
 
 import java.util.ArrayList;
 

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sale"
-    android:orientation="vertical">
+    tools:context=".SaleFragment"
+    android:orientation="vertical"
+    android:padding="15dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,10 +15,14 @@
         android:textSize="30sp"
         android:textColor="@color/black"
         />
+
     <GridView
         android:id="@+id/gvSaleProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:listSelector="@android:color/holo_blue_bright"
-        android:numColumns="2"/>
+        android:numColumns="2"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5sp"/>
+
 </LinearLayout>

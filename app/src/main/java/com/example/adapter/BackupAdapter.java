@@ -1,5 +1,6 @@
 package com.example.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,22 +9,25 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.model.ItemPaymentAndShipment;
 import com.example.model.Sale_Item;
 import com.example.nhom03_organicare.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SaleAdapter extends BaseAdapter {
+public class BackupAdapter extends BaseAdapter {
+
     Context context;
     int item_gridview;
     ArrayList<Sale_Item> sale_items;
 
-    public SaleAdapter(Context context, int item_gridview, ArrayList<Sale_Item>sale_items) {
+    public BackupAdapter(Context context, int item_gridview, ArrayList<Sale_Item> sale_items) {
         this.context = context;
-        this.sale_items = sale_items;
         this.item_gridview = item_gridview;
+        this.sale_items = sale_items;
     }
+
     @Override
     public int getCount() {
         return sale_items.size();
@@ -42,27 +46,27 @@ public class SaleAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder holder;
-        if (view == null){
+        if (view == null) {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(item_gridview, null);
-            holder.txtSaleProductName = view.findViewById(R.id.txtSaleProductName);
             holder.imvSaleThumb = view.findViewById(R.id.imvSaleThumb);
+            holder.txtSaleProductName = view.findViewById(R.id.txtSaleProductName);
             holder.txtSaleProductPrice = view.findViewById(R.id.txtSaleProductPrice);
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();
         }
 
-        Sale_Item b = sale_items.get(i);
-        holder.txtSaleProductName.setText(b.getProductName());
-        holder.imvSaleThumb.setImageResource(b.getProductThumb());
-        holder.txtSaleProductPrice.setText(String.valueOf(b.getProductPrice()));
+        Sale_Item s = sale_items.get(i);
+        holder.imvSaleThumb.setImageResource(s.getProductThumb());
+        holder.txtSaleProductName.setText(s.getProductName());
+        holder.txtSaleProductPrice.setText(String.valueOf(s.getProductPrice()));
 
         return view;
     }
 
-    public static class ViewHolder{
+    public static class ViewHolder {
         ImageView imvSaleThumb;
         TextView txtSaleProductName, txtSaleProductPrice;
     }

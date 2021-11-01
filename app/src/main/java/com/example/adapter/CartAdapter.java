@@ -1,6 +1,7 @@
 package com.example.adapter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +15,10 @@ import com.example.nhom03_organicare.R;
 import java.util.List;
 
 public class CartAdapter extends BaseAdapter {
-    Activity context;
+    Context context;
     int item_listview;
     List<Cart_Item> cart_items;
-    public CartAdapter(Activity context, int item_listview, List<Cart_Item>productList) {
+    public CartAdapter(Context context, int item_listview, List<Cart_Item>productList) {
         this.context = context;
         this.cart_items = productList;
         this.item_listview = item_listview;

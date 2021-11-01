@@ -2,9 +2,10 @@ package com.example.model;
 
 public class Sale_Item {
     private int productThumb;
-    private String productPrice;
+    private double productPrice;
     private String productName;
-    public Sale_Item(String productPrice, int productThumb, String productName)
+
+    public Sale_Item(double productPrice, int productThumb, String productName)
     {
         this.productName= productName;
         this.productThumb= productThumb;
@@ -28,10 +29,10 @@ public class Sale_Item {
         this.productThumb = productThumb;
     }
 
-    public String getProductPrice() {
+    public double getProductPrice() {
         return productPrice;
     }
-    public void setProductPrice(String productPrice) {
+    public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
 }

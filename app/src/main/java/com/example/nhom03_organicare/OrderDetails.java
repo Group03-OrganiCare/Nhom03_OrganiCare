@@ -13,9 +13,7 @@ import android.widget.TextView;
 
 
 import com.example.adapter.ItemOrderAdapter;
-import com.example.model.Delivery;
 import com.example.model.ItemOrder;
-import com.example.model.ItemPaymentAndShipment;
 
 import java.util.ArrayList;
 
