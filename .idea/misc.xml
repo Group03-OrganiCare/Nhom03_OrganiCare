@@ -32,20 +32,40 @@
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_layout.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_order.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_payment.xml" value="0.21403508771929824" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/drawable/certification_background.xml" value="0.2611111111111111" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/drawable/item_layout.xml" value="0.23229166666666667" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/drawable/search_bar.xml" value="0.23229166666666667" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_confirm_order.xml" value="0.264" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery.xml" value="0.25833333333333336" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_main.xml" value="0.21614583333333334" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_order_details.xml" value="0.264" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_payment_options.xml" value="0.21614583333333334" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/activity_payment_type.xml" value="0.21614583333333334" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/category_layout.xml" value="0.21614583333333334" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/fragment_home.xml" value="0.21614583333333334" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/item_layout.xml" value="0.21614583333333334" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/item_order.xml" value="0.25833333333333336" />
-        <entry key="..\:/study/HocKi5/M-Commerce/DoAn/Nhom03_OrganiCare/app/src/main/res/layout/item_payment.xml" value="0.25833333333333336" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/drawable/bg_circle.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/drawable/category_background.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/drawable/certification_background.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/activity_confirm_order.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/activity_logo.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_logo.xml" value="0.12962962962962962" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_noti.xml" value="0.25052083333333336" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_onboarding1.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_onboarding2.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_onboarding3.xml" value="0.1" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/category_background.xml" value="0.240625" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/certification_background.xml" value="0.240625" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/ic_account.xml" value="0.240625" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_account.xml" value="0.21041666666666667" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_cart.xml" value="0.18703703703703703" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/cart_item.xml" value="0.18703703703703703" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.19583333333333333" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_confirm_order.xml" value="0.1" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery.xml" value="0.14666666666666667" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_login2.xml" value="0.1" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_loginaccount.xml" value="0.16666666666666666" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_order_details.xml" value="0.22" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_registeraccount.xml" value="0.22" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_layout.xml" value="0.1" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_order.xml" value="0.1" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_payment_delivery.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/activity_confirm_order.xml" value="0.1" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_logo.xml" value="0.12962962962962962" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_noti.xml" value="0.25052083333333336" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_onboarding1.xml" value="0.12962962962962962" />
+        <entry key="..\:/mobileapp/123/app/src/main/res/layout/fragment_onboarding2.xml" value="0.12962962962962962" />
       </map>
     </option>
   </component>
