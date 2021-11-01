@@ -103,15 +103,16 @@
             android:scaleType="fitXY"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/facebook"/>
+            android:src="@drawable/facebook"
+            android:background="@android:color/transparent"/>
 
         <ImageButton
             android:id="@+id/imbGG"
             android:scaleType="fitXY"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/google"/>
+            android:src="@drawable/google"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
 </LinearLayout>
