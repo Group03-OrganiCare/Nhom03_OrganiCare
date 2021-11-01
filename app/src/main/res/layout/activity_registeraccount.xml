@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green">
+
+        <ImageButton
+            android:id="@+id/imbBackLogin"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_baseline_arrow_back"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/registerAccount"
+            android:textSize="24sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtAccount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/grey"
+        android:drawableStart="@drawable/ic_baseline_account_circle_24"
+        android:hint="@string/account"
+        android:paddingStart="10dp"
+        android:textSize="15sp"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/edtPhonenumber"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/phonenumber"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:background="@color/grey"
+        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+        android:layout_margin="20dp"
+        tools:ignore="RtlSymmetry" />
+    <EditText
+        android:id="@+id/edtPasswordRegister"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/password"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:background="@color/grey"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:layout_margin="20dp"
+        tools:ignore="RtlSymmetry" />
+    <EditText
+        android:id="@+id/edtPasswordChecked"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/passwordchecked"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:background="@color/grey"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:layout_margin="20dp"
+        tools:ignore="RtlSymmetry" />
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/email"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:background="@color/grey"
+        android:drawableStart="@drawable/ic_baseline_mail_24"
+        android:layout_margin="20dp"
+        tools:ignore="RtlSymmetry" />
+    <Button
+        android:id="@+id/btnRegister2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:backgroundTint="@color/light_blue"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
