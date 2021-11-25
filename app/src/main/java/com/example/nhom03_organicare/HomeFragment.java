@@ -1,5 +1,6 @@
 package com.example.nhom03_organicare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.GridView;
 
 import com.example.adapter.CategoryAdapter;
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
+    EditText edtSearch;
     GridView gvCategory, gvBestSeller;
     ArrayList<Category> categories;
     ArrayList<Product> products;
@@ -34,6 +37,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         //Link Views
+        edtSearch = view.findViewById(R.id.edtSearch);
         gvCategory = view.findViewById(R.id.gvCategory);
         gvBestSeller = view.findViewById(R.id.gvBestSeller);
 
@@ -44,6 +48,13 @@ public class HomeFragment extends Fragment {
         productAdapter = new ProductAdapter(getContext(), R.layout.item_layout, initData2());
         gvBestSeller.setAdapter(productAdapter);
 
+        edtSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
@@ -72,7 +83,4 @@ public class HomeFragment extends Fragment {
 
         return products;
     }
-
-
-
 }

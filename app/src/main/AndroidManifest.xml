@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
+            android:name=".SearchActivity"
+            android:exported="true" />
+        <activity
             android:name=".LogoActivity"
             android:exported="true">
             <intent-filter>
@@ -21,15 +24,12 @@
         <activity
             android:name=".ConfirmOrder"
             android:exported="true" />
-
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
-
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
-
         <activity
             android:name=".OrderDetails"
             android:exported="true" />
