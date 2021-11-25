@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/ic_baseline_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,258 +20,393 @@
         android:id="@+id/txtOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chi tiết đơn hàng"
+        android:text="ĐƠN HÀNG"
         android:textStyle="bold"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textColor="@color/dark_green"
+        android:layout_marginStart="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@id/btnBack"
         app:layout_constraintStart_toEndOf="@id/btnBack"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutInfo"
+    <ScrollView
+        android:id="@+id/svContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@+id/txtOrder"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/certification_background">
-
-        <TextView
-            android:id="@+id/txtName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Họ tên:"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtNameData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="12sp"
-            android:textColor="@color/white"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/txtName"/>
-
-        <TextView
-            android:id="@+id/txtPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Số điện thoại:"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_marginTop="3dp"
-            app:layout_constraintTop_toBottomOf="@id/txtName"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtPhoneData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="12sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="3dp"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toBottomOf="@id/txtNameData"
-            app:layout_constraintStart_toEndOf="@id/txtPhone"/>
-
-        <TextView
-            android:id="@+id/txtEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email:"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_marginTop="3dp"
-            app:layout_constraintTop_toBottomOf="@id/txtPhone"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtEmailData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="12sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="3dp"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toBottomOf="@id/txtPhoneData"
-            app:layout_constraintStart_toEndOf="@id/txtEmail"/>
-
-        <TextView
-            android:id="@+id/txtAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Địa chỉ:"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_marginTop="3dp"
-            app:layout_constraintTop_toBottomOf="@id/txtEmail"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/txtAddressData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="12sp"
-            android:textColor="@color/white"
-            android:layout_marginTop="3dp"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toBottomOf="@id/txtEmail"
-            app:layout_constraintStart_toEndOf="@id/txtAddress"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:padding="0dp"
-            app:layout_constraintTop_toBottomOf="@id/txtAddressData"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/dark_green"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvOrderItem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/item_layout"
-        app:layout_constraintTop_toBottomOf="@id/layoutInfo"
         app:layout_constraintStart_toStartOf="parent">
-    </androidx.recyclerview.widget.RecyclerView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutShipment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/rcvOrderItem"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/search_bar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/txtShipment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Phương thức vận chuyển:"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/txtNewAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm địa chỉ mới"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink"
+                android:padding="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/dark_green"/>
 
-        <TextView
-            android:id="@+id/txtChooseShipment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/click_here"
-            android:textSize="12sp"
-            android:textColor="@color/black"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtNewAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/border_background">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/imvMap"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/map"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutPayment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/layoutShipment"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/search_bar">
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imvMap">
 
-        <TextView
-            android:id="@+id/txtPayment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Phương thức thanh toán:"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
 
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_place"/>
+                        <TextView
+                            android:id="@+id/txtAddress"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="669 QL1A, khu phố 3, Thủ Đức, TPHCM"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imvMap"/>
 
-        <TextView
-            android:id="@+id/txtChoosePayment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/click_here"
-            android:textSize="12sp"
-            android:textColor="@color/black"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thành tiền:"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPayment"
-        app:layout_constraintStart_toStartOf="parent"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/txtTotalData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="825.000VND"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPayment"
-        app:layout_constraintEnd_toEndOf="parent"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_account_circle_24"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/txtTotal"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center">
+                        <TextView
+                            android:id="@+id/txtName"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nguyễn Minh Anh"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/grey"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintTop_toBottomOf="@id/txtAddress"
+                            app:layout_constraintStart_toEndOf="@+id/imvMap"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Đóng"
-            android:background="@drawable/certification_background"
-            android:backgroundTint="@color/light_blue"/>
+                    </LinearLayout>
 
-        <Button
-            android:id="@+id/btnConfirm"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Xác nhận"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/certification_background"
-            android:backgroundTint="@color/light_blue"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
 
-    </LinearLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_local_phone_24"/>
 
+                        <TextView
+                            android:id="@+id/txtPhone"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:text="0123456789"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/grey"
+                            android:layout_marginStart="5dp"
+                            app:layout_constraintTop_toBottomOf="@id/txtName"
+                            app:layout_constraintStart_toEndOf="@+id/imvMap"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvOrderItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/layoutInfo"
+                app:layout_constraintStart_toStartOf="parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutShipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/rcvOrderItem"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/light_blue_20_background">
+
+                <TextView
+                    android:id="@+id/txtShipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phương thức vận chuyển:"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtChooseShipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/click_here"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/layoutShipment"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/light_blue_20_background">
+
+                <TextView
+                    android:id="@+id/txtPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phương thức thanh toán:"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txtChoosePayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/click_here"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtVoucher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Áp dụng voucher"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPayment"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imvVoucher"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:src="@drawable/voucher"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtVoucher"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/edtNote"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Nhập ghi chú tại đây"
+                android:textSize="14sp"
+                android:background="@drawable/light_blue_20_background"
+                app:layout_constraintTop_toBottomOf="@+id/imvVoucher"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <View
+                android:id="@+id/vLine1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/edtNote"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thành tiền:"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/vLine1"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtSumData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="825.000VND"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/vLine1"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtShipFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phí giao hàng:"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtSum"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtShipFeeData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtSumData"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng cộng:"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtShipFee"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtTotalData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="825.000VND"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtShipFeeData"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/vLine2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtTotal"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Điểm thành viên tích lũy:"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_blue"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/vLine2"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtPointData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_blue"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/vLine2"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txtPoint"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightSum="10"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="ĐÓNG"
+                    android:textSize="18dp"
+                    android:background="@drawable/grey_background"/>
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="7"
+                    android:text="Xác nhận"
+                    android:textSize="18dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/dark_green_background"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
