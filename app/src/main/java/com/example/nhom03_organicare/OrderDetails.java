@@ -49,7 +49,6 @@ public class OrderDetails extends AppCompatActivity {
     private void configRecyclerView() {
         LinearLayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         rcvOrderItem.setLayoutManager(manager);
-
         rcvOrderItem.setHasFixedSize(true);
         rcvOrderItem.setItemAnimator(new DefaultItemAnimator());
     }

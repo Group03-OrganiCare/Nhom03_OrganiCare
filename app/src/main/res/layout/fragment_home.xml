@@ -39,6 +39,7 @@
         android:background="@drawable/search_bar"
         android:autofillHints="no"
         android:inputType="text"
+        android:focusable="false"
         android:paddingHorizontal="15dp"
         app:layout_constraintTop_toBottomOf="@+id/imvLogo"
         app:layout_constraintStart_toStartOf="parent"
