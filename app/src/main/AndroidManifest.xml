@@ -10,8 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
-            android:name=".CardInfo"
-            android:exported="false" />
+            android:name=".Delivery_Pickup"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".LogoActivity"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".OTPActivity"
             android:exported="true" />
@@ -26,12 +41,11 @@
             android:exported="true" />
         <activity
             android:name=".LogoActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
         <activity
             android:name=".ConfirmOrder"
