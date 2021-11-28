@@ -5,6 +5,8 @@ plugins {
 android {
     compileSdk 31
 
+
+
     defaultConfig {
         applicationId "com.example.nhom03_organicare"
         minSdk 21
@@ -39,4 +41,5 @@ dependencies {
     implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
 
     implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
 }
