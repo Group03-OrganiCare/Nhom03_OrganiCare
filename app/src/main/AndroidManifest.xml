@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nhom03_organicare">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
+            android:name=".Rate"
+            android:exported="true" />
+        <activity
             android:name=".Delivery_Pickup"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".CardInfo"
             android:exported="true">
@@ -23,25 +25,21 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--        <activity-->
-<!--            android:name=".OTPActivity"-->
-<!--            android:exported="true" />-->
-<!--        <activity-->
-<!--            android:name=".ChangePassword"-->
-<!--            android:exported="true" />-->
-<!--        <activity-->
-<!--            android:name=".ForgetPassword"-->
-<!--            android:exported="true" />-->
+        </activity> <!-- <activity -->
+        <!-- android:name=".OTPActivity" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ChangePassword" -->
+        <!-- android:exported="true" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ForgetPassword" -->
+        <!-- android:exported="true" /> -->
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
         <activity
             android:name=".LogoActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ConfirmOrder"
             android:exported="true" />
@@ -66,10 +64,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity android:name=".Capture"
+        <activity
+            android:name=".Capture"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"/>
+            android:theme="@style/zxing_CaptureTheme" />
     </application>
 
 </manifest>
