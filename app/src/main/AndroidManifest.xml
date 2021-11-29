@@ -12,11 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
+            android:name=".AdjustQuantity"
+            android:exported="true" />
+        <activity
             android:name=".Rate"
             android:exported="true" />
         <activity
             android:name=".Delivery_Pickup"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CardInfo"
             android:exported="true">
@@ -39,7 +42,7 @@
             android:exported="true" />
         <activity
             android:name=".LogoActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ConfirmOrder"
             android:exported="true" />
