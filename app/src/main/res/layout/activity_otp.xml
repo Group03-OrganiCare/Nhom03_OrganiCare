@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="10dp">
 
         <ImageButton
             android:id="@+id/imbBackForgetPass"
@@ -33,10 +33,10 @@
 
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_width="350dp"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:background="@drawable/border_background">
+        android:background="@drawable/edittext_background">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"

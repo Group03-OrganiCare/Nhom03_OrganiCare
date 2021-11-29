@@ -34,12 +34,13 @@ public class ChangePassword extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         btnConfirmPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ChangePassword.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 }
