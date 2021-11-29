@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardInfo"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            >
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_baseline_arrow_back"
+                tools:ignore="InvalidId" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CHỌN PHƯƠNG THỨC THANH TOÁN"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/dark_green"
+                android:layout_marginStart="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_credit_card"
+                android:layout_marginEnd="20dp"
+                />
+            <EditText
+                android:id="@+id/edtCardNumb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="4343 4343 4343 4343"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginBottom="10dp">
+            <EditText
+                android:id="@+id/edtDate"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:hint="MM/YY"
+                android:background="@drawable/ic_rounded_edittext"
+                />
+            <EditText
+                android:id="@+id/edtCVV"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:hint="CVV"
+                android:background="@drawable/ic_rounded_edittext"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnrScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+       >
+        <Button
+            android:id="@+id/btnScanCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUÉT THẺ"
+            android:drawableLeft="@drawable/ic_baseline_qr_code_scanner"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_green"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            />
+        <Button
+            android:id="@+id/btnCardConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XÁC NHẬN"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
