@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+        </RadioButton>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/txtStoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cửa hàng số 1"
+                android:textStyle="bold"
+                android:textSize="20sp">
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="315 Duy Tân, Thủ Đức, TP.HCM"
+                    android:textSize="18sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txtDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3km"
+                    android:layout_marginStart="40dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

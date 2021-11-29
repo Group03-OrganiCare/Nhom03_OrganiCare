@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:text="Thông tin đơn hàng"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutConfirmOrder"/>
@@ -51,10 +51,19 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_margin="10dp"
-        android:background="@drawable/item_layout"
         app:layout_constraintTop_toBottomOf="@id/txtOrderInfo"
         app:layout_constraintStart_toStartOf="parent">
     </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:id="@+id/vLineConfirmOrder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rcvOrderItem1"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/txtTotal1"
@@ -65,8 +74,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/rcvOrderItem1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/vLineConfirmOrder"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
@@ -78,16 +87,18 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/rcvOrderItem1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/vLineConfirmOrder"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btnBackHome"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginLeft="100dp"
-        android:text="Quay lại trang chủ"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:text="Quay về trang chủ"
+        android:textSize="18dp"
         android:background="@drawable/certification_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTotalData1"/>
