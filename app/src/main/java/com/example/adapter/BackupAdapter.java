@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.ItemPaymentAndShipment;
 import com.example.model.Sale_Item;
 import com.example.nhom03_organicare.R;
 

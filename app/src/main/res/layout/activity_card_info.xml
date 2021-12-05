@@ -27,8 +27,7 @@
                 android:id="@+id/btnBack"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
-                android:background="@drawable/ic_baseline_arrow_back"
-                tools:ignore="InvalidId" />
+                android:background="@drawable/ic_baseline_arrow_back" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
