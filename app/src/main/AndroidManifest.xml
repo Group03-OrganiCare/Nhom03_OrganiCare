@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
+        android:theme="@style/Theme.Nhom03_OrganiCare">
+        <activity
+            android:name=".Point"
+            android:exported="true" />
+        <activity
+            android:name=".Account2"
+            android:exported="true" />
         <activity
             android:name=".DiscountActivity"
             android:exported="true" >
@@ -21,6 +28,8 @@
         <activity
             android:name=".MessageActivity"
             android:exported="true"></activity>
+            android:name=".MessageActivity"
+            android:exported="true" />
         <activity
             android:name=".AdjustQuantity"
             android:exported="true" />
@@ -33,9 +42,11 @@
         <activity
             android:name=".CardInfo"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
@@ -60,15 +71,19 @@
         <activity
             android:name=".OrderDetails"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".PaymentOptions"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".PaymentCard"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".PaymentWallet"
             android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
