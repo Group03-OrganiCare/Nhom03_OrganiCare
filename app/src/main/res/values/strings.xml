@@ -20,6 +20,12 @@
     <string name="register">Đăng ký</string>
     <string name="login">Đăng nhập</string>
     <string name="registerAccount">ĐĂNG KÝ TÀI KHOẢN</string>
-    <string name="forgot"><u>Quên mật khẩu?</u></string>
+    <string name="forgot"><u>Quên mật khẩu</u></string>
+    <string-array name="weight">
+        <item>100 gram</item>
+        <item>300 gram</item>
+        <item>1 kg</item>
+        <item>5 kg</item>
+    </string-array>
     <string name="new_account"><u>Đăng ký</u></string>
 </resources>

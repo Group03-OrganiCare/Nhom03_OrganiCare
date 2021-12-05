@@ -38,12 +38,15 @@
         android:layout_marginTop="80dp"
         android:background="@drawable/edittext_background">
         <EditText
+            android:id="@+id/edtOTP"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="  Nhập mã OTP"
+            android:hint="Nhập mã OTP"
             android:textSize="18sp"
             android:paddingStart="10sp"
             android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:inputType="number|textPassword"
             tools:ignore="RtlSymmetry"
             android:background="@null"/>
 

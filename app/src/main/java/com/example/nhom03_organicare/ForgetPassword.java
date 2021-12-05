@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class ForgetPassword extends AppCompatActivity {
     ImageButton imbBackLoginPass;
+    EditText edtEmail_Phone;
     Button btnSendOTP;
 
     @Override
@@ -18,12 +23,16 @@ public class ForgetPassword extends AppCompatActivity {
         setContentView(R.layout.activity_forget_password);
         linkViews();
         addEvents();
+
     }
 
     private void linkViews() {
         imbBackLoginPass = findViewById(R.id.imbBackLoginPass);
+        edtEmail_Phone = findViewById(R.id.edtEmail_Phone);
         btnSendOTP = findViewById(R.id.btnSendOTP);
     }
+
+
 
     private void addEvents() {
         imbBackLoginPass.setOnClickListener(new View.OnClickListener() {
@@ -37,8 +46,12 @@ public class ForgetPassword extends AppCompatActivity {
         btnSendOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ForgetPassword.this, OTPActivity.class);
-                startActivity(intent);
+                if(edtEmail_Phone.getText().length() == 0){
+                    Toast.makeText(ForgetPassword.this, "Bạn phải nhập Email hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(ForgetPassword.this, OTPActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }

@@ -6,8 +6,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+
+import java.util.function.Function;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         
         linkViews();
         setNavigation();
-
     }
 
     private void linkViews() {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.add(new MeowBottomNavigation.Model(5, R.drawable.ic_account));
 
         //Add events
+        getSupportFragmentManager().beginTransaction().replace(R.id.layoutContainer, new HomeFragment()).commit();
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
@@ -44,42 +47,23 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction = manager.beginTransaction();
                 Fragment fragment = null;
                 //Check condition
-                if (item.getId() == 1) {
-                    fragment = new HomeFragment();
+                switch (item.getId()) {
+                    case 1:
+                        fragment = new HomeFragment();
+                        break;
+                    case 2:
+                        fragment = new SaleFragment();
+                        break;
+                    case 3:
+                        fragment = new CartFragment();
+                        break;
+                    case 4:
+                        fragment = new NotiFragment();
+                        break;
+                    case 5:
+                        fragment = new AccountFragment();
+                        break;
                 }
-                else if (item.getId() == 2) {
-                    fragment = new SaleFragment();
-                }
-                else if (item.getId() == 3) {
-                    fragment = new CartFragment();
-                }
-                else if (item.getId() == 4) {
-                    fragment = new NotiFragment();
-                }
-                else if (item.getId() == 5) {
-                    fragment = new AccountFragment();
-                }
-                else {
-                    fragment = new HomeFragment();
-                }
-
-//                switch (item.getId()) {
-//                    case 1:
-//                        fragment = new HomeFragment();
-//                        break;
-//                    case 2:
-//                        fragment = new OnlyYouFragment();
-//                        break;
-//                    case 3:
-//                        fragment = new CartFragment();
-//                        break;
-//                    case 4:
-//                        fragment = new NotiFragment();
-//                        break;
-//                    case 5:
-//                        fragment = new AccountFragment();
-//                        break;
-//                }
                 transaction.replace(R.id.layoutContainer, fragment);
                 transaction.commit();
 
@@ -88,13 +72,13 @@ public class MainActivity extends AppCompatActivity {
                 bottomNavigation.setCount(4, "10");
                 //Set home fragment initially selected
                 //bottomNavigation.show(1, true);
+            }
+        });
 
-                bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
-                    @Override
-                    public void onClickItem(MeowBottomNavigation.Model item) {
-//                        Toast.makeText(getApplicationContext(), "You clicked " + item.getId(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+        bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
+            @Override
+            public void onClickItem(MeowBottomNavigation.Model item) {
+                //Toast.makeText(getApplicationContext(), "You clicked " + item.getId(), Toast.LENGTH_SHORT).show();
             }
         });
     }

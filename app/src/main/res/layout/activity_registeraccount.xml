@@ -44,7 +44,8 @@
             android:layout_height="60dp"
             android:background="@null"
             android:drawableStart="@drawable/ic_baseline_account_circle_24"
-            android:hint="  Tài khoản"
+            android:drawablePadding="10dp"
+            android:hint="Tài khoản"
             android:paddingStart="10sp"
             android:textSize="18sp"
             tools:ignore="RtlSymmetry" />
@@ -62,7 +63,8 @@
             android:layout_height="60dp"
             android:background="@null"
             android:hint="@string/phonenumber"
-            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"            android:drawablePadding="10dp"
+
             android:paddingStart="10sp"
             android:textSize="18sp"
             tools:ignore="RtlSymmetry" />
@@ -81,6 +83,7 @@
             android:background="@null"
             android:hint="@string/password"
             android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
             android:paddingStart="10sp"
             android:textSize="18sp"
             tools:ignore="RtlSymmetry" />
@@ -100,6 +103,7 @@
             android:background="@null"
             android:hint="@string/passwordchecked"
             android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
             android:paddingStart="10sp"
             android:textSize="18sp"
             tools:ignore="RtlSymmetry" />
@@ -119,6 +123,7 @@
             android:background="@null"
             android:hint="@string/email"
             android:drawableStart="@drawable/ic_baseline_mail_24"
+            android:drawablePadding="10dp"
             android:paddingStart="10sp"
             android:textSize="18sp"
             tools:ignore="RtlSymmetry" />

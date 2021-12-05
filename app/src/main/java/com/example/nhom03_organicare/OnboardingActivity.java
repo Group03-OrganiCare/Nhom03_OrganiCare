@@ -14,7 +14,7 @@ import com.example.adapter.ViewPagerAdapter;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class LogoActivity extends AppCompatActivity {
+public class OnboardingActivity extends AppCompatActivity {
 
     private TextView txtSkip;
     private ViewPager view_pager;
@@ -27,7 +27,7 @@ public class LogoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logo);
+        setContentView(R.layout.activity_onboarding);
 
         initUI();
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
@@ -42,7 +42,7 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                if (position == 3){
+                if (position == 2){
                     txtSkip.setVisibility(View.GONE);
                     layoutBottom.setVisibility(View.GONE);
                 }else{
@@ -68,14 +68,14 @@ public class LogoActivity extends AppCompatActivity {
         txtSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                view_pager.setCurrentItem(3);
+                view_pager.setCurrentItem(2);
             }
         });
 
         layoutNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (view_pager.getCurrentItem() < 3){
+                if (view_pager.getCurrentItem() < 2){
                     view_pager.setCurrentItem(view_pager.getCurrentItem() + 1);
                 }
             }

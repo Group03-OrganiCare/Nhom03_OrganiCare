@@ -47,7 +47,8 @@
             android:layout_height="60dp"
             android:background="@null"
             android:drawableStart="@drawable/ic_baseline_account_circle_24"
-            android:hint="  Tên đăng nhập"
+            android:drawablePadding="10dp"
+            android:hint="Tên đăng nhập"
             android:paddingStart="10sp"
             android:textSize="18sp"
             tools:ignore="RtlSymmetry" />
@@ -62,12 +63,13 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="  Mật khẩu"
+            android:hint="Mật khẩu"
             android:textSize="18sp"
             android:paddingStart="10sp"
             android:paddingEnd="10sp"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawableEnd="@drawable/ic_baseline_eye"
+            android:drawablePadding="10dp"
             tools:ignore="RtlSymmetry"
             android:background="@null"/>
     </LinearLayout>
