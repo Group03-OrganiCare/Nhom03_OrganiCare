@@ -31,6 +31,8 @@
         <activity
             android:name=".Delivery_Pickup"
             android:exported="true" />
+        <activity android:name=".TrackingOrder"
+            android:exported="true" />
         <activity
             android:name=".CardInfo"
             android:exported="true"/>
