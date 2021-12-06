@@ -14,9 +14,9 @@ import java.util.ArrayList;
 
 public class TabHostInvoice extends AppCompatActivity {
 
-    ListView lvDelivering;
+    ListView lvDelivering,lvDelivered,lvDeliverCancel;
     ArrayList<Delivering> deliverings;
-    DeliveringAdapter adapter;
+    DeliveringAdapter adapter,adapter1,adapter2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,22 +46,29 @@ public class TabHostInvoice extends AppCompatActivity {
         initData();
         loadData();
     }
-    private void linkViews() {
+    private void linkViews()
+    {
         lvDelivering = findViewById(R.id.lvDelivering);
+        lvDelivered = findViewById(R.id.lvDelivered);
+        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
     }
 
     private void initData() {
         deliverings = new ArrayList<Delivering>();
-        deliverings.add(new Delivering(R.drawable.ic_launcher_background,"Táo Dazzle",50000,5,250000));
-        deliverings.add(new Delivering(R.drawable.ic_launcher_background,"Kiwi Zespri",80000,5,400000));
-        deliverings.add(new Delivering(R.drawable.ic_launcher_background,"Granola",100000,5,500000));
-        deliverings.add(new Delivering(R.drawable.ic_launcher_background,"Sữa hạt hữu cơ",30000,5,150000));
-        deliverings.add(new Delivering(R.drawable.ic_launcher_background,"Việt quất",30000,5,150000));
-        deliverings.add(new Delivering(R.drawable.ic_launcher_background,"Khoai lang hữu cơ",30000,5,150000));
+        deliverings.add(new Delivering(R.drawable.apple_dazzle,"Táo Dazzle",50000,250000,5));
+        deliverings.add(new Delivering(R.drawable.kiwi,"Kiwi Zespri",80000,400000,5));
+        deliverings.add(new Delivering(R.drawable.granola,"Granola",100000,500000,5));
+        deliverings.add(new Delivering(R.drawable.milk_barista,"Sữa hạt hữu cơ",30000,150000,5));
+        deliverings.add(new Delivering(R.drawable.juice_blueberry,"Việt quất",30000,150000,5));
+        deliverings.add(new Delivering(R.drawable.sweet_potato,"Khoai lang hữu cơ",30000,150000,5));
     }
 
     private void loadData() {
         adapter = new DeliveringAdapter(TabHostInvoice.this,R.layout.item_layout_delivering,deliverings);
         lvDelivering.setAdapter(adapter);
+        adapter1 = new DeliveringAdapter(TabHostInvoice.this,R.layout.item_layout_delivered,deliverings);
+        lvDelivered.setAdapter(adapter1);
+        adapter2 = new DeliveringAdapter(TabHostInvoice.this,R.layout.item_layout_delivercancel, deliverings);
+        lvDeliverCancel.setAdapter(adapter2);
     }
 }
