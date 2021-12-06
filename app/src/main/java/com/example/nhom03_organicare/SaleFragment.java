@@ -1,6 +1,5 @@
 package com.example.nhom03_organicare;
 
-import android.content.ClipData;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,9 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
-import com.example.adapter.BackupAdapter;
 import com.example.adapter.SaleAdapter;
-import com.example.model.Category;
 import com.example.model.Sale_Item;
 
 import java.util.ArrayList;
@@ -21,7 +18,7 @@ public class SaleFragment extends Fragment {
 
     GridView gvSaleProduct;
     ArrayList<Sale_Item> sale_items;
-    BackupAdapter adapter;
+    SaleAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +29,7 @@ public class SaleFragment extends Fragment {
         gvSaleProduct = view.findViewById(R.id.gvSaleProduct);
 
         //load Data
-        adapter = new BackupAdapter(getContext(), R.layout.item_layout, initData());
+        adapter = new SaleAdapter(getContext(), R.layout.item_layout, initData());
         gvSaleProduct.setAdapter(adapter);
         return view;
 

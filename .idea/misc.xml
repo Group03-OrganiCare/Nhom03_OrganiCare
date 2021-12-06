@@ -31,31 +31,42 @@
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/drawable/shadow.xml" value="0.22763157894736843" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/drawable/white_search.xml" value="0.22763157894736843" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_account.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_account2.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_cart.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_confirm_order.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_detail_order.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_loginaccount.xml" value="0.2" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_onboarding.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_order_details.xml" value="0.2" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_payment_options.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_payment_type.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_sale.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_search.xml" value="0.2" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_delivery.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_invoice.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_tracking_order.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/category_layout.xml" value="0.2" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/filter_layout.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_account.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_cart.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_logo.xml" value="0.10964912280701754" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_noti.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_onboarding1.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_onboarding2.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_onboarding3.xml" value="0.10964912280701754" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_only_you.xml" value="0.264" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_sale.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_discount.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_layout.xml" value="0.8" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_layout_delivering.xml" value="0.1337719298245614" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_order.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_payment.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_payment_delivery.xml" value="0.21403508771929824" />
         <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/item_suggestion.xml" value="0.21403508771929824" />
+        <entry key="..\:/HK5/Android/Project/Nhom03_OrganiCare/app/src/main/res/layout/sale_item.xml" value="0.1337719298245614" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/category_background.xml" value="0.240625" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/certification_background.xml" value="0.240625" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/ic_account.xml" value="0.240625" />

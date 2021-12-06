@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/dark_green">
 
+                android:background="@color/dark_green">
             </TabWidget>
             <FrameLayout
                 android:id="@android:id/tabcontent"
