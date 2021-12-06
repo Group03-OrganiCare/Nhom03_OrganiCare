@@ -18,18 +18,10 @@
             android:exported="true" />
         <activity
             android:name=".DiscountActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MessageActivity"
-            android:exported="true"></activity>
-            android:name=".MessageActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".AdjustQuantity"
             android:exported="true" />
@@ -41,12 +33,10 @@
             android:exported="true" />
         <activity
             android:name=".CardInfo"
-            android:exported="true"></activity>
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".SplashActivity"
-            android:exported="true"></activity>
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".ForgetPassword"
             android:exported="true" />
@@ -79,19 +69,15 @@
             android:exported="true" />
         <activity
             android:name=".OrderDetails"
-            android:exported="true"></activity>
             android:exported="true" />
         <activity
             android:name=".PaymentOptions"
-            android:exported="true"></activity>
             android:exported="true" />
         <activity
             android:name=".PaymentCard"
-            android:exported="true"></activity>
             android:exported="true" />
         <activity
             android:name=".PaymentWallet"
-            android:exported="true"></activity>
             android:exported="true" />
         <activity
             android:name=".MainActivity"
