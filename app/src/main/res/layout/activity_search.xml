@@ -34,6 +34,7 @@
             android:hint="@string/search_here"
             android:drawableStart="@drawable/ic_search"
             android:background="@drawable/white_search"
+            android:padding="5dp"
             android:autofillHints="no"
             android:inputType="text"
             android:paddingHorizontal="10dp"
@@ -201,4 +202,23 @@
             app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerFilter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="end">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navFilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_gravity="end"
+            app:headerLayout="@layout/filter"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
