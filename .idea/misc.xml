@@ -74,11 +74,13 @@
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_registeraccount.xml" value="0.22" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_delivery.xml" value="0.11594202898550725" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_invoice.xml" value="0.11594202898550725" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/fragment_delivery.xml" value="0.11594202898550725" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/fragment_logo.xml" value="0.11594202898550725" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/fragment_pickup.xml" value="0.11594202898550725" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_deli_layout.xml" value="0.22" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_layout.xml" value="0.1" />
+        <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_layout_delivering.xml" value="0.11594202898550725" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_layout_store.xml" value="0.11594202898550725" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_order.xml" value="0.1" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/item_payment_delivery.xml" value="0.1" />
