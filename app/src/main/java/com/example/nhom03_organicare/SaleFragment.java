@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import com.example.adapter.BackupAdapter;
-import com.example.adapter.ItemPayAndShipAdapter;
 import com.example.adapter.SaleAdapter;
 import com.example.model.Category;
 import com.example.model.Sale_Item;

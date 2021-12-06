@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imvDiscount"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/discount01"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imvDiscount"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtCodeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[HNGG01]"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtCodeUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giảm 5% cho đơn hàng từ 200.000đ"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtCodeExp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hạn sử dụng: 30/12/2021"
+            android:gravity="end"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:textColor="#F44336"/>
+
+
+
+    </LinearLayout>
+</RelativeLayout>

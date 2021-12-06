@@ -67,7 +67,7 @@ public class OrderDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                intent = new Intent(OrderDetails.this,PaymentType.class);
+                intent = new Intent(OrderDetails.this, PaymentOptions.class);
                 startActivity(intent);
 
             }
@@ -75,7 +75,7 @@ public class OrderDetails extends AppCompatActivity {
         txtChooseShipment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(OrderDetails.this, DeliveryActivity.class);
+                intent = new Intent(OrderDetails.this, Delivery_Pickup.class);
                 startActivity(intent);
             }
         });

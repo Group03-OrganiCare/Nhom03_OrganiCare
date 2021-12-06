@@ -17,8 +17,9 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class CardInfo extends AppCompatActivity {
 
-    Button btnCardConfirm, btnScanCard;
+    Button btnCardConfirm, btnScanCard, btnBack;
     EditText edtCardNumb, edtDate, edtCVV;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class CardInfo extends AppCompatActivity {
     private void linkViews() {
         btnCardConfirm =findViewById(R.id.btnCardConfirm);
         btnScanCard =findViewById(R.id.btnScanCard);
+        btnBack=findViewById(R.id.btnBack);
         edtCardNumb =findViewById(R.id.edtCardNumb);
         edtCVV =findViewById(R.id.edtCVV);
         edtDate=findViewById(R.id.edtDate);
@@ -39,15 +41,24 @@ public class CardInfo extends AppCompatActivity {
         btnCardConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                intent =new Intent(CardInfo.this,OrderDetails.class);
+                startActivity(intent);
             }
         });
+
         btnScanCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 ScanCard();
 
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent =new Intent(CardInfo.this,PaymentCard.class);
+                startActivity(intent);
             }
         });
     }
