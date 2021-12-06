@@ -216,7 +216,7 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_gravity="end"
-            app:headerLayout="@layout/filter"/>
+            app:headerLayout="@layout/filter_layout"/>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
