@@ -5,9 +5,7 @@ public class Delivering {
     private String ProductName_delivering;
     private double PriceEach_delivering, PriceInvoice_delivering;
     private double Weight_delivering;
-    private double PriceEach_delivering, PriceInvoice_delivering,Weight_delivering;
 
-    public Delivering(int productThumb_delivering, String productName_delivering, double priceEach_delivering, double priceInvoice_delivering, double weight_delivering) {
 
     public Delivering(int productThumb_delivering, String productName_delivering, double priceEach_delivering, double priceInvoice_delivering, double weight_delivering) {
         ProductThumb_delivering = productThumb_delivering;
