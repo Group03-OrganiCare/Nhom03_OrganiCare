@@ -21,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void loadData() {
         if (AppUtil.isNetworkAvailable(this)) {
-            // Network connected
+            //Network connected
             //Load data
             new Handler().postDelayed(new Runnable() {
                 @Override

@@ -9,56 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
-        android:theme="@style/Theme.Nhom03_OrganiCare">
-        <activity
-            android:name=".Point"
-            android:exported="true" />
-        <activity
-            android:name=".Account2"
-            android:exported="true" />
-        <activity
-            android:name=".DiscountActivity"
-            android:exported="true" />
         <activity
             android:name=".MessageActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".AdjustQuantity"
-            android:exported="true" />
-        <activity
-            android:name=".Rate"
-            android:exported="true" />
-        <activity
-            android:name=".Delivery_Pickup"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            android:name=".SearchActivity"
             android:exported="true" />
         <activity android:name=".TrackingOrder"
             android:exported="true" />
         <activity
-            android:name=".CardInfo"
-            android:exported="true"/>
+            android:name=".LogoActivity"
+            android:exported="true" >
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SplashActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".ForgetPassword"
-            android:exported="true" />
-        <activity
-            android:name=".OTPActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ChangePassword"
-            android:exported="true"/>
+            android:exported="true"></activity>
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
         <activity
             android:name=".OnboardingActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ConfirmOrder"
@@ -73,22 +49,22 @@
             android:name=".OrderDetails"
             android:exported="true" />
         <activity
+            android:name=".DeliveryActivity"
+            android:exported="true" />
+        <activity
             android:name=".PaymentOptions"
             android:exported="true" />
         <activity
-            android:name=".PaymentCard"
-            android:exported="true" />
-        <activity
-            android:name=".PaymentWallet"
+            android:name=".PaymentType"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity
-            android:name=".Capture"
-            android:screenOrientation="portrait"
-            android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme" />
+<!--        <activity-->
+<!--            android:name=".Capture"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:stateNotNeeded="true"-->
+<!--            android:theme="@style/zxing_CaptureTheme"/>-->
     </application>
 
 </manifest>
