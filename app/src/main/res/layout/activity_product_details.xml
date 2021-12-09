@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetails">
+
+    <LinearLayout
+        android:id="@+id/layoutReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đánh giá và nhận xét"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_account"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Đánh giá sản phẩm"
+                android:gravity="top"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/ic_baseline_reply"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_account"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Đánh giá sản phẩm"
+                android:gravity="top"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/ic_baseline_reply"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_account"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Đánh giá sản phẩm"
+                android:gravity="top"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:background="@drawable/edittext_background"
+                android:drawableEnd="@drawable/ic_baseline_reply"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/light_blue_20"
+        android:paddingTop="15dp"
+        android:paddingBottom="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutReview"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="Sản phẩm tương tự"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvSimilar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
