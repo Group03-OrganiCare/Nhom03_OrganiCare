@@ -259,11 +259,14 @@
             <EditText
                 android:id="@+id/edtNote"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:layout_marginTop="10dp"
+                android:inputType="textMultiLine"
+                android:lines="5"
                 android:hint="Nhập ghi chú tại đây"
                 android:textSize="14sp"
+                android:gravity="top"
                 android:background="@drawable/light_blue_20_background"
                 app:layout_constraintTop_toBottomOf="@+id/imvVoucher"
                 app:layout_constraintStart_toStartOf="parent"/>
