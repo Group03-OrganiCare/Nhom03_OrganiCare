@@ -32,7 +32,8 @@
                     <ListView
                         android:id="@+id/lvDelivering"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
                     </ListView>
                 </LinearLayout>
                 <LinearLayout
@@ -43,7 +44,8 @@
                     <ListView
                         android:id="@+id/lvDelivered"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
                     </ListView>
                 </LinearLayout>
                 <LinearLayout
@@ -54,7 +56,8 @@
                     <ListView
                         android:id="@+id/lvDeliverCancel"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:scrollbars="none">
                     </ListView>
                 </LinearLayout>
 
