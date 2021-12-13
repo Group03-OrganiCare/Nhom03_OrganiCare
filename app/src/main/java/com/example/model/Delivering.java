@@ -3,10 +3,11 @@ package com.example.model;
 public class Delivering {
     private int ProductThumb_delivering;
     private String ProductName_delivering;
-    private int PriceEach_delivering, PriceInvoice_delivering;
+    private double PriceEach_delivering, PriceInvoice_delivering;
     private double Weight_delivering;
 
-    public Delivering(int productThumb_delivering, String productName_delivering, int priceEach_delivering, int priceInvoice_delivering, double weight_delivering) {
+
+    public Delivering(int productThumb_delivering, String productName_delivering, double priceEach_delivering, double priceInvoice_delivering, double weight_delivering) {
         ProductThumb_delivering = productThumb_delivering;
         ProductName_delivering = productName_delivering;
         PriceEach_delivering = priceEach_delivering;
@@ -30,7 +31,7 @@ public class Delivering {
         ProductName_delivering = productName_delivering;
     }
 
-    public int getPriceEach_delivering() {
+    public double getPriceEach_delivering() {
         return PriceEach_delivering;
     }
 
@@ -38,7 +39,7 @@ public class Delivering {
         PriceEach_delivering = priceEach_delivering;
     }
 
-    public int getPriceInvoice_delivering() {
+    public double getPriceInvoice_delivering() {
         return PriceInvoice_delivering;
     }
 
