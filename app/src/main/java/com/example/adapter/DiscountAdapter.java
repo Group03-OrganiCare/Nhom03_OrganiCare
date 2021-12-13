@@ -15,25 +15,25 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DiscountAdapter extends RecyclerView.Adapter<DiscountAdapter.DiscountHolder>{
+public class DiscountAdapter extends RecyclerView.Adapter<DiscountAdapter.DiscountViewHolder>{
 
-    private List<Discount> mListDiscount;
+    private List<Discount> mListDiscounts;
 
-    public DiscountAdapter(List<Discount> mListDiscount) {
-        this.mListDiscount = mListDiscount;
+    public DiscountAdapter(List<Discount> mListDiscounts) {
+        this.mListDiscounts = mListDiscounts;
     }
 
     @NonNull
     @Override
-    public DiscountHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DiscountViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_discount, parent, false);
-        return new DiscountHolder(view);
+        return new DiscountViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DiscountHolder holder, int position) {
-        Discount discount = mListDiscount.get(position);
-        if (discount != null){
+    public void onBindViewHolder(@NonNull DiscountViewHolder holder, int position) {
+        Discount discount = mListDiscounts.get(position);
+        if (discount == null) {
             return;
         }
         holder.imvDiscount.setImageResource(discount.getCodeThumb());
@@ -44,18 +44,21 @@ public class DiscountAdapter extends RecyclerView.Adapter<DiscountAdapter.Discou
 
     @Override
     public int getItemCount() {
-        if(mListDiscount != null){
-            return mListDiscount.size();
+        if (mListDiscounts != null) {
+            return mListDiscounts.size();
         }
+
         return 0;
     }
 
-    public class DiscountHolder extends RecyclerView.ViewHolder{
+    public class DiscountViewHolder extends RecyclerView.ViewHolder{
 
         private CircleImageView imvDiscount;
-        private TextView txtCodeName, txtCodeUsage, txtCodeExp;
+        private TextView txtCodeName;
+        private TextView txtCodeUsage;
+        private TextView txtCodeExp;
 
-        public DiscountHolder(@NonNull View itemView) {
+        public DiscountViewHolder(@NonNull View itemView) {
             super(itemView);
             imvDiscount = itemView.findViewById(R.id.imvDiscount);
             txtCodeName  = itemView.findViewById(R.id.txtCodeName);

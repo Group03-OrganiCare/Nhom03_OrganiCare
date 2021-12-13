@@ -17,6 +17,7 @@
     <string name="passwordchecked">Nhập lại mật khẩu</string>
     <string name="phonenumber">Số điện thoại</string>
     <string name="email">Email</string>
+    <string name="action_search">Tìm kiếm</string>
     <string name="register">Đăng ký</string>
     <string name="login">Đăng nhập</string>
     <string name="registerAccount">ĐĂNG KÝ TÀI KHOẢN</string>
