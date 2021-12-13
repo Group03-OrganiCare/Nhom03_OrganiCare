@@ -78,7 +78,12 @@
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/ic_account.xml" value="0.240625" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_account.xml" value="0.21041666666666667" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_cart.xml" value="0.18703703703703703" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_delivery.xml" value="0.22447916666666667" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_invoice.xml" value="0.22447916666666667" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/bottomsheet_rate.xml" value="0.22447916666666667" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/cart_item.xml" value="0.18703703703703703" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/fragment_cart.xml" value="0.22447916666666667" />
+        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/item_layout_delivered.xml" value="0.18703703703703703" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.19583333333333333" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_confirm_order.xml" value="0.1" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery.xml" value="0.14666666666666667" />

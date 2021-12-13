@@ -70,6 +70,7 @@
             android:gravity="bottom">
 
             <Button
+                android:id="@+id/btnOpenRateBtS"
                 android:layout_width="100sp"
                 android:layout_height="40sp"
                 android:text="Đánh giá"
@@ -78,6 +79,7 @@
                 android:layout_gravity="right">
             </Button>
             <Button
+                android:id="@+id/btnReOrder"
                 android:layout_width="100sp"
                 android:layout_height="40sp"
                 android:text="Mua lại"
