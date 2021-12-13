@@ -31,6 +31,6 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_gravity="left" />
+            android:layout_gravity="left"/>
     </LinearLayout>
 </LinearLayout>

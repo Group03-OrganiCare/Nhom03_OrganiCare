@@ -92,6 +92,7 @@ public class ExpandableTextViewAdapter extends BaseExpandableListAdapter {
         faqQ= view.findViewById(R.id.txtFAQQuestion);
         faqQ.setText(questionFAQ);
         faqQ.setTypeface(null, Typeface.BOLD);
+        view.setPadding(0,0,0,15);
         return view;
     }
 
