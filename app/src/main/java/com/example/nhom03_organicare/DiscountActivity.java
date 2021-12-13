@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import com.example.adapter.DiscountAdapter;
 import com.example.model.Discount;
@@ -23,33 +24,36 @@ public class DiscountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discount);
 
-        linkViews();
-        addEvents();
-    }
-
-    private void linkViews() {
         rcvDiscount = findViewById(R.id.rcvDiscount);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvDiscount.setLayoutManager(linearLayoutManager);
-    }
 
-    private void addEvents() {
-        discountAdapter = new DiscountAdapter(getListDiscount());
+        discountAdapter = new DiscountAdapter(getListDiscounts());
         rcvDiscount.setAdapter(discountAdapter);
+
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         rcvDiscount.addItemDecoration(itemDecoration);
     }
 
-    private List<Discount> getListDiscount() {
+    private List<Discount> getListDiscounts() {
         List<Discount> list = new ArrayList<>();
-        list.add(new Discount(R.drawable.discount01, "[HNGG01]", "Giảm 5% cho đơn hàng từ 200.000đ", "Hạn sử dụng: 30/12/2021"));
-        list.add(new Discount(R.drawable.discount01, "[HNGG02]", "Giảm 5% cho đơn hàng từ 300.000đ", "Hạn sử dụng: 20/12/2021"));
-        list.add(new Discount(R.drawable.discount02, "[HNGG03]", "Giảm 10% cho đơn hàng từ 500.000đ", "Hạn sử dụng: 12/12/2021"));
-        list.add(new Discount(R.drawable.discount02, "[HNGG04]", "Giảm 10% cho đơn hàng từ 1.000.000đ", "Hạn sử dụng: 12/12/2021"));
-        list.add(new Discount(R.drawable.discount03, "[HNGG05]", "Miễn phí vận chuyển địa bàn TP. Hồ Chí Minh", "Hạn sử dụng: 12/12/2021"));
-        list.add(new Discount(R.drawable.discount03, "[HNGG06]", "Miễn phí vận chuyển cho đơn hàng từ 500.000đ", "Hạn sử dụng: 12/12/2021"));
-        list.add(new Discount(R.drawable.discount03, "[HNGG07]", "Giảm 20.000đ cho đơn hàng từ 500.000đ", "Hạn sử dụng: 20/12/2021"));
+        list.add(new Discount(R.drawable.discount01, "[SALE01]", "Giảm 5% cho đơn hàng từ 200.000đ", "Hạn sử dụng: 30/12/2021"));
+        list.add(new Discount(R.drawable.discount01, "[SALE02]", "Giảm 10% cho đơn hàng từ 500.000đ", "Hạn sử dụng: 11/12/2021"));
+        list.add(new Discount(R.drawable.discount11, "[SALE03]", "Giảm 15% cho đơn hàng từ 2.000.000đ", "Hạn sử dụng: 12/12/2021"));
+        list.add(new Discount(R.drawable.discount12, "[SALE04]", "Miễn phí vận chuyển địa bàn TP.HCM", "Hạn sử dụng: 15/12/2021"));
+        list.add(new Discount(R.drawable.discount11, "[SALE05]", "Miễn phí vận chuyển cho đơn hàng từ 300.000đ", "Hạn sử dụng: 20/12/2021"));
+        list.add(new Discount(R.drawable.discount12, "[SALE06]", "Giảm 15% cho đơn hàng từ 800.000đ", "Hạn sử dụng: 24/12/2021"));
+        list.add(new Discount(R.drawable.discount01, "[SALE07]", "Giảm 10.000đ cho đơn hàng từ 200.000đ", "Hạn sử dụng: 25/12/2021"));
+        list.add(new Discount(R.drawable.discount11, "[SALE08]", "Miễn phí vận chuyển cho đơn hàng từ 500.000đ", "Hạn sử dụng: 26/12/2021"));
+        list.add(new Discount(R.drawable.discount12, "[SALE09]", "Giảm 20.000đ cho đơn hàng từ 500.000đ", "Hạn sử dụng: 30/12/2021"));
 
-        return  list;
+        return list;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search_discount, menu);
+
+        return true;
     }
 }
