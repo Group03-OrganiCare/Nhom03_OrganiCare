@@ -83,6 +83,8 @@
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/drawable/ic_rounded_edittext.xml" value="0.2388888888888889" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/drawable/ic_rounded_faq.xml" value="0.1" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_card_info.xml" value="0.2" />
+        <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_change_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_change_password_account.xml" value="0.25416666666666665" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery.xml" value="0.13020833333333334" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery_pickup.xml" value="0.13020833333333334" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_faq.xml" value="0.264" />
@@ -93,6 +95,8 @@
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_payment_type.xml" value="0.13020833333333334" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_payment_wallet.xml" value="0.25416666666666665" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_point.xml" value="0.13020833333333334" />
+        <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/activity_tracking_order.xml" value="0.13020833333333334" />
+        <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/fragment_noti.xml" value="0.13020833333333334" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/fragment_sale.xml" value="0.13020833333333334" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/item_deli_layout.xml" value="0.13020833333333334" />
         <entry key="..\:/HK5/PhatTrienAndroid/Nhom03_OrganiCare/app/src/main/res/layout/item_faq_answer.xml" value="0.1" />
