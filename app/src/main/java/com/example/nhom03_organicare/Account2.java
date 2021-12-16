@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Account2 extends AppCompatActivity {
-    Button btnPoint;
+    Button btnPoint, btnHistory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class Account2 extends AppCompatActivity {
 
     private void linkViews() {
         btnPoint = findViewById(R.id.btnPoint);
+        btnHistory = findViewById(R.id.btnHistory);
     }
 
     private void addEvents() {
@@ -27,6 +28,13 @@ public class Account2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Account2.this, Point.class);
+                startActivity(intent);
+            }
+        });
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Account2.this, TabHostDelivery.class);
                 startActivity(intent);
             }
         });
