@@ -29,7 +29,9 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
                     <ListView
                         android:id="@+id/lvStore"
                         android:layout_width="match_parent"
@@ -41,7 +43,9 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -51,7 +55,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_launcher_background">
+                            android:src="@drawable/giaohangnhanh">
                         </ImageView>
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -87,7 +91,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_launcher_background">
+                            android:src="@drawable/ghtk">
                         </ImageView>
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -123,7 +127,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_launcher_background">
+                            android:src="@drawable/viettelpost">
                         </ImageView>
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -146,10 +150,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Giao trong vòng 60 phút"
-
                                 android:textSize="18sp"/>
                         </LinearLayout>
-
                     </LinearLayout>
                 </LinearLayout>
             </FrameLayout>

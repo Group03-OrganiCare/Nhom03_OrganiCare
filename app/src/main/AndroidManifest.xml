@@ -30,7 +30,11 @@
         <activity
             android:name=".TabHostDelivery"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Point"
@@ -40,11 +44,7 @@
         <activity
             android:name=".TrackingOrder"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SplashActivity"
@@ -68,9 +68,9 @@
         <activity
             android:name=".OnboardingActivity"
             android:exported="true"></activity>
-        <activity
-            android:name=".ConfirmOrder"
-            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".ConfirmOrder"-->
+<!--            android:exported="true" />-->
         <activity
             android:name=".LoginActivity"
             android:exported="true"></activity>
