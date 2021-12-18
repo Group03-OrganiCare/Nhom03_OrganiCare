@@ -83,13 +83,21 @@
             android:exported="true">
         </activity>
         <activity
-            android:name=".DiscountActivity"
+            android:name=".Account2"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MessageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".DiscountActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".Capture"

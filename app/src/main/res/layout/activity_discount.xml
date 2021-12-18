@@ -19,13 +19,21 @@
             android:backgroundTint="@color/dark_green"/>
         <TextView
             android:layout_marginLeft="5dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="MÃ GIẢM GIÁ"
             android:textSize="20sp"
             android:textColor="@color/dark_green"
             android:textStyle="bold"
             android:gravity="center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/imbReadCheck"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity=""
+            android:background="@drawable/readcheck"
+            android:backgroundTint="@color/dark_green" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

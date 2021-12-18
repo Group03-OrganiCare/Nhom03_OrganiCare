@@ -1,5 +1,6 @@
 package com.example.nhom03_organicare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.adapter.NoticeAdapter;
@@ -22,6 +23,7 @@ public class NotiFragment extends Fragment {
     ListView lvNotice;
     ArrayList<ItemNotice> itemNotices;
     NoticeAdapter noticeAdapter;
+    ImageButton imbBackNotice;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,10 +32,21 @@ public class NotiFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_noti, container, false);
         //Link view
         lvNotice = view.findViewById(R.id.lvNotice);
+        imbBackNotice = view.findViewById(R.id.imbBackNotice);
         //Load data
         noticeAdapter = new NoticeAdapter(getContext(), R.layout.item_notice, initData());
         lvNotice.setAdapter(noticeAdapter);
+
+        imbBackNotice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
+
+
     }
 
     private List<ItemNotice> initData() {
