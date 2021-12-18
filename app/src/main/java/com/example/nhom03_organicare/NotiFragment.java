@@ -10,16 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.model.Category;
+import com.example.adapter.NoticeAdapter;
+import com.example.model.ItemNotice;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class NotiFragment extends Fragment {
 
     ListView lvNotice;
-    ArrayList<String> arrayNotice;
-    ArrayAdapter arrayAdapter;
+    ArrayList<ItemNotice> itemNotices;
+    NoticeAdapter noticeAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,30 +30,24 @@ public class NotiFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_noti, container, false);
         //Link view
         lvNotice = view.findViewById(R.id.lvNotice);
-        arrayNotice = new ArrayList<>();
-        arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, initData() );
-        lvNotice.setAdapter(arrayAdapter);
+        //Load data
+        noticeAdapter = new NoticeAdapter(getContext(), R.layout.item_notice, initData());
+        lvNotice.setAdapter(noticeAdapter);
         return view;
     }
 
-    private ArrayList<String> initData(){
-        arrayNotice.add("Notice 1");
-        arrayNotice.add("Notice 2");
-        arrayNotice.add("Notice 3");
-        arrayNotice.add("Notice 4");
-        arrayNotice.add("Notice 5");
-        arrayNotice.add("Notice 6");
-        arrayNotice.add("Notice 7");
-        arrayNotice.add("Notice 8");
-        arrayNotice.add("Notice 9");
-        arrayNotice.add("Notice 10");
-        arrayNotice.add("Notice 11");
-        arrayNotice.add("Notice 12");
-        arrayNotice.add("Notice 13");
-        arrayNotice.add("Notice 14");
-        arrayNotice.add("Notice 15");
-        arrayNotice.add("Notice 16");
-        return arrayNotice;
+    private List<ItemNotice> initData() {
+        itemNotices = new ArrayList<ItemNotice>();
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 1", "Đặt hàng thành công!", "03/12/2021 03:00 PM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 2", "Đặt hàng thành công!", "04/12/2021 04:00 PM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 3", "Đặt hàng thành công!", "05/12/2021 05:00 PM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 4", "Đặt hàng thành công!", "06/12/2021 06:00 PM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 5", "Đặt hàng thành công!", "07/12/2021 07:00 PM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 6", "Đặt hàng thành công!", "08/12/2021 08:00 AM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 7", "Đặt hàng thành công!", "09/12/2021 09:00 AM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 8", "Đặt hàng thành công!", "10/12/2021 10:00 AM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 9", "Đặt hàng thành công!", "11/12/2021 11:00 AM"));
+        itemNotices.add(new ItemNotice(R.drawable.notibell, "Thông báo 10", "Đặt hàng thành công!", "12/12/2021 02:00 PM"));
+        return itemNotices;
     }
-
 }

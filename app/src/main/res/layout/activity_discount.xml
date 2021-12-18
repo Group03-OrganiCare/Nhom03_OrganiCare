@@ -3,12 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiscountActivity">
+    tools:context=".DiscountActivity"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/layout_Discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imbBackDiscount"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_baseline_arrow_back"
+            android:backgroundTint="@color/dark_green"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="MÃ GIẢM GIÁ"
+            android:textSize="20sp"
+            android:textColor="@color/dark_green"
+            android:textStyle="bold"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="15dp"
         android:id="@+id/rcvDiscount"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_Discount"></androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>
