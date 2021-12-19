@@ -7,18 +7,33 @@
     android:orientation="vertical"
     android:padding="15dp">
 
-    <TextView
-        android:id="@+id/txtNotice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Notification"
-        android:textSize="26sp"
-        android:textColor="#009688"
-        android:textStyle="bold"/>
+    <LinearLayout
+        android:id="@+id/layout_Notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imbBackNotice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_baseline_arrow_back"
+            android:backgroundTint="@color/dark_green"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="THÔNG BÁO"
+            android:textSize="20sp"
+            android:textColor="@color/dark_green"
+            android:textStyle="bold"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/lvNotice"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:listSelector="@color/light_blue"/>
 
 </LinearLayout>

@@ -2,12 +2,14 @@ package com.example.nhom03_organicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adapter.DeliveringAdapter;
@@ -31,6 +33,21 @@ public class TabHostInvoice extends AppCompatActivity {
         try {
             TabHost th = findViewById(R.id.tabHostInvoice);
             th.setup();
+
+            th.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+                @Override
+                public void onTabChanged(String s) {
+                    for (int i = 0; i < th.getTabWidget().getChildCount(); i++) {
+                        th.getTabWidget().getChildAt(i).setBackgroundColor(Color.parseColor("#005959")); // unselected
+                        TextView tv = (TextView) th.getTabWidget().getChildAt(i).findViewById(android.R.id.title); //Unselected Tabs
+                        tv.setTextColor(Color.parseColor("#FFFFFFFF"));
+                    }
+
+                    th.getTabWidget().getChildAt(th.getCurrentTab()).setBackgroundColor(Color.parseColor("#FFFFFFFF")); // selected
+                    TextView tv = (TextView) th.getCurrentTabView().findViewById(android.R.id.title); //for Selected Tab
+                    tv.setTextColor(Color.parseColor("#005959"));
+                }
+            });
 
             TabHost.TabSpec spec = th.newTabSpec("Tab One");
             spec.setContent(R.id.tab1);

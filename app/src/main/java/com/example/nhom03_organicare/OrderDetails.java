@@ -92,7 +92,7 @@ public class OrderDetails extends AppCompatActivity {
         txtChooseShipment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(OrderDetails.this, Delivery_Pickup.class);
+                intent = new Intent(OrderDetails.this, TabHostDelivery.class);
                 startActivity(intent);
             }
         });
