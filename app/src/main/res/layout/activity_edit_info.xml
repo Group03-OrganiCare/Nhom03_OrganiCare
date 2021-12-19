@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
-    android:orientation="vertical">
+    tools:context=".EditInfo"
+    android:orientation="vertical"
+    android:padding="15dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/imbBackLogin"
-            android:layout_marginStart="10dp"
+            android:id="@+id/imbBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/ic_baseline_arrow_back"
             android:backgroundTint="@color/dark_green"/>
+
         <TextView
             android:layout_marginLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="ĐĂNG KÝ TÀI KHOẢN"
+            android:text="CHỈNH SỬA THÔNG TIN"
             android:textSize="20sp"
             android:textColor="@color/dark_green"
             android:textStyle="bold"
@@ -44,45 +44,7 @@
             android:background="@null"
             android:drawableStart="@drawable/ic_baseline_account_circle_24"
             android:drawablePadding="10dp"
-            android:hint="Tài khoản"
-            android:paddingStart="10sp"
-            android:textSize="18sp"
-            tools:ignore="RtlSymmetry" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_gravity="center"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edittext_background">
-
-        <EditText
-            android:id="@+id/edtPhonenumber"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@null"
-            android:hint="@string/phonenumber"
-            android:drawableStart="@drawable/ic_baseline_local_phone_24"            android:drawablePadding="10dp"
-
-            android:paddingStart="10sp"
-            android:textSize="18sp"
-            tools:ignore="RtlSymmetry" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_gravity="center"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edittext_background">
-
-        <EditText
-            android:id="@+id/edtPasswordRegister"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@null"
-            android:hint="@string/password"
-            android:drawableStart="@drawable/ic_baseline_lock_24"
-            android:drawablePadding="10dp"
+            android:hint="Họ và tên"
             android:paddingStart="10sp"
             android:textSize="18sp"
             tools:ignore="RtlSymmetry" />
@@ -95,13 +57,43 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_background">
 
+        <Spinner
+            android:id="@+id/spDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:spinnerMode="dialog"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_background">
+
+        <Spinner
+            android:id="@+id/spWard"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:spinnerMode="dialog"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_background">
+
         <EditText
-            android:id="@+id/edtPasswordChecked"
+            android:id="@+id/edtAddress"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@null"
-            android:hint="@string/passwordchecked"
-            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:hint="Địa chỉ cụ thể"
+            android:drawableStart="@drawable/ic_baseline_place2"
             android:drawablePadding="10dp"
             android:paddingStart="10sp"
             android:textSize="18sp"
@@ -128,23 +120,34 @@
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
-    <TextView
-        android:layout_margin="15dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Bằng cách Đăng ký, bạn đồng ý với Điều khoản Điều kiện và Chính sách Bảo mật của chúng tôi."
-        />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_background">
+
+        <EditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:hint="@string/phonenumber"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="10sp"
+            android:textSize="18sp"
+            tools:ignore="RtlSymmetry"/>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btnRegister2"
+        android:id="@+id/btnConfirm"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/border_background"
-        android:text="ĐĂNG KÝ"
-        android:textSize="18sp" />
-
+        android:text="XÁC NHẬN"
+        android:textSize="18sp"/>
 
 </LinearLayout>

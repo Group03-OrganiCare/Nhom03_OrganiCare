@@ -74,7 +74,7 @@ public class HomeFragment extends Fragment {
         products.add(new Product(R.drawable.kiwi, "Kiwi", 150000, "USDA", "JAS"));
         products.add(new Product(R.drawable.apple_fuji, "Táo Fuji", 180000, "USDA", "JAS"));
         products.add(new Product(R.drawable.carrot, "Cà rốt", 100000, "USDA", "JAS"));
-        products.add(new Product(R.drawable.green_cabbage, "Bắp cải xanh", 120000, "USDA", "JAS"));
+        products.add(new Product(R.drawable.green_cabbage, "Bắp cải", 120000, "USDA", "JAS"));
         products.add(new Product(R.drawable.juice_apple, "Nước ép táo", 200000, "USDA", "JAS"));
         products.add(new Product(R.drawable.cacao, "Bột cacao", 150000, "USDA", "JAS"));
         products.add(new Product(R.drawable.milk_canxi, "Sữa canxi", 180000, "USDA", "JAS"));
