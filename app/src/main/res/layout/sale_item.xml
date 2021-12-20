@@ -27,12 +27,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_gravity="left"/>
-            <ImageButton
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:background="@drawable/ic_heart"
-                android:layout_gravity="center_vertical"
-                android:paddingLeft="50dp" />
         </LinearLayout>
 
         <TextView

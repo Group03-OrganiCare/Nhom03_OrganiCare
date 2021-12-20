@@ -153,16 +153,8 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textColor="@color/white"
-                    android:layout_weight="3"/>
-                <TextView
-                    android:id="@+id/txtOrder1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Đặt hàng"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_weight="3"/>
+                    android:layout_weight="4"/>
+
                 <TextView
                     android:id="@+id/txtAddToCart"
                     android:layout_width="wrap_content"
@@ -171,7 +163,7 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textColor="@color/white"
-                    android:layout_weight="4"/>
+                    android:layout_weight="6"/>
             </LinearLayout>
 
 

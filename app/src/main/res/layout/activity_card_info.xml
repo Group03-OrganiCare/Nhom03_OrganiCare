@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CardInfo"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="15dp">
 
     <LinearLayout
         android:id="@+id/linearLayoutType"
@@ -31,8 +31,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CHỌN PHƯƠNG THỨC THANH TOÁN"
+                android:text="PHƯƠNG THỨC THANH TOÁN"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:textColor="@color/dark_green"
                 android:layout_marginStart="5dp"
@@ -53,6 +54,7 @@
                 android:id="@+id/edtCardNumb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16dp"
                 android:hint="4343 4343 4343 4343"/>
         </LinearLayout>
         <LinearLayout
@@ -66,7 +68,7 @@
                 android:layout_weight="6"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:hint="MM/YY"
                 android:background="@drawable/ic_rounded_edittext"
                 />
@@ -75,8 +77,9 @@
                 android:layout_weight="4"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:hint="CVV"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/ic_rounded_edittext"
                 />
         </LinearLayout>
@@ -97,8 +100,9 @@
             android:layout_height="wrap_content"
             android:text="QUÉT THẺ"
             android:drawableLeft="@drawable/ic_baseline_qr_code_scanner"
-            android:backgroundTint="@color/white"
             android:textColor="@color/dark_green"
+            android:backgroundTint="@color/white"
+            android:textSize="18dp"
             android:gravity="center"
             android:layout_marginEnd="20dp"
             />
@@ -106,7 +110,9 @@
             android:id="@+id/btnCardConfirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_background"
             android:text="XÁC NHẬN"
+            android:textSize="18dp"
             />
     </LinearLayout>
 
