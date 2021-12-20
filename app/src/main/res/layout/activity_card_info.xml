@@ -31,8 +31,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CHỌN PHƯƠNG THỨC THANH TOÁN"
+                android:text="PHƯƠNG THỨC THANH TOÁN"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:textColor="@color/dark_green"
                 android:layout_marginStart="5dp"
@@ -77,6 +78,7 @@
                 android:layout_height="40dp"
                 android:textSize="20sp"
                 android:hint="CVV"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/ic_rounded_edittext"
                 />
         </LinearLayout>

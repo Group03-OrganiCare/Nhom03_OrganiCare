@@ -67,16 +67,16 @@ public class TabHostInvoice extends AppCompatActivity {
             Toast.makeText(this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         linkViews();
-        initData();
-        loadData();
+//        initData();
+//        loadData();
         addEvents();
     }
 
     private void linkViews()
     {
-        lvDelivering = findViewById(R.id.lvDelivering);
-        lvDelivered = findViewById(R.id.lvDelivered);
-        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
+//        lvDelivering = findViewById(R.id.lvDelivering);
+//        lvDelivered = findViewById(R.id.lvDelivered);
+//        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
 
         btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS);
 

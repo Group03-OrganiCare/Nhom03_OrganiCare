@@ -33,13 +33,10 @@ public class item_layout_delivered extends AppCompatActivity {
     private void linkViews() {
         btnRate = findViewById(R.id.btnOpenRateBtS1);
 
-        lvDelivered = findViewById(R.id.lvDelivered);
+
     }
 
     private void addEvents() {
-
-
-
 
         btnRate.setOnClickListener(new View.OnClickListener() {
             @Override

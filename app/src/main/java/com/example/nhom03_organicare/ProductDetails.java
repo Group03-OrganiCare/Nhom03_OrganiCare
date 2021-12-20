@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,7 @@ public class ProductDetails extends AppCompatActivity {
     RecyclerView rcvSimilar;
     ItemSimilarAdapter adapter;
 
-    TextView txtAddToCart;
+    TextView txtAddToCart, txtText;
     private int numberOrder = 1;
     Spinner spinnerWeight;
 
@@ -47,6 +48,7 @@ public class ProductDetails extends AppCompatActivity {
         rcvSimilar = findViewById(R.id.rcvSimilar);
 
         txtAddToCart = findViewById(R.id.txtAddToCart);
+        txtText = findViewById(R.id.txtText);
 
 //        spinnerWeight = findViewById(R.id.spinnerWeight);
 //        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.weight, android.R.layout.simple_spinner_dropdown_item);
@@ -92,6 +94,15 @@ public class ProductDetails extends AppCompatActivity {
                         txtQuantity.setText(String.valueOf(numberOrder));
                     }
                 });
+
+                txtText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(ProductDetails.this, MessageActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
                 imvMinus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
