@@ -5,8 +5,11 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.adapter.DiscountAdapter;
 import com.example.model.Discount;
@@ -18,6 +21,7 @@ public class DiscountActivity extends AppCompatActivity {
 
     private RecyclerView rcvDiscount;
     private DiscountAdapter discountAdapter;
+    ImageButton imbBackDiscount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,7 @@ public class DiscountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discount);
 
         rcvDiscount = findViewById(R.id.rcvDiscount);
+        imbBackDiscount = findViewById(R.id.imbBackDiscount);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvDiscount.setLayoutManager(linearLayoutManager);
 
@@ -33,6 +38,14 @@ public class DiscountActivity extends AppCompatActivity {
 
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         rcvDiscount.addItemDecoration(itemDecoration);
+
+        imbBackDiscount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DiscountActivity.this, Account2Fragment.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private List<Discount> getListDiscounts() {

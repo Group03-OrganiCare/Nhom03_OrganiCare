@@ -48,7 +48,7 @@ public class TrackingOrder extends AppCompatActivity {
         ArrayList<ItemOrderTracking> trackingOrders = new ArrayList<>();
         trackingOrders.add(new ItemOrderTracking(R.drawable.apple_rose, "Táo Rose", 150000, "x5", "Đang giao" ));
         trackingOrders.add(new ItemOrderTracking(R.drawable.carrot , "Cà rốt hữu cơ", 50000, "x3", "Đang giao" ));
-        trackingOrders.add(new ItemOrderTracking(R.drawable.corn , "Bắp ngọt", 30000, "x3", "Đang giao" ));
+
 
         adapter = new ItemOrderTrackingAdapter(getApplicationContext(), trackingOrders);
         rcvOrderTracking.setAdapter(adapter);

@@ -32,6 +32,7 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp">
                     <LinearLayout
+                        android:id="@+id/layoutItem"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -92,6 +93,7 @@
 
                         </LinearLayout>
                         <LinearLayout
+                            android:id="@+id/layoutItem2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -154,6 +156,7 @@
                     android:paddingRight="15dp"
                     android:paddingTop="10dp">
                     <LinearLayout
+                        android:id="@+id/layoutItem3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
