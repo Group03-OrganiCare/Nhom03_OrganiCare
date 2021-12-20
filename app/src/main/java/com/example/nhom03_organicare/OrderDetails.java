@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -20,8 +21,9 @@ import java.util.ArrayList;
 public class OrderDetails extends AppCompatActivity {
 
     RecyclerView rcvOrderItem;
-    TextView txtChoosePayment, txtChooseShipment;
+    TextView txtNewAddress, txtChoosePayment, txtChooseShipment;
     Button btnConfirm;
+    ImageButton imbBackCart;
     ItemOrderAdapter adapter;
     Intent intent;
 
@@ -38,12 +40,12 @@ public class OrderDetails extends AppCompatActivity {
     }
 
     private void linkViews() {
-
+        imbBackCart = findViewById(R.id.imbBackCart);
         rcvOrderItem = findViewById(R.id.rcvOrderItem);
+        txtNewAddress = findViewById(R.id.txtNewAddress);
         txtChoosePayment =findViewById(R.id.txtChoosePayment);
         txtChooseShipment = findViewById(R.id.txtChooseShipment);
         btnConfirm = findViewById(R.id.btnConfirm);
-
     }
 
     private void configRecyclerView() {
@@ -63,22 +65,38 @@ public class OrderDetails extends AppCompatActivity {
     }
 
     private void addEvents() {
+        imbBackCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(OrderDetails.this, CartFragment.class);
+                startActivity(intent);
+            }
+        });
+
+        txtNewAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(OrderDetails.this, EditInfo.class);
+                startActivity(intent);
+            }
+        });
+
         txtChoosePayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 intent = new Intent(OrderDetails.this, PaymentOptions.class);
                 startActivity(intent);
-
             }
         });
+
         txtChooseShipment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(OrderDetails.this, Delivery_Pickup.class);
+                intent = new Intent(OrderDetails.this, TabHostDelivery.class);
                 startActivity(intent);
             }
         });
+
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,5 +110,4 @@ public class OrderDetails extends AppCompatActivity {
 
 
     }
-
 }

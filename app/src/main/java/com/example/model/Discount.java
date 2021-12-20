@@ -44,4 +44,5 @@ public class Discount {
     public void setGetCodeExp(String getCodeExp) {
         this.getCodeExp = getCodeExp;
     }
+
 }

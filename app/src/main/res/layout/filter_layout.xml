@@ -274,19 +274,19 @@
         <Button
             android:id="@+id/btnClearAll"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_weight="5"
-            android:text="XÓA TẤT CẢ"
-            android:textSize="16dp"
+            android:text="XÓA"
+            android:textSize="18dp"
             android:background="@drawable/grey_background"/>
 
         <Button
             android:id="@+id/btnApply"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="ÁP DỤNG"
-            android:textSize="16dp"
+            android:textSize="18dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/dark_green_background"/>
 

@@ -75,7 +75,6 @@ public class ProductAdapter extends BaseAdapter {
     public static class ViewHolder {
         ImageView imvProductThumb;
         TextView txtProductName, txtProductPrice, txtProductCert1, txtProductCert2;
-
     }
 
 }

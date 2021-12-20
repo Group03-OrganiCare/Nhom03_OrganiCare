@@ -11,26 +11,68 @@
 
         <ImageView
             android:id="@+id/imvSaleThumb"
-            android:layout_width="170dp"
-            android:layout_height="200dp"
-            android:src="@drawable/carrot"/>
-        <TextView
-            android:id="@+id/txtSaleProductName"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:src="@drawable/carrot"
+            android:layout_gravity="center"/>
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cà rốt hữu cơ"
-            android:textColor="#005959"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="left"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtSaleProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cà rốt hữu cơ"
+                android:textColor="#005959"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="left"/>
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_heart"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="50dp" />
+        </LinearLayout>
+
         <TextView
             android:id="@+id/txtSaleProductPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="115.000đ/kg"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_gravity="left" />
+            android:layout_gravity="left"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/txtProductCert1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="USDA"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:padding="2dp"
+                android:gravity="center"
+                android:background="@drawable/certification_background"/>
+
+            <TextView
+                android:id="@+id/txtProductCert2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="JAS"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:padding="2dp"
+                android:gravity="center"
+                android:background="@drawable/certification_background"/>
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
