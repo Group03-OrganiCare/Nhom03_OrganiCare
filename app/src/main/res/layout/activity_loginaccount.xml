@@ -7,15 +7,13 @@
     android:weightSum="1"
     tools:context=".LoginActivity"
     android:orientation="vertical"
->
+    android:padding="15dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:id="@+id/imbBack"
-            android:layout_marginStart="10dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/ic_baseline_arrow_back"
@@ -37,37 +35,39 @@
         android:src="@drawable/logo"/>
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_background">
 
         <EditText
+            android:id="@+id/edtLoginName"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:paddingStart="10sp"
             android:background="@null"
-            android:drawableStart="@drawable/ic_baseline_account_circle_24"
             android:drawablePadding="10dp"
             android:hint="Tên đăng nhập"
-            android:paddingStart="10sp"
             android:textSize="18sp"
+            android:textCursorDrawable="@drawable/cursor_color"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_background">
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Mật khẩu"
             android:textSize="18sp"
+            android:textCursorDrawable="@drawable/cursor_color"
             android:paddingStart="10sp"
             android:paddingEnd="10sp"
-            android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawableEnd="@drawable/ic_baseline_eye"
             android:drawablePadding="10dp"
             tools:ignore="RtlSymmetry"
@@ -99,7 +99,7 @@
 
     <Button
         android:id="@+id/btnSignIn1"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"

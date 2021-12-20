@@ -71,12 +71,7 @@
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/drawable/ic_account.xml" value="0.240625" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_account.xml" value="0.21041666666666667" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_cart.xml" value="0.18703703703703703" />
-        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_delivery.xml" value="0.22447916666666667" />
-        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_invoice.xml" value="0.22447916666666667" />
-        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/bottomsheet_rate.xml" value="0.22447916666666667" />
         <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/cart_item.xml" value="0.18703703703703703" />
-        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/fragment_cart.xml" value="0.22447916666666667" />
-        <entry key="..\:/HK5/M-Commerce/Fin-term/Nhom03_OrganiCare/app/src/main/res/layout/item_layout_delivered.xml" value="0.18703703703703703" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.19583333333333333" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_confirm_order.xml" value="0.1" />
         <entry key="..\:/HK5/Nhom03_OrganiCare/app/src/main/res/layout/activity_delivery.xml" value="0.14666666666666667" />
@@ -99,6 +94,7 @@
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/drawable/border1_background.xml" value="0.20925925925925926" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/drawable/border_background.xml" value="0.27447916666666666" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/drawable/certification_background.xml" value="0.27447916666666666" />
+        <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/drawable/cursor_color.xml" value="0.2324074074074074" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/drawable/dark_green_background.xml" value="0.27447916666666666" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/drawable/edittext_background.xml" value="0.27447916666666666" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/drawable/grey_background.xml" value="0.27447916666666666" />
@@ -136,9 +132,13 @@
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_registeraccount.xml" value="0.25833333333333336" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_search.xml" value="0.25833333333333336" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_splash.xml" value="0.25833333333333336" />
+        <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_delivery.xml" value="0.25833333333333336" />
+        <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_tab_host_invoice.xml" value="0.25833333333333336" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/activity_tracking_order.xml" value="0.25833333333333336" />
+        <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/bottomsheet_rate.xml" value="0.25833333333333336" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/cart_item.xml" value="0.25833333333333336" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/category_layout.xml" value="0.25833333333333336" />
+        <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/cursor_color.xml" value="0.24270833333333333" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_account.xml" value="0.25833333333333336" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_cart.xml" value="0.25833333333333336" />
         <entry key="..\:/study/HocKi5/M-Commerce/Project/Nhom03_OrganiCare/app/src/main/res/layout/fragment_delivery.xml" value="0.25833333333333336" />
