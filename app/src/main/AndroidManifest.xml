@@ -13,13 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
-            android:name=".item_layout_delivered"
+            android:name=".Setting"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".item_layout_delivered"
+            android:exported="true">
+
         </activity>
         <activity
             android:name=".EditInfo"
@@ -35,27 +40,25 @@
             android:exported="true" />
         <activity
             android:name=".TabHostInvoice"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".TabHostDelivery"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Point"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".TrackingOrder"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Account2"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MessageActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
