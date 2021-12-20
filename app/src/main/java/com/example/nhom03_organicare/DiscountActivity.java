@@ -50,10 +50,10 @@ public class DiscountActivity extends AppCompatActivity {
         return list;
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search_discount, menu);
-
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_search_discount, menu);
+//
+//        return true;
+//    }
 }

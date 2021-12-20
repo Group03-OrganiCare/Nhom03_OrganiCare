@@ -13,38 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
-            android:name=".EditInfo"
+            android:name=".item_layout_delivered"
             android:exported="true">
-
-            android:name=".ChangePasswordAccount"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name=".FAQ"
-            android:exported="true"></activity>
-
-        <activity
-            android:name=".ProductDetails"
-            android:exported="true"></activity>
-
-        <activity
-            android:name=".TabHostInvoice"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".TabHostDelivery"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".Point"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".TrackingOrder"
-            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,33 +22,52 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".EditInfo"
+            android:exported="true">
+            android:name=".ChangePasswordAccount"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".FAQ"
+            android:exported="true" />
+        <activity
+            android:name=".ProductDetails"
+            android:exported="true" />
+        <activity
+            android:name=".TabHostInvoice"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".TabHostDelivery"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Point"
+            android:exported="true"></activity>
+        <activity
+            android:name=".TrackingOrder"
+            android:exported="true"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".Account2"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".MessageActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
         <activity
             android:name=".OnboardingActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ConfirmOrder"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ForgetPassword"
             android:exported="true" />
