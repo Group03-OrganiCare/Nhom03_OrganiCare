@@ -13,28 +13,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
             android:name=".ChangePasswordAccount"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".FAQ"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".ProductDetails"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".TabHostInvoice"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".TabHostDelivery"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".TrackingOrder"
             android:exported="true" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
@@ -66,7 +73,7 @@
         <!-- android:exported="true" /> -->
         <activity
             android:name=".PaymentOptions"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".PaymentCard"
             android:exported="true" />
@@ -78,13 +85,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".Capture"
             android:screenOrientation="portrait"
