@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.adapter.MessageAdapter;
+import com.example.model.Message;
 
 import java.util.ArrayList;
 import java.util.List;
