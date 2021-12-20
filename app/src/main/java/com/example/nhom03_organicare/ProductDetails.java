@@ -32,6 +32,7 @@ public class ProductDetails extends AppCompatActivity {
     TextView txtAddToCart, txtText;
     private int numberOrder = 1;
     Spinner spinnerWeight;
+    Button btnBack1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class ProductDetails extends AppCompatActivity {
 
         txtAddToCart = findViewById(R.id.txtAddToCart);
         txtText = findViewById(R.id.txtText);
+        btnBack1 = findViewById(R.id.btnBack1);
 
 //        spinnerWeight = findViewById(R.id.spinnerWeight);
 //        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.weight, android.R.layout.simple_spinner_dropdown_item);
@@ -73,6 +75,14 @@ public class ProductDetails extends AppCompatActivity {
                 //EditText edtOrderNote;
                 Button btnCloseOrder = bottomSheetOrder.findViewById(R.id.btnCloseOrder),
                         btnConfirmOrder =bottomSheetOrder.findViewById(R.id.btnConfirmOrder);
+
+                btnBack1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(ProductDetails.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
 
                 btnCloseOrder.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -2,10 +2,12 @@ package com.example.nhom03_organicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TabHost;
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 public class TabHostInvoice extends AppCompatActivity {
 
     ListView lvDelivering,lvDelivered,lvDeliverCancel;
+    LinearLayout layoutItem, layoutItem2, layoutItem3;
     ArrayList<Delivering> deliverings;
     DeliveringAdapter adapter,adapter1,adapter2;
 
@@ -79,7 +82,7 @@ public class TabHostInvoice extends AppCompatActivity {
 //        lvDelivered = findViewById(R.id.lvDelivered);
 //        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
 
-        btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS_1);
+        btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS);
 
 
     }
@@ -149,6 +152,30 @@ public class TabHostInvoice extends AppCompatActivity {
                     }
                 });
                 bottomSheetRate.show();
+            }
+        });
+
+        layoutItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TabHostInvoice.this, TrackingOrder.class);
+                startActivity(intent);
+            }
+        });
+
+        layoutItem2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TabHostInvoice.this, TrackingOrder.class);
+                startActivity(intent);
+            }
+        });
+
+        layoutItem3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TabHostInvoice.this, TrackingOrder.class);
+                startActivity(intent);
             }
         });
     }

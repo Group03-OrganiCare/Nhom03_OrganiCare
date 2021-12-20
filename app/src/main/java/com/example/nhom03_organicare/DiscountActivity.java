@@ -29,6 +29,7 @@ public class DiscountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discount);
 
         rcvDiscount = findViewById(R.id.rcvDiscount);
+        imbBackDiscount = findViewById(R.id.imbBackDiscount);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvDiscount.setLayoutManager(linearLayoutManager);
 
@@ -38,19 +39,10 @@ public class DiscountActivity extends AppCompatActivity {
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         rcvDiscount.addItemDecoration(itemDecoration);
 
-        linkView();
-        addEvent();
-    }
-
-    private void linkView() {
-        imbBackDiscount = findViewById(R.id.imbBackDiscount);
-    }
-
-    private void addEvent() {
         imbBackDiscount.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DiscountActivity.this, Account2.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(DiscountActivity.this, Account2Fragment.class);
                 startActivity(intent);
             }
         });
@@ -70,7 +62,6 @@ public class DiscountActivity extends AppCompatActivity {
 
         return list;
     }
-
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
