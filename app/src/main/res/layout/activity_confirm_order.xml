@@ -98,7 +98,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="25dp"
         android:text="Quay về trang chủ"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:background="@drawable/certification_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTotalData1"/>

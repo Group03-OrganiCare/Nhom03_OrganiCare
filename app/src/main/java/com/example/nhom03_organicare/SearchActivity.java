@@ -23,11 +23,11 @@ import java.util.ArrayList;
 
 public class SearchActivity extends AppCompatActivity {
 
-    ImageView imvFilter;
+    ImageView imvFilter, imvBack;
     RecyclerView rcvSuggestion;
     ItemSuggestionAdapter adapter;
-
     DrawerLayout drawerFilter;
+    Intent intent;
 
 
     @Override
@@ -42,6 +42,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void linkViews() {
+        imvBack = findViewById(R.id.imvBack);
         rcvSuggestion = findViewById(R.id.rcvSuggestion);
         imvFilter = findViewById(R.id.imvFilter);
         drawerFilter = findViewById(R.id.drawerFilter);
@@ -70,6 +71,14 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
+        imvBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(SearchActivity.this, HomeFragment.class);
+                startActivity(intent);
+            }
+        });
+
         imvFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,0 +1,39 @@
+package com.example.nhom03_organicare;
+
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+
+public class Account2Fragment extends Fragment {
+    Button btnPoint, btnHistory;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view= inflater.inflate(R.layout.fragment_account2, container, false);
+        btnPoint = view.findViewById(R.id.btnPoint);
+        btnHistory = view.findViewById(R.id.btnHistory);
+        btnPoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Point.class);
+                startActivity(intent);
+            }
+        });
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), TabHostDelivery.class);
+                startActivity(intent);
+            }
+        });
+        return view;
+    }
+}

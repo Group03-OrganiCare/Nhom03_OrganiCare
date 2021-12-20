@@ -13,29 +13,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nhom03_OrganiCare">
         <activity
+            android:name=".item_layout_delivered"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".EditInfo"
+            android:exported="true">
             android:name=".ChangePasswordAccount"
             android:exported="true" >
         </activity>
-
         <activity
             android:name=".FAQ"
-            android:exported="true"></activity>
-
+            android:exported="true" />
         <activity
             android:name=".ProductDetails"
-            android:exported="true"></activity>
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".TabHostInvoice"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".TabHostDelivery"
             android:exported="true"></activity>
         <activity
+            android:name=".Point"
+            android:exported="true"></activity>
+        <activity
             android:name=".TrackingOrder"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".SplashActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Account2"
+            android:exported="true"></activity>
+        <activity
+            android:name=".MessageActivity"
             android:exported="true"></activity>
         <activity
             android:name=".SearchActivity"
@@ -68,7 +89,7 @@
         <!-- android:exported="true" /> -->
         <activity
             android:name=".PaymentOptions"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".PaymentCard"
             android:exported="true" />
@@ -80,25 +101,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".Account2"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".MessageActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".DiscountActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Capture"
             android:screenOrientation="portrait"

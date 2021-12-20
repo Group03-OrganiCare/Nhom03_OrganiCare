@@ -72,4 +72,10 @@ public class DiscountActivity extends AppCompatActivity {
     }
 
 
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_search_discount, menu);
+//
+//        return true;
+//    }
 }
