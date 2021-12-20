@@ -137,6 +137,7 @@ public class TabHostInvoice extends AppCompatActivity {
                                 break;
                         }
                         Toast.makeText(TabHostInvoice.this, message, Toast.LENGTH_SHORT).show();
+                        bottomSheetRate.show();
                     }
                 });
                 btnRate.setOnClickListener(new View.OnClickListener() {

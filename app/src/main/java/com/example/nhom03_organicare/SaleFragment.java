@@ -1,5 +1,6 @@
 package com.example.nhom03_organicare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageButton;
 
 import com.example.adapter.SaleAdapter;
 import com.example.model.Sale_Item;
@@ -19,6 +21,7 @@ public class SaleFragment extends Fragment {
     GridView gvSaleProduct;
     ArrayList<Sale_Item> sale_items;
     SaleAdapter adapter;
+    ImageButton imbBackSale;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,6 +30,15 @@ public class SaleFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_sale, container, false);
         //linkViews
         gvSaleProduct = view.findViewById(R.id.gvSaleProduct);
+        imbBackSale = view.findViewById(R.id.imbBackSale);
+
+        imbBackSale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), HomeFragment.class);
+                startActivity(intent);
+            }
+        });
 
         //load Data
         adapter = new SaleAdapter(getContext(), R.layout.item_layout, initData());
@@ -50,4 +62,5 @@ public class SaleFragment extends Fragment {
 
         return sale_items;
     }
+
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <ImageView
+        android:id="@+id/imvIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_baseline_place2"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:text="Quận 1"
+        android:textSize="18sp"
+        android:textColor="@color/light_black"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

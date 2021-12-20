@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.example.adapter.MessageAdapter;
 
@@ -19,6 +21,7 @@ public class MessageActivity extends AppCompatActivity {
 
     private EditText edtMessage;
     private Button btnSend;
+    private ImageButton imbBackMessage;
 
     private RecyclerView rcvMessage;
     private MessageAdapter messageAdapter;
@@ -30,12 +33,15 @@ public class MessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_message);
 
         linkViews();
+        addEvent();
+
     }
 
     private void linkViews() {
         edtMessage = findViewById(R.id.edtMessage);
         btnSend = findViewById(R.id.btnSend);
         rcvMessage = findViewById(R.id.rcv_message);
+        imbBackMessage = findViewById(R.id.imbBackMessage);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvMessage.setLayoutManager(linearLayoutManager);
@@ -65,5 +71,15 @@ public class MessageActivity extends AppCompatActivity {
         rcvMessage.scrollToPosition(mListMessage.size() - 1);
 
         edtMessage.setText("");
+    }
+
+    private void addEvent() {
+        imbBackMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MessageActivity.this, ProductDetails.class);
+                startActivity(intent);
+            }
+        });
     }
 }
