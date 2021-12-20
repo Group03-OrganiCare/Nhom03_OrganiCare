@@ -29,6 +29,11 @@
         <activity
             android:name=".ProductDetails"
             android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".TabHostInvoice"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,13 +41,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TabHostInvoice"
+            android:name=".TabHostDelivery"
             android:exported="true">
 
         </activity>
-        <activity
-            android:name=".TabHostDelivery"
-            android:exported="true"></activity>
         <activity
             android:name=".Point"
             android:exported="true"></activity>

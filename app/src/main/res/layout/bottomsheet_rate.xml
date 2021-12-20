@@ -28,6 +28,8 @@
         android:layout_height="100dp"
         android:hint="Viết đánh giá của bạn ở đây"
         android:background="@color/light_blue"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:padding="10dp"
         android:layout_marginTop="20dp"/>
     <Button
@@ -35,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đánh giá"
+        android:textColor="@color/white"
         android:backgroundTint="@color/dark_green"
         android:layout_marginTop="20dp"/>
 

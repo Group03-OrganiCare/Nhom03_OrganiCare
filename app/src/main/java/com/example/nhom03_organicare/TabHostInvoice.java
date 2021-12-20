@@ -34,9 +34,11 @@ public class TabHostInvoice extends AppCompatActivity {
             TabHost th = findViewById(R.id.tabHostInvoice);
             th.setup();
 
+
             th.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
                 @Override
                 public void onTabChanged(String s) {
+
                     for (int i = 0; i < th.getTabWidget().getChildCount(); i++) {
                         th.getTabWidget().getChildAt(i).setBackgroundColor(Color.parseColor("#005959")); // unselected
                         TextView tv = (TextView) th.getTabWidget().getChildAt(i).findViewById(android.R.id.title); //Unselected Tabs
@@ -48,7 +50,6 @@ public class TabHostInvoice extends AppCompatActivity {
                     tv.setTextColor(Color.parseColor("#005959"));
                 }
             });
-
             TabHost.TabSpec spec = th.newTabSpec("Tab One");
             spec.setContent(R.id.tab1);
             spec.setIndicator("Đang giao");
@@ -78,7 +79,7 @@ public class TabHostInvoice extends AppCompatActivity {
 //        lvDelivered = findViewById(R.id.lvDelivered);
 //        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
 
-        btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS);
+        btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS_1);
 
 
     }
@@ -144,6 +145,7 @@ public class TabHostInvoice extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(TabHostInvoice.this, "Đánh giá của bạn đã được ghi nhận", Toast.LENGTH_SHORT).show();
+                        bottomSheetRate.dismiss();
                     }
                 });
                 bottomSheetRate.show();
