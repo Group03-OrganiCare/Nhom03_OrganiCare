@@ -33,6 +33,7 @@
                     android:id="@+id/btnBack1"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/ic_baseline_arrow_back" />
 
@@ -145,6 +146,7 @@
                 android:weightSum="10"
                 app:layout_constraintTop_toBottomOf="@id/layoutCoupon"
                 app:layout_constraintBottom_toTopOf="@id/NavigationBar">
+
                 <TextView
                     android:id="@+id/txtText"
                     android:layout_width="wrap_content"
@@ -176,6 +178,7 @@
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@id/NavigationBar"
                 app:layout_constraintBottom_toTopOf="@+id/layoutReview">
+
                 <TextView
                     android:id="@+id/txtProductDes"
                     android:layout_width="wrap_content"

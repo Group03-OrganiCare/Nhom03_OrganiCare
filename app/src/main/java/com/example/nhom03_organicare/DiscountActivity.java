@@ -42,8 +42,7 @@ public class DiscountActivity extends AppCompatActivity {
         imbBackDiscount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DiscountActivity.this, Account2Fragment.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
     }

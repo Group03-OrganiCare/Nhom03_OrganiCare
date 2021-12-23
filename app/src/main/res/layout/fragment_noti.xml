@@ -19,7 +19,7 @@
             android:layout_height="40dp"
             android:background="@drawable/ic_baseline_arrow_back"
             android:backgroundTint="@color/dark_green"
-            android:layout_weight="1"/>
+            android:layout_weight="0.5"/>
         <TextView
             android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
             android:textColor="@color/dark_green"
             android:textStyle="bold"
             android:gravity="center_vertical"
-            android:layout_weight="9"/>
+            android:layout_weight="9.5"/>
         <ImageButton
             android:id="@+id/imbReadCheck"
             android:layout_width="40dp"
@@ -45,6 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        android:listSelector="@color/light_blue"/>
+        android:listSelector="@color/light_blue_20"/>
 
 </LinearLayout>

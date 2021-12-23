@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartFragment"
-    android:orientation="vertical"
-    android:padding="15dp">
+    tools:context=".FavoriteProducts"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageButton
-            android:id="@+id/imbBackSale"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imvBackAcc2"
             android:layout_marginStart="10dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/ic_baseline_arrow_back"
             android:backgroundTint="@color/dark_green"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:text="GIỎ HÀNG"
+            android:text="SẢN PHẨM YÊU THÍCH"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@color/dark_green"
             android:gravity="center_vertical"/>
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/lvPickedProduct"
+
+    <GridView
+        android:id="@+id/gvFavoriteProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.0"
         android:scrollbars="none"
-        android:layout_marginBottom="10dp"
+        android:numColumns="2"
         android:divider="@android:color/transparent"
-        android:dividerHeight="5sp"/>
-
-    <Button
-        android:id="@+id/btnOrder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/dark_green_background"
-        android:text="Mua hàng"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:layout_gravity="center"/>
+        android:dividerHeight="5sp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
 </LinearLayout>

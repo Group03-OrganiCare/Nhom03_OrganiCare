@@ -47,7 +47,7 @@ public class ForgetPassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(edtEmail_Phone.getText().length() == 0){
-                    Toast.makeText(ForgetPassword.this, "Bạn phải nhập Email hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgetPassword.this, "Bạn phải nhập email hoặc số điện thoại", Toast.LENGTH_SHORT).show();
                 }else {
                     Intent intent = new Intent(ForgetPassword.this, OTPActivity.class);
                     startActivity(intent);

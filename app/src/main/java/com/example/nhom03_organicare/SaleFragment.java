@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 
@@ -41,8 +42,17 @@ public class SaleFragment extends Fragment {
         });
 
         //load Data
-        adapter = new SaleAdapter(getContext(), R.layout.item_layout, initData());
+        adapter = new SaleAdapter(getContext(), R.layout.sale_item, initData());
         gvSaleProduct.setAdapter(adapter);
+
+        gvSaleProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), ProductDetails.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
 
     }
@@ -50,12 +60,12 @@ public class SaleFragment extends Fragment {
     private ArrayList<Sale_Item> initData() {
         sale_items = new ArrayList<Sale_Item>();
         sale_items.add(new Sale_Item(100.000, R.drawable.red_cabbage,"Bắp cải tím"));
-        sale_items.add(new Sale_Item(100.000, R.drawable.green_cabbage,"Bắp cải xanh hữu cơ"));
+        sale_items.add(new Sale_Item(100.000, R.drawable.green_cabbage,"Bắp cải xanh"));
         sale_items.add(new Sale_Item(220.000, R.drawable.kiwi,"Kiwi Zespri vàng"));
         sale_items.add(new Sale_Item(95.000, R.drawable.corn,"Bắp ngọt"));
-        sale_items.add(new Sale_Item(115.000, R.drawable.carrot,"Cà rốt tím hữu cơ"));
+        sale_items.add(new Sale_Item(115.000, R.drawable.carrot,"Cà rốt hữu cơ"));
         sale_items.add(new Sale_Item(120.000, R.drawable.apple_fuji,"Táo Fuji S100"));
-        sale_items.add(new Sale_Item(120.000, R.drawable.apple_dazzle,"Bắp cải tím hữu cơ"));
+        sale_items.add(new Sale_Item(120.000, R.drawable.raspberry,"Raspberry"));
         sale_items.add(new Sale_Item(115.000, R.drawable.potato,"Khoai tây hữu cơ"));
         sale_items.add(new Sale_Item(70.000, R.drawable.sweet_potato,"Khoai lang Nhật"));
         sale_items.add(new Sale_Item(105.000, R.drawable.tomato,"Cà chua hữu cơ"));
