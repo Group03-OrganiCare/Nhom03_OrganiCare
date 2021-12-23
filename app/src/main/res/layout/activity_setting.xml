@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Setting"
     android:orientation="vertical">
-<!--    <ScrollView-->
-<!--        android:layout_width="fill_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:fillViewport="true">-->
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120px"
@@ -79,9 +73,10 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@drawable/ic_baseline_account_circle_24">
+            android:src="@drawable/ic_baseline_lock_24">
         </ImageView>
         <LinearLayout
+            android:id="@+id/ChangePassword"
             android:layout_width="800px"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -115,7 +110,7 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@drawable/ic_baseline_account_circle_24">
+            android:src="@drawable/ic_baseline_share_24">
         </ImageView>
         <LinearLayout
             android:layout_width="800px"
@@ -161,7 +156,7 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@drawable/ic_baseline_account_circle_24">
+            android:src="@drawable/ic_baseline_notifications_24">
         </ImageView>
         <LinearLayout
             android:layout_width="800px"
@@ -181,12 +176,15 @@
                 android:text="Cập nhật thông tin mới nhất">
             </TextView>
         </LinearLayout>
-        <ImageView
-            android:layout_width="80px"
-            android:layout_height="100px"
-            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:layout_gravity="end">
-        </ImageView>
+        <Switch
+            android:id="@+id/simpleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="true"
+            android:text="switch 1"
+            android:textOff="Off"
+            android:textOn="On" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -197,7 +195,7 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@drawable/ic_baseline_account_circle_24">
+            android:src="@drawable/ic_baseline_notifications_24">
         </ImageView>
         <LinearLayout
             android:layout_width="800px"
@@ -217,12 +215,15 @@
                 android:text="Cập nhật bản mới nhất">
             </TextView>
         </LinearLayout>
-        <ImageView
-            android:layout_width="80px"
-            android:layout_height="100px"
-            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:layout_gravity="end">
-        </ImageView>
+        <Switch
+            android:id="@+id/simpleSwitch_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:text="switch 1"
+            android:textOff="Off"
+            android:textOn="On" />
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
@@ -242,7 +243,7 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@drawable/ic_baseline_account_circle_24">
+            android:src="@drawable/ic_baseline_star_24">
         </ImageView>
         <LinearLayout
             android:layout_width="800px"
@@ -278,7 +279,7 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@drawable/ic_baseline_account_circle_24">
+            android:src="@drawable/ic_baseline_bookmark_24">
         </ImageView>
         <LinearLayout
             android:layout_width="800px"
@@ -315,7 +316,7 @@
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
-            android:src="@drawable/ic_baseline_account_circle_24">
+            android:src="@drawable/ic_baseline_login_24">
         </ImageView>
         <LinearLayout
             android:layout_width="800px"
@@ -336,5 +337,4 @@
             android:layout_gravity="end">
         </ImageView>
     </LinearLayout>
-<!--    </ScrollView>-->
 </LinearLayout>

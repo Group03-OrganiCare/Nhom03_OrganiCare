@@ -9,10 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 public class Account2Fragment extends Fragment {
-    Button btnPoint, btnHistory, btnDiscount, btnFavorite;
+    Button btnPoint, btnHistory, btnDiscount;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,6 +23,8 @@ public class Account2Fragment extends Fragment {
         btnHistory = view.findViewById(R.id.btnHistory);
         btnFavorite = view.findViewById(R.id.btnFavorite);
         btnDiscount = view.findViewById(R.id.btnDiscount);
+
+        imvSetting = view.findViewById(R.id.imvSetting);
 
         btnPoint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +54,14 @@ public class Account2Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), DiscountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imvSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Setting.class);
                 startActivity(intent);
             }
         });

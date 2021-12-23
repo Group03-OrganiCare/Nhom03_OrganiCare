@@ -9,11 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 public class AccountFragment extends Fragment {
 
     Button btnLogin, btnSignin;
+    ImageView imvSetting;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,6 +25,7 @@ public class AccountFragment extends Fragment {
         //linkViews
         btnLogin = view.findViewById(R.id.btnLogin);
         btnSignin = view.findViewById(R.id.btnSignin);
+        imvSetting = view.findViewById(R.id.imvSetting);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +43,14 @@ public class AccountFragment extends Fragment {
             }
         });
 
-        return view;
+        imvSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), Setting.class);
+                startActivity(intent);
+            }
+        });
 
+        return view;
     }
 }
