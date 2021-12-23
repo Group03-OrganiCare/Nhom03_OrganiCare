@@ -9,7 +9,8 @@
     <TabHost
         android:id="@+id/tabHostInvoice"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/TabWidgetTheme">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -29,14 +30,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp">
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
                     <LinearLayout
                         android:id="@+id/layoutItem"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
+                        android:orientation="horizontal">
                         <ImageView
                             android:id="@+id/imvProduct_delivery"
                             android:layout_width="100dp"
@@ -44,9 +45,10 @@
                             android:src="@drawable/ic_launcher_background">
                         </ImageView>
                         <LinearLayout
-                            android:layout_width="135sp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp">
 
                             <TextView
                                 android:id="@+id/txtNameProduct_delivery"
@@ -95,32 +97,12 @@
                         <LinearLayout
                             android:id="@+id/layoutItem2"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:orientation="vertical"
                             android:gravity="bottom">
-
-                            <Button
-                                android:id="@+id/btnOpenRateBtS"
-                                android:layout_width="100sp"
-                                android:layout_height="40sp"
-                                android:text="Đánh giá"
-                                android:textSize="12sp"
-                                android:gravity="center"
-                                android:layout_gravity="right">
-                            </Button>
-                            <Button
-                                android:id="@+id/btnReOrder"
-                                android:layout_width="100sp"
-                                android:layout_height="40sp"
-                                android:text="Mua lại"
-                                android:textSize="12sp"
-                                android:gravity="center"
-                                android:layout_gravity="right">
-                            </Button>
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="right">
+                                android:layout_height="wrap_content">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -132,19 +114,20 @@
                                     android:id="@+id/txtPriceInvoice_delivery"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="750.000"
+                                    android:text="750.000 "
                                     android:textSize="12sp"
                                     android:textStyle="italic">
                                 </TextView>
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text=" VND"
+                                    android:text="VND"
                                     android:textSize="12sp"
                                     android:textStyle="italic">
                                 </TextView>
                             </LinearLayout>
                         </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -152,7 +135,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingLeft="15dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="15dp"
                     android:paddingTop="10dp">
                     <LinearLayout
@@ -161,18 +144,19 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <ImageView
-                            android:id="@+id/imvProduct_delivery2"
+                            android:id="@+id/imvProduct_delivered"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:src="@drawable/ic_launcher_background">
                         </ImageView>
                         <LinearLayout
-                            android:layout_width="135sp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp">
 
                             <TextView
-                                android:id="@+id/txtNameProduct_delivery2"
+                                android:id="@+id/txtNameProduct_delivered"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Táo Dazzle"
@@ -180,7 +164,7 @@
                                 android:textStyle="bold">
                             </TextView>
                             <TextView
-                                android:id="@+id/txtPriceEach_delivery2"
+                                android:id="@+id/txtPriceEach_delivered"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="150.000VND"
@@ -198,7 +182,7 @@
                                     android:textStyle="italic">
                                 </TextView>
                                 <TextView
-                                    android:id="@+id/txtWeight_delivery2"
+                                    android:id="@+id/txtWeight_delivered"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="5"
@@ -219,10 +203,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:gravity="bottom">
+                            android:layout_gravity="bottom">
 
                             <Button
-                                android:id="@+id/btnOpenRateBtS2"
+                                android:id="@+id/btnOpenRateBtS_1"
                                 android:layout_width="100sp"
                                 android:layout_height="40sp"
                                 android:text="Đánh giá"
@@ -231,7 +215,7 @@
                                 android:layout_gravity="right">
                             </Button>
                             <Button
-                                android:id="@+id/btnReOrder2"
+                                android:id="@+id/btnReOrder"
                                 android:layout_width="100sp"
                                 android:layout_height="40sp"
                                 android:text="Mua lại"
@@ -242,7 +226,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:gravity="right">
+                                android:layout_gravity="bottom">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -275,25 +259,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp">
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <ImageView
-                            android:id="@+id/imvProduct_delivery3"
+                            android:id="@+id/imvProduct_deliverycancel"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:src="@drawable/ic_launcher_background">
                         </ImageView>
                         <LinearLayout
-                            android:layout_width="135sp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp">
 
                             <TextView
-                                android:id="@+id/txtNameProduct_delivery3"
+                                android:id="@+id/txtNameProduct_deliverycancel"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Táo Dazzle"
@@ -301,7 +287,7 @@
                                 android:textStyle="bold">
                             </TextView>
                             <TextView
-                                android:id="@+id/txtPriceEach_delivery3"
+                                android:id="@+id/txtPriceEach_deliverycancel"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="150.000VND"
@@ -319,7 +305,7 @@
                                     android:textStyle="italic">
                                 </TextView>
                                 <TextView
-                                    android:id="@+id/txtWeight_delivery3"
+                                    android:id="@+id/txtWeight_deliverycancel"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="5"
@@ -334,36 +320,26 @@
                                     android:textStyle="italic">
                                 </TextView>
                             </LinearLayout>
-
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:orientation="vertical"
                             android:gravity="bottom">
 
                             <Button
-                                android:id="@+id/btnOpenRateBtS3"
-                                android:layout_width="100sp"
-                                android:layout_height="40sp"
-                                android:text="Đánh giá"
-                                android:textSize="12sp"
-                                android:gravity="center"
-                                android:layout_gravity="right">
-                            </Button>
-                            <Button
-                                android:id="@+id/btnReOrder3"
+                                android:id="@+id/BtnBuyAgain"
                                 android:layout_width="100sp"
                                 android:layout_height="40sp"
                                 android:text="Mua lại"
-                                android:textSize="12sp"
                                 android:gravity="center"
-                                android:layout_gravity="right">
+                                android:layout_gravity="right"
+                                android:textSize="12sp">
                             </Button>
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:gravity="right">
+                                android:layout_gravity="bottom">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -372,7 +348,7 @@
                                     android:textStyle="italic">
                                 </TextView>
                                 <TextView
-                                    android:id="@+id/txtPriceInvoice_delivery3"
+                                    android:id="@+id/txtPriceInvoice_deliverycancel"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="750.000"
@@ -391,7 +367,6 @@
 
                     </LinearLayout>
                 </LinearLayout>
-
             </FrameLayout>
         </LinearLayout>
     </TabHost>
