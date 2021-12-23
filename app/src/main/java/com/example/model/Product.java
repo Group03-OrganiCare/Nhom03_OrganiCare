@@ -1,6 +1,11 @@
 package com.example.model;
 
-public class Product {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private int ProductThumb;
     private String ProductName;
     private double ProductPrice;
@@ -54,4 +59,5 @@ public class Product {
     public void setProductCert2(String productCert2) {
         ProductCert2 = productCert2;
     }
+
 }

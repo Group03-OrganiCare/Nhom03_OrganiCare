@@ -7,10 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.example.adapter.SpinnerAdapter;
+import com.example.model.Product;
+import com.example.model.UserInfo;
 
 public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -25,6 +28,7 @@ public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSel
             R.drawable.ic_baseline_place2, R.drawable.ic_baseline_place2, R.drawable.ic_baseline_place2, R.drawable.ic_baseline_place2};
 
     Spinner spDistrict, spWard;
+    EditText edtName, edtAddress, edtEmail, edtPhone;
     ImageButton imbBack;
     Button btnConfirm;
     Intent intent;
@@ -44,6 +48,10 @@ public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSel
         spWard = findViewById(R.id.spWard);
         imbBack = findViewById(R.id.imbBack);
         btnConfirm = findViewById(R.id.btnConfirm);
+        edtName = findViewById(R.id.edtName);
+        edtAddress = findViewById(R.id.edtAddress);
+        edtEmail = findViewById(R.id.edtEmail);
+        edtPhone = findViewById(R.id.edtPhone);
     }
 
     private void loadData() {
@@ -78,7 +86,22 @@ public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSel
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String name = edtName.getText().toString();
+                String district = spDistrict.getSelectedItem().toString();
+                String ward = spWard.getSelectedItem().toString();
+                String address = edtAddress.getText().toString();
+                String email = edtEmail.getText().toString();
+                String phone = edtPhone.getText().toString();
+
+                UserInfo userInfo = new UserInfo(name, district, ward, address, email, phone);
+
                 intent = new Intent(EditInfo.this, OrderDetails.class);
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("info", userInfo);
+
+                intent.putExtras(bundle);
+
                 startActivity(intent);
             }
         });

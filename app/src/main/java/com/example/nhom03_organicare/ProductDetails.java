@@ -28,8 +28,8 @@ public class ProductDetails extends AppCompatActivity {
 
     RecyclerView rcvSimilar;
     ItemSimilarAdapter adapter;
-
-    TextView txtAddToCart, txtText;
+    ImageView imvProductImage;
+    TextView txtAddToCart, txtText, txtProductNameDetail, txtProductPriceDetail;
     private int numberOrder = 1;
     Spinner spinnerWeight;
     Button btnBack1;
@@ -47,7 +47,7 @@ public class ProductDetails extends AppCompatActivity {
     private void linkViews() {
 
         rcvSimilar = findViewById(R.id.rcvSimilar);
-
+        imvProductImage = findViewById(R.id.imvProductImage);
         txtAddToCart = findViewById(R.id.txtAddToCart);
         txtText = findViewById(R.id.txtText);
         btnBack1 = findViewById(R.id.btnBack1);
