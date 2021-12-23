@@ -13,7 +13,9 @@ import android.widget.ImageView;
 
 
 public class Account2Fragment extends Fragment {
-    Button btnPoint, btnHistory, btnDiscount;
+    Button btnPoint, btnHistory, btnDiscount, btnFavorite;
+    ImageView imvSetting;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

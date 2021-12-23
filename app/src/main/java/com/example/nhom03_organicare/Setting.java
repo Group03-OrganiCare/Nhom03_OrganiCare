@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 public class Setting extends AppCompatActivity {
-    LinearLayout ChangePassword;
+    LinearLayout layoutChangePassword, layoutFAQ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,23 @@ public class Setting extends AppCompatActivity {
     }
 
     private void linkViews() {
-        ChangePassword = findViewById(R.id.ChangePassword);
+        layoutChangePassword = findViewById(R.id.layoutChangePassword);
+        layoutFAQ = findViewById(R.id.layoutFAQ);
     }
 
     private void addEvents() {
-        ChangePassword.setOnClickListener(new View.OnClickListener() {
+        layoutChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Setting.this,ForgetPassword.class);
+                Intent intent = new Intent(Setting.this, ChangePassword.class);
+                startActivity(intent);
+            }
+        });
+
+        layoutFAQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Setting.this, FAQ.class);
                 startActivity(intent);
             }
         });
