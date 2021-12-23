@@ -14,7 +14,6 @@ import android.widget.ImageView;
 
 public class Account2Fragment extends Fragment {
     Button btnPoint, btnHistory, btnDiscount;
-    ImageView imvSetting;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,6 +21,7 @@ public class Account2Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_account2, container, false);
         btnPoint = view.findViewById(R.id.btnPoint);
         btnHistory = view.findViewById(R.id.btnHistory);
+        btnFavorite = view.findViewById(R.id.btnFavorite);
         btnDiscount = view.findViewById(R.id.btnDiscount);
 
         imvSetting = view.findViewById(R.id.imvSetting);
@@ -33,6 +33,7 @@ public class Account2Fragment extends Fragment {
                 startActivity(intent);
             }
         });
+
         btnHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,6 +41,15 @@ public class Account2Fragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FavoriteProducts.class);
+                startActivity(intent);
+            }
+        });
+
         btnDiscount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

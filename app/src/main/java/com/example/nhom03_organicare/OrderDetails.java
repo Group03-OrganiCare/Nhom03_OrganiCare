@@ -22,7 +22,7 @@ public class OrderDetails extends AppCompatActivity {
 
     RecyclerView rcvOrderItem;
     TextView txtNewAddress, txtChoosePayment, txtChooseShipment;
-    Button btnConfirm;
+    Button btnConfirm, btnClose;
     ImageButton imbBackCart;
     ItemOrderAdapter adapter;
     Intent intent;
@@ -46,6 +46,7 @@ public class OrderDetails extends AppCompatActivity {
         txtChoosePayment =findViewById(R.id.txtChoosePayment);
         txtChooseShipment = findViewById(R.id.txtChooseShipment);
         btnConfirm = findViewById(R.id.btnConfirm);
+        btnClose = findViewById(R.id.btnClose);
     }
 
     private void configRecyclerView() {
@@ -68,8 +69,7 @@ public class OrderDetails extends AppCompatActivity {
         imbBackCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(OrderDetails.this, CartFragment.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
 
@@ -93,6 +93,14 @@ public class OrderDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(OrderDetails.this, TabHostDelivery.class);
+                startActivity(intent);
+            }
+        });
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(OrderDetails.this, MainActivity2.class);
                 startActivity(intent);
             }
         });

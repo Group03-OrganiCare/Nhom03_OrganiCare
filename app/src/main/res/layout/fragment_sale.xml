@@ -31,10 +31,12 @@
         android:id="@+id/gvSaleProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:listSelector="@android:color/holo_blue_bright"
+        android:scrollbars="none"
         android:numColumns="2"
         android:divider="@android:color/transparent"
         android:dividerHeight="5sp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"/>
