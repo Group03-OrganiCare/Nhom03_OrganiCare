@@ -44,7 +44,7 @@
             android:textSize="18sp"
             android:textCursorDrawable="@drawable/cursor_color"
             android:paddingStart="10sp"
-            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableStart="@drawable/ic_baseline_lock"
             android:drawablePadding="10dp"
             android:inputType="number|textPassword"
             tools:ignore="RtlSymmetry"

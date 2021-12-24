@@ -46,13 +46,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Còn 8,000 điểm nữa bạn sẽ thăng hạng lên Thành Viên Bạc"/>
+        android:text="Còn 8,000 điểm nữa bạn sẽ thăng hạng lên Thành Viên Bạc"
+        android:textSize="16sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lịch sử tích điểm"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/light_black"
         android:drawableEnd="@drawable/ic_baseline_navigate_next"
         android:paddingTop="20dp"/>
     <TextView
@@ -61,6 +63,7 @@
         android:text="Ưu đãi hiện có"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/light_black"
         android:drawableEnd="@drawable/ic_baseline_navigate_next"
         android:paddingTop="20dp"/>
     <TabHost
@@ -93,20 +96,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hoàn thành 5 đơn hàng"
+                        android:text="  Voucher 100k cho đơn tối thiếu 300k"
+                        android:textSize="16sp"
                         android:drawableLeft="@drawable/icon_done"
                         android:paddingBottom="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chi tiêu 1.000.000 VNĐ"
+                        android:text="  Miễn phí vận chuyển 03 đơn hàng/tháng"
+                        android:textSize="16sp"
                         android:drawableLeft="@drawable/icon_done"
                         android:paddingBottom="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Đánh giá cửa hàng"
-                        android:drawableLeft="@drawable/icon_done"/>
+
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/tab2"
@@ -117,13 +118,22 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hoàn thành 15 đơn hàng (6/15)"
+                        android:text="  Voucher 300k cho đơn tối thiếu 500k"
+                        android:textSize="16sp"
                         android:drawableLeft="@drawable/icon_done"
                         android:paddingBottom="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chi tiêu 5.000.000 VNĐ (Mua thêm 4.120.000 VNĐ)"
+                        android:text="  Miễn phí vận chuyển 05 đơn hàng/tháng"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/icon_done"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Mở khóa cảnh báo sản phẩm kỵ nhau"
+                        android:textSize="16sp"
                         android:drawableLeft="@drawable/icon_done"/>
 
                 </LinearLayout>
@@ -136,9 +146,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chưa có dữ liệu"
-                        android:textSize="26sp"
-                        android:layout_gravity="center"/>
+                        android:text="  Voucher 300k cho đơn tối thiếu 500k"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/icon_done"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Miễn phí vận chuyển 05 đơn hàng/tháng"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/icon_done"
+                        android:paddingBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Hoàn tiền 20% cho đơn đầu tiên trong tháng"
+                        android:textSize="16sp"
+                        android:drawableLeft="@drawable/icon_done"/>
                 </LinearLayout>
 
             </FrameLayout>

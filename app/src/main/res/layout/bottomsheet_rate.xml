@@ -27,9 +27,11 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:hint="Viết đánh giá của bạn ở đây"
-        android:background="@color/light_blue"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:background="@drawable/light_blue_20_background"
+        android:textColorHint="@color/light_black"
+        android:textColor="@color/light_black"
         android:padding="10dp"
         android:layout_marginTop="20dp"/>
     <Button
@@ -38,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="Đánh giá"
         android:textColor="@color/white"
-        android:backgroundTint="@color/dark_green"
+        android:background="@drawable/dark_green_background"
         android:layout_marginTop="20dp"/>
 
 </LinearLayout>

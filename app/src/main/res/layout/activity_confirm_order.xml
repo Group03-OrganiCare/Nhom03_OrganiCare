@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/dark_green"
         android:orientation="vertical"
+        android:paddingVertical="15dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/layoutConfirmOrder">
