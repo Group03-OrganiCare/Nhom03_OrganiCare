@@ -59,7 +59,7 @@ public class DeliveringAdapter extends BaseAdapter {
             holder1 = (ViewHolder1) view.getTag();
         }
             Delivering delivering = deliverings.get(i);
-            holder1.txtPriceInvoice.setText(String.valueOf(delivering.getPriceInvoice_delivering()));
+            holder1.txtPriceInvoice.setText(String.format("%.0f", delivering.getPriceInvoice_delivering()) + "VND");
             holder1.txtWeight.setText(String.valueOf(delivering.getWeight_delivering()));
             holder1.txtProductName.setText(delivering.getProductName_delivering());
             holder1.txtPriceEach.setText(String.valueOf(delivering.getPriceEach_delivering()));

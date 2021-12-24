@@ -40,7 +40,7 @@ public class ItemSimilarAdapter extends RecyclerView.Adapter<ItemSimilarAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imvItemThumb.setImageResource(itemSimilars.get(position).getItemThumb());
         holder.txtItemName.setText(itemSimilars.get(position).getItemName());
-        holder.txtItemPrice.setText(String.valueOf(itemSimilars.get(position).getItemPrice()));
+        holder.txtItemPrice.setText(String.format("%.0f", itemSimilars.get(position).getItemPrice()) + "VND");
     }
 
     @Override

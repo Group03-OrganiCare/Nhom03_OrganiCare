@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,10 +16,9 @@ import com.example.adapter.SpinnerAdapter;
 import com.example.model.Product;
 import com.example.model.UserInfo;
 
-public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class EditInfo extends AppCompatActivity{
 
-    String[] districts = {"TPHCM - Quận 1","TPHCM - Quận 2","TPHCM - Quận 3","TPHCM - Quận 4","TPHCM - Quận 5","TPHCM - Quận 6",
-            "TPHCM - Quận 7", "TPHCM - Quận 8", "TPHCM - Quận 9", "TPHCM - Quận 10", "TPHCM - Quận 11", "TPHCM - Quận 12",};
+    String[] districts = {"Quận 1","Quận 2","Quận 3","Quận 4","Quận 5","Quận 6", "Quận 7", "Quận 8", "Quận 9", "Quận 10", "Quận 11", "Quận 12",};
 
     String[] wards = {"An Khánh", "An Phú", "Hiệp Bình Phước", "Hiệp Bình Chánh", "Linh Chiểu", "Linh Đông", "Linh Tây", "Linh Trung",
     "Linh Xuân", "Thảo Điền", "Trường Thọ", "Long Thạnh Mỹ"};
@@ -31,6 +31,7 @@ public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSel
     EditText edtName, edtAddress, edtEmail, edtPhone;
     ImageButton imbBack;
     Button btnConfirm;
+    String district, ward, name, address, email, phone;
     Intent intent;
 
     @Override
@@ -55,24 +56,39 @@ public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
     private void loadData() {
-        spDistrict.setOnItemSelectedListener(this);
+
         SpinnerAdapter spinnerAdapter =new SpinnerAdapter(getApplicationContext(), icons, districts, getLayoutInflater());
         spDistrict.setAdapter(spinnerAdapter);
 
-        spWard.setOnItemSelectedListener(this);
+
         SpinnerAdapter spinnerAdapter1 = new SpinnerAdapter(getApplicationContext(), icons, wards, getLayoutInflater());
         spWard.setAdapter(spinnerAdapter1);
+
+        spDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                district = spDistrict.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                district = spDistrict.getSelectedItem().toString();
+            }
+        });
+
+        spWard.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ward = spWard.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> arg0) {
-
-    }
 
     private void addEvents() {
         imbBack.setOnClickListener(new View.OnClickListener() {
@@ -86,12 +102,10 @@ public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSel
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = edtName.getText().toString();
-                String district = spDistrict.getSelectedItem().toString();
-                String ward = spWard.getSelectedItem().toString();
-                String address = edtAddress.getText().toString();
-                String email = edtEmail.getText().toString();
-                String phone = edtPhone.getText().toString();
+                name = edtName.getText().toString();
+                address = edtAddress.getText().toString();
+                email = edtEmail.getText().toString();
+                phone = edtPhone.getText().toString();
 
                 UserInfo userInfo = new UserInfo(name, district, ward, address, email, phone);
 
@@ -101,7 +115,6 @@ public class EditInfo extends AppCompatActivity implements AdapterView.OnItemSel
                 bundle.putSerializable("info", userInfo);
 
                 intent.putExtras(bundle);
-
                 startActivity(intent);
             }
         });
