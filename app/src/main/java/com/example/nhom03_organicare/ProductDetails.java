@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,10 +28,11 @@ public class ProductDetails extends AppCompatActivity {
 
     RecyclerView rcvSimilar;
     ItemSimilarAdapter adapter;
-
-    TextView txtAddToCart;
+    ImageView imvProductImage;
+    TextView txtAddToCart, txtText, txtProductNameDetail, txtProductPriceDetail;
     private int numberOrder = 1;
     Spinner spinnerWeight;
+    Button btnBack1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +47,10 @@ public class ProductDetails extends AppCompatActivity {
     private void linkViews() {
 
         rcvSimilar = findViewById(R.id.rcvSimilar);
-
+        imvProductImage = findViewById(R.id.imvProductImage);
         txtAddToCart = findViewById(R.id.txtAddToCart);
+        txtText = findViewById(R.id.txtText);
+        btnBack1 = findViewById(R.id.btnBack1);
 
 //        spinnerWeight = findViewById(R.id.spinnerWeight);
 //        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.weight, android.R.layout.simple_spinner_dropdown_item);
@@ -72,6 +76,13 @@ public class ProductDetails extends AppCompatActivity {
                 Button btnCloseOrder = bottomSheetOrder.findViewById(R.id.btnCloseOrder),
                         btnConfirmOrder =bottomSheetOrder.findViewById(R.id.btnConfirmOrder);
 
+                btnBack1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onBackPressed();
+                    }
+                });
+
                 btnCloseOrder.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -92,6 +103,15 @@ public class ProductDetails extends AppCompatActivity {
                         txtQuantity.setText(String.valueOf(numberOrder));
                     }
                 });
+
+                txtText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(ProductDetails.this, MessageActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
                 imvMinus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

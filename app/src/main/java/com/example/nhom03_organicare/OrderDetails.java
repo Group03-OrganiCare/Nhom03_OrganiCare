@@ -15,14 +15,15 @@ import android.widget.TextView;
 
 import com.example.adapter.ItemOrderAdapter;
 import com.example.model.ItemOrder;
+import com.example.model.UserInfo;
 
 import java.util.ArrayList;
 
 public class OrderDetails extends AppCompatActivity {
 
     RecyclerView rcvOrderItem;
-    TextView txtNewAddress, txtChoosePayment, txtChooseShipment;
-    Button btnConfirm;
+    TextView txtNewAddress, txtChoosePayment, txtChooseShipment, txtAddress, txtName, txtPhone;
+    Button btnConfirm, btnClose;
     ImageButton imbBackCart;
     ItemOrderAdapter adapter;
     Intent intent;
@@ -43,9 +44,13 @@ public class OrderDetails extends AppCompatActivity {
         imbBackCart = findViewById(R.id.imbBackCart);
         rcvOrderItem = findViewById(R.id.rcvOrderItem);
         txtNewAddress = findViewById(R.id.txtNewAddress);
-        txtChoosePayment =findViewById(R.id.txtChoosePayment);
+        txtChoosePayment = findViewById(R.id.txtChoosePayment);
         txtChooseShipment = findViewById(R.id.txtChooseShipment);
+        txtAddress = findViewById(R.id.txtAddress);
+        txtName = findViewById(R.id.txtName);
+        txtPhone = findViewById(R.id.txtPhone);
         btnConfirm = findViewById(R.id.btnConfirm);
+        btnClose = findViewById(R.id.btnClose);
     }
 
     private void configRecyclerView() {
@@ -68,8 +73,7 @@ public class OrderDetails extends AppCompatActivity {
         imbBackCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(OrderDetails.this, CartFragment.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
 
@@ -97,6 +101,14 @@ public class OrderDetails extends AppCompatActivity {
             }
         });
 
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(OrderDetails.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,7 +119,11 @@ public class OrderDetails extends AppCompatActivity {
     }
 
     private void getData() {
-
-
+        if (getIntent().getExtras() != null){
+            UserInfo userInfo = (UserInfo) getIntent().getExtras().get("info");
+            txtName.setText(userInfo.getName());
+            txtAddress.setText(userInfo.getAddress() + ", " + userInfo.getWard() + ", " + userInfo.getDistrict());
+            txtPhone.setText(userInfo.getPhone());
+        }
     }
 }

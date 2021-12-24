@@ -1,4 +1,4 @@
-package com.example.nhom03_organicare;
+package com.example.model;
 
 public class Message {
     private String message;

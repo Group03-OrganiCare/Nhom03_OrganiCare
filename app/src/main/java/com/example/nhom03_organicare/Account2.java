@@ -42,7 +42,7 @@ public class Account2 extends AppCompatActivity {
         btnHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Account2.this, TabHostDelivery.class);
+                Intent intent = new Intent(Account2.this, TabHostInvoice.class);
                 startActivity(intent);
             }
         });

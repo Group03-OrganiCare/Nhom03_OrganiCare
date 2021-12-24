@@ -9,7 +9,8 @@
     <TabHost
         android:id="@+id/tabHostInvoice"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:theme="@style/TabWidgetTheme">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -29,45 +30,343 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp">
-                    <ListView
-                        android:id="@+id/lvDelivering"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+                    <LinearLayout
+                        android:id="@+id/layoutItem"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scrollbars="none">
-                    </ListView>
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/imvProduct_delivery"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_launcher_background">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp">
+
+                            <TextView
+                                android:id="@+id/txtNameProduct_delivery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Táo Dazzle"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <TextView
+                                android:id="@+id/txtPriceEach_delivery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="150.000VND"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trọng lượng: "
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/txtWeight_delivery"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="kg"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/layoutItem2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Giá thành: "
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/txtPriceInvoice_delivery"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="750.000 "
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VND"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp">
-                    <ListView
-                        android:id="@+id/lvDelivered"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+                    <LinearLayout
+                        android:id="@+id/layoutItem3"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scrollbars="none"
-                        >
-                    </ListView>
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/imvProduct_delivered"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_launcher_background">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp">
+
+                            <TextView
+                                android:id="@+id/txtNameProduct_delivered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Táo Dazzle"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <TextView
+                                android:id="@+id/txtPriceEach_delivered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="150.000VND"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trọng lượng: "
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/txtWeight_delivered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="kg"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="bottom">
+
+                            <Button
+                                android:id="@+id/btnOpenRateBtS_1"
+                                android:layout_width="100sp"
+                                android:layout_height="40sp"
+                                android:text="Đánh giá"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:layout_gravity="right">
+                            </Button>
+                            <Button
+                                android:id="@+id/btnReOrder"
+                                android:layout_width="100sp"
+                                android:layout_height="40sp"
+                                android:text="Mua lại"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:layout_gravity="right">
+                            </Button>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Giá thành: "
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/txtPriceInvoice_delivered"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="750.000"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" VND"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp">
-                    <ListView
-                        android:id="@+id/lvDeliverCancel"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scrollbars="none">
-                    </ListView>
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/imvProduct_deliverycancel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_launcher_background">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp">
 
+                            <TextView
+                                android:id="@+id/txtNameProduct_deliverycancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Táo Dazzle"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <TextView
+                                android:id="@+id/txtPriceEach_deliverycancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="150.000VND"
+                                android:textSize="16sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trọng lượng: "
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/txtWeight_deliverycancel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="kg"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="bottom">
+
+                            <Button
+                                android:id="@+id/BtnBuyAgain"
+                                android:layout_width="100sp"
+                                android:layout_height="40sp"
+                                android:text="Mua lại"
+                                android:gravity="center"
+                                android:layout_gravity="right"
+                                android:textSize="12sp">
+                            </Button>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Giá thành: "
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/txtPriceInvoice_deliverycancel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="750.000"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" VND"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic">
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>

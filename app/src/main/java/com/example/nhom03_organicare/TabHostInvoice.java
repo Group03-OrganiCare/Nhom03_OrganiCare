@@ -2,10 +2,12 @@ package com.example.nhom03_organicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TabHost;
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 public class TabHostInvoice extends AppCompatActivity {
 
     ListView lvDelivering,lvDelivered,lvDeliverCancel;
+    LinearLayout layoutItem, layoutItem2, layoutItem3;
     ArrayList<Delivering> deliverings;
     DeliveringAdapter adapter,adapter1,adapter2;
 
@@ -34,9 +37,11 @@ public class TabHostInvoice extends AppCompatActivity {
             TabHost th = findViewById(R.id.tabHostInvoice);
             th.setup();
 
+
             th.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
                 @Override
                 public void onTabChanged(String s) {
+
                     for (int i = 0; i < th.getTabWidget().getChildCount(); i++) {
                         th.getTabWidget().getChildAt(i).setBackgroundColor(Color.parseColor("#005959")); // unselected
                         TextView tv = (TextView) th.getTabWidget().getChildAt(i).findViewById(android.R.id.title); //Unselected Tabs
@@ -48,7 +53,6 @@ public class TabHostInvoice extends AppCompatActivity {
                     tv.setTextColor(Color.parseColor("#005959"));
                 }
             });
-
             TabHost.TabSpec spec = th.newTabSpec("Tab One");
             spec.setContent(R.id.tab1);
             spec.setIndicator("Đang giao");
@@ -67,16 +71,16 @@ public class TabHostInvoice extends AppCompatActivity {
             Toast.makeText(this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         linkViews();
-        initData();
-        loadData();
+//        initData();
+//        loadData();
         addEvents();
     }
 
     private void linkViews()
     {
-        lvDelivering = findViewById(R.id.lvDelivering);
-        lvDelivered = findViewById(R.id.lvDelivered);
-        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
+//        lvDelivering = findViewById(R.id.lvDelivering);
+//        lvDelivered = findViewById(R.id.lvDelivered);
+//        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
 
         btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS);
 
@@ -144,9 +148,34 @@ public class TabHostInvoice extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(TabHostInvoice.this, "Đánh giá của bạn đã được ghi nhận", Toast.LENGTH_SHORT).show();
+                        bottomSheetRate.dismiss();
                     }
                 });
                 bottomSheetRate.show();
+            }
+        });
+
+        layoutItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TabHostInvoice.this, TrackingOrder.class);
+                startActivity(intent);
+            }
+        });
+
+        layoutItem2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TabHostInvoice.this, TrackingOrder.class);
+                startActivity(intent);
+            }
+        });
+
+        layoutItem3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TabHostInvoice.this, TrackingOrder.class);
+                startActivity(intent);
             }
         });
     }

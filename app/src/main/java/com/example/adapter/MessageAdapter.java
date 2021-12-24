@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.nhom03_organicare.Message;
+import com.example.model.Message;
 import com.example.nhom03_organicare.R;
 
 import java.util.List;

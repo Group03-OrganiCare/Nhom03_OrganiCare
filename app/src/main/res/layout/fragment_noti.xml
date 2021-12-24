@@ -10,23 +10,34 @@
     <LinearLayout
         android:id="@+id/layout_Notice"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:weightSum="10">
 
         <ImageButton
             android:id="@+id/imbBackNotice"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/ic_baseline_arrow_back"
-            android:backgroundTint="@color/dark_green"/>
+            android:backgroundTint="@color/dark_green"
+            android:layout_weight="0.5"/>
         <TextView
             android:layout_marginLeft="5dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="THÔNG BÁO"
             android:textSize="20sp"
             android:textColor="@color/dark_green"
             android:textStyle="bold"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            android:layout_weight="9.5"/>
+        <ImageButton
+            android:id="@+id/imbReadCheck"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:background="@drawable/readcheck"
+            android:backgroundTint="@color/dark_green"
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <ListView
@@ -34,6 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        android:listSelector="@color/light_blue"/>
+        android:listSelector="@color/light_blue_20"/>
 
 </LinearLayout>
