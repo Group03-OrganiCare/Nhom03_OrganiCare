@@ -38,7 +38,7 @@ public class ForgetPassword extends AppCompatActivity {
         imbBackLoginPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ForgetPassword.this, LoginActivity.class);
+                Intent intent = new Intent(ForgetPassword.this, Setting.class);
                 startActivity(intent);
             }
         });

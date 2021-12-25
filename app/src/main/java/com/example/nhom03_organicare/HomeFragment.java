@@ -1,6 +1,7 @@
 package com.example.nhom03_organicare;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,10 +16,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.adapter.CategoryAdapter;
 import com.example.adapter.ProductAdapter;
 import com.example.model.Category;
+import com.example.model.MyItemClick;
 import com.example.model.Product;
 
 import java.util.ArrayList;
@@ -27,11 +31,14 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     EditText edtSearch;
+    TextView txtProductNameDetail, txtProductPriceDetail;
+    ImageView imvProductImage;
     GridView gvCategory, gvBestSeller;
     ArrayList<Category> categories;
     ArrayList<Product> products;
     CategoryAdapter categoryAdapter;
     ProductAdapter productAdapter;
+    MyItemClick itemClick;
 
     @Nullable
     @Override
@@ -41,6 +48,9 @@ public class HomeFragment extends Fragment {
         edtSearch = view.findViewById(R.id.edtSearch);
         gvCategory = view.findViewById(R.id.gvCategory);
         gvBestSeller = view.findViewById(R.id.gvBestSeller);
+        imvProductImage = view.findViewById(R.id.imvProductImage);
+        txtProductNameDetail = view.findViewById(R.id.txtProductNameDetail);
+        txtProductPriceDetail = view.findViewById(R.id.txtProductPriceDetail);
 
         //loadData
         categoryAdapter = new CategoryAdapter(getContext(), R.layout.category_layout, initData());
@@ -60,8 +70,16 @@ public class HomeFragment extends Fragment {
         gvBestSeller.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getContext(), ProductDetails.class);
-                startActivity(intent);
+                if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                    itemClick = (MyItemClick) getActivity();
+                    if (itemClick != null) {
+                        itemClick.click(products.get(position));
+                    }
+                } else {
+                    imvProductImage.setImageResource(products.get(position).getProductThumb());
+                    txtProductNameDetail.setText(products.get(position).getProductName());
+                    txtProductPriceDetail.setText(String.format("%.0f", products.get(position).getProductPrice()) + "VND");
+                }
             }
         });
 

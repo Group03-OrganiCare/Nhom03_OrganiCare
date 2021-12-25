@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -15,10 +16,13 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.model.MyItemClick;
+import com.example.model.Product;
+import com.example.model.Sale_Item;
 
 import java.util.function.Function;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyItemClick {
 
     MeowBottomNavigation bottomNavigation;
 
@@ -32,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         broadcastReceiver = new NetworkReceiver();
         RegisterNetworkBroadcastReceiver();
-        
+
         linkViews();
         setNavigation();
     }
@@ -59,6 +63,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         unRegisterNetworkBroadcastReceiver();
+    }
+
+    @Override
+    public void click(Product p) {
+        Intent intent = new Intent(MainActivity.this, ProductDetails.class);
+        intent.putExtra("SelectedItem", p);
+        startActivity(intent);
+    }
+
+    @Override
+    public void clickItem(Sale_Item s) {
+        Intent intent = new Intent(MainActivity.this, ProductDetails.class);
+        intent.putExtra("SaleItem", s);
+        startActivity(intent);
     }
 
     private void linkViews() {
@@ -118,4 +136,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

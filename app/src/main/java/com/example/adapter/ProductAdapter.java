@@ -65,7 +65,7 @@ public class ProductAdapter extends BaseAdapter {
         Product p = productList.get(i);
         holder.imvProductThumb.setImageResource(p.getProductThumb());
         holder.txtProductName.setText(p.getProductName());
-        holder.txtProductPrice.setText(String.valueOf(p.getProductPrice()));
+        holder.txtProductPrice.setText(String.format("%.0f", p.getProductPrice()) + "VND");
         holder.txtProductCert1.setText(p.getProductCert1());
         holder.txtProductCert2.setText(p.getProductCert2());
 
