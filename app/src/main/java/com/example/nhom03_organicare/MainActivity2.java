@@ -5,24 +5,74 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.model.MyItemClick;
+import com.example.model.Product;
+import com.example.model.Sale_Item;
 
 import java.util.function.Function;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements MyItemClick {
 
     MeowBottomNavigation bottomNavigation;
+    BroadcastReceiver broadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        broadcastReceiver = new NetworkReceiver();
+        RegisterNetworkBroadcastReceiver();
+
         linkViews();
         setNavigation();
+    }
+
+    @Override
+    public void click(Product p) {
+        Intent intent = new Intent(MainActivity2.this, ProductDetails.class);
+        intent.putExtra("SelectedItem", p);
+        startActivity(intent);
+    }
+
+    @Override
+    public void clickItem(Sale_Item s) {
+        Intent intent = new Intent(MainActivity2.this, ProductDetails.class);
+        intent.putExtra("SaleItem", s);
+        startActivity(intent);
+    }
+
+    protected void RegisterNetworkBroadcastReceiver(){
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
+            registerReceiver(broadcastReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        }
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            registerReceiver(broadcastReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        }
+    }
+
+    protected void unRegisterNetworkBroadcastReceiver(){
+        try {
+            unregisterReceiver(broadcastReceiver);
+        }catch (IllegalArgumentException e){
+            e.printStackTrace();
+
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unRegisterNetworkBroadcastReceiver();
     }
 
     private void linkViews() {

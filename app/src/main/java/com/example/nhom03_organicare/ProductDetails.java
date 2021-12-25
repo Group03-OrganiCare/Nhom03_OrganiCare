@@ -20,6 +20,8 @@ import com.example.adapter.ItemSimilarAdapter;
 import com.example.adapter.ItemSuggestionAdapter;
 import com.example.model.ItemSimilar;
 import com.example.model.ItemSuggestion;
+import com.example.model.Product;
+import com.example.model.Sale_Item;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -40,8 +42,10 @@ public class ProductDetails extends AppCompatActivity {
         setContentView(R.layout.activity_product_details);
 
         linkViews();
+        getData();
         configRecyclerView();
         initData();
+
     }
 
     private void linkViews() {
@@ -51,6 +55,9 @@ public class ProductDetails extends AppCompatActivity {
         txtAddToCart = findViewById(R.id.txtAddToCart);
         txtText = findViewById(R.id.txtText);
         btnBack1 = findViewById(R.id.btnBack1);
+        imvProductImage = findViewById(R.id.imvProductImage);
+        txtProductNameDetail = findViewById(R.id.txtProductNameDetail);
+        txtProductPriceDetail = findViewById(R.id.txtProductPriceDetail);
 
 //        spinnerWeight = findViewById(R.id.spinnerWeight);
 //        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.weight, android.R.layout.simple_spinner_dropdown_item);
@@ -125,6 +132,27 @@ public class ProductDetails extends AppCompatActivity {
             }
 
         });
+    }
+
+    private void getData() {
+        Intent intent = getIntent();
+        if (intent != null){
+            Product p = (Product) intent.getSerializableExtra("SelectedItem");
+            if (p != null){
+                imvProductImage.setImageResource(p.getProductThumb());
+                txtProductNameDetail.setText(p.getProductName());
+                txtProductPriceDetail.setText(String.format("%.0f", p.getProductPrice()) + "VND");
+            }
+        }
+
+        if (intent != null){
+            Sale_Item s = (Sale_Item) intent.getSerializableExtra("SaleItem");
+            if (s != null){
+                imvProductImage.setImageResource(s.getProductThumb());
+                txtProductNameDetail.setText(s.getProductName());
+                txtProductPriceDetail.setText(String.format("%.0f", s.getProductPrice()) + "VND");
+            }
+        }
     }
 
     private void configRecyclerView() {

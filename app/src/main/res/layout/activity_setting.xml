@@ -163,7 +163,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="15dp">
+        android:padding="15dp"
+        android:paddingEnd="10dp">
         <ImageView
             android:layout_width="100px"
             android:layout_height="100px"
@@ -201,7 +202,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
+        android:padding="15dp"
+        android:paddingEnd="10dp"
         android:layout_marginTop="5dp">
         <ImageView
             android:layout_width="100px"
@@ -320,6 +322,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layoutLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

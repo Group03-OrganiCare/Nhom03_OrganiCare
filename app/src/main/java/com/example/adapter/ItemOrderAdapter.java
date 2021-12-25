@@ -39,7 +39,7 @@ public class ItemOrderAdapter extends RecyclerView.Adapter<ItemOrderAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imvItemThumb.setImageResource(itemOrders.get(position).getItemThumb());
         holder.txtItemName.setText(itemOrders.get(position).getItemName());
-        holder.txtItemPrice.setText(String.valueOf(itemOrders.get(position).getItemPrice()));
+        holder.txtItemPrice.setText(String.format("%.0f", itemOrders.get(position).getItemPrice()) + "VND");
         holder.txtItemWeight.setText(String.valueOf(itemOrders.get(position).getItemWeight()));
         holder.txtItemTotal.setText(String.valueOf(itemOrders.get(position).getItemTotal()));
     }

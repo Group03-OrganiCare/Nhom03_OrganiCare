@@ -60,7 +60,8 @@ public class SaleAdapter extends BaseAdapter {
         Sale_Item s = sale_items.get(i);
         holder.imvSaleThumb.setImageResource(s.getProductThumb());
         holder.txtSaleProductName.setText(s.getProductName());
-        holder.txtSaleProductPrice.setText(String.valueOf(s.getProductPrice()));
+        holder.txtSaleProductPrice.setText(String.format("%.0f", s.getProductPrice()) + "VND");
+
 
         return view;
     }

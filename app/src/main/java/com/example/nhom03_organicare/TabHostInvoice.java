@@ -82,6 +82,9 @@ public class TabHostInvoice extends AppCompatActivity {
 //        lvDelivered = findViewById(R.id.lvDelivered);
 //        lvDeliverCancel = findViewById(R.id.lvDeliverCancel);
 
+        layoutItem = findViewById(R.id.layoutItem);
+        layoutItem2 = findViewById(R.id.layoutItem2);
+        layoutItem3 = findViewById(R.id.layoutItem3);
         btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS);
 
 

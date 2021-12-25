@@ -33,29 +33,32 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="15dp"
                     android:paddingTop="10dp">
+
                     <LinearLayout
                         android:id="@+id/layoutItem"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
                         <ImageView
                             android:id="@+id/imvProduct_delivery"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_launcher_background">
+                            android:src="@drawable/apple_dazzle">
                         </ImageView>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginStart="5dp">
+                            android:layout_marginStart="5dp"
+                            android:gravity="center_vertical">
 
                             <TextView
                                 android:id="@+id/txtNameProduct_delivery"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Táo Dazzle"
-                                android:textSize="20sp"
+                                android:text="Đơn hàng #101257"
+                                android:textSize="18sp"
                                 android:textStyle="bold">
                             </TextView>
                             <TextView
@@ -66,69 +69,30 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold">
                             </TextView>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Trọng lượng: "
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:id="@+id/txtWeight_delivery"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="5"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="kg"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                            </LinearLayout>
 
                         </LinearLayout>
                         <LinearLayout
-                            android:id="@+id/layoutItem2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
                             android:gravity="bottom">
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="end">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Giá thành: "
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:id="@+id/txtPriceInvoice_delivery"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="750.000 "
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="VND"
-                                    android:textSize="12sp"
+                                    android:text="20/12/2021"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/pink"
                                     android:textStyle="italic">
                                 </TextView>
                             </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
+
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/tab2"
@@ -138,75 +102,52 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="15dp"
                     android:paddingTop="10dp">
+
                     <LinearLayout
-                        android:id="@+id/layoutItem3"
+                        android:id="@+id/layoutItem2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
                         <ImageView
-                            android:id="@+id/imvProduct_delivered"
+                            android:id="@+id/imvProduct_delivery2"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_launcher_background">
+                            android:src="@drawable/blackberry">
                         </ImageView>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginStart="5dp">
+                            android:layout_marginStart="5dp"
+                            android:gravity="center_vertical">
 
                             <TextView
-                                android:id="@+id/txtNameProduct_delivered"
+                                android:id="@+id/txtNameProduct_delivery2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Táo Dazzle"
-                                android:textSize="20sp"
+                                android:text="Đơn hàng #101003"
+                                android:textSize="18sp"
                                 android:textStyle="bold">
                             </TextView>
                             <TextView
-                                android:id="@+id/txtPriceEach_delivered"
+                                android:id="@+id/txtPriceEach_delivery2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="150.000VND"
                                 android:textSize="16sp"
                                 android:textStyle="bold">
                             </TextView>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Trọng lượng: "
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:id="@+id/txtWeight_delivered"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="5"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="kg"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                            </LinearLayout>
 
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_gravity="bottom">
+                            android:gravity="bottom">
 
                             <Button
-                                android:id="@+id/btnOpenRateBtS_1"
+                                android:id="@+id/btnOpenRateBtS"
                                 android:layout_width="100sp"
                                 android:layout_height="40sp"
                                 android:text="Đánh giá"
@@ -226,33 +167,20 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="bottom">
+                                android:gravity="end">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Giá thành: "
+                                    android:text="12/12/2021"
                                     android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:id="@+id/txtPriceInvoice_delivered"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="750.000"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text=" VND"
-                                    android:textSize="12sp"
+                                    android:textColor="@color/pink"
                                     android:textStyle="italic">
                                 </TextView>
                             </LinearLayout>
                         </LinearLayout>
 
                     </LinearLayout>
+
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/tab3"
@@ -263,27 +191,30 @@
                     android:paddingRight="15dp"
                     android:paddingTop="10dp">
                     <LinearLayout
+                        android:id="@+id/layoutItem3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
                         <ImageView
                             android:id="@+id/imvProduct_deliverycancel"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/ic_launcher_background">
+                            android:src="@drawable/cacao">
                         </ImageView>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:layout_marginStart="5dp">
+                            android:layout_marginStart="5dp"
+                            android:gravity="center_vertical">
 
                             <TextView
                                 android:id="@+id/txtNameProduct_deliverycancel"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Táo Dazzle"
-                                android:textSize="20sp"
+                                android:text="Đơn hàng #101123"
+                                android:textSize="18sp"
                                 android:textStyle="bold">
                             </TextView>
                             <TextView
@@ -294,32 +225,6 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold">
                             </TextView>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Trọng lượng: "
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:id="@+id/txtWeight_deliverycancel"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="5"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="kg"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                            </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -339,29 +244,15 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="bottom">
+                                android:gravity="end">
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Giá thành: "
+                                    android:text="24/12/2021"
+                                    android:textColor="@color/pink"
                                     android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:id="@+id/txtPriceInvoice_deliverycancel"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="750.000"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text=" VND"
-                                    android:textSize="12sp"
-                                    android:textStyle="italic">
-                                </TextView>
+                                    android:textStyle="italic"
+                                    android:gravity="end"/>
                             </LinearLayout>
                         </LinearLayout>
 

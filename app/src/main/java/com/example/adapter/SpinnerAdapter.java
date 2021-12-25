@@ -28,12 +28,12 @@ public class SpinnerAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return icons.length;
+        return names.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return names[position];
     }
 
     @Override

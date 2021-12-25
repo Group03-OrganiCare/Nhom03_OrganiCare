@@ -36,7 +36,7 @@ public class ItemOrderTrackingAdapter extends RecyclerView.Adapter<ItemOrderTrac
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imvItemThumb.setImageResource(trackingOrders.get(position).getProductOrderThumb());
         holder.txtItemName.setText(trackingOrders.get(position).getProductName());
-        holder.txtItemPrice.setText(String.valueOf(trackingOrders.get(position).getProductPrice()));
+        holder.txtItemPrice.setText(String.format("%.0f", trackingOrders.get(position).getProductPrice()) + "VND");
         holder.txtItemQuantity.setText((trackingOrders.get(position).getProductQuantity()));
         holder.txtCondition.setText((trackingOrders.get(position).getDeliveryCondition()));
     }
