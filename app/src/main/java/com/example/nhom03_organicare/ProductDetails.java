@@ -66,7 +66,7 @@ public class ProductDetails extends AppCompatActivity {
 //
 //        spinnerWeight.setOnItemSelectedListener(this);
 
-        //show bottom sheet order
+
         txtText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,7 +74,7 @@ public class ProductDetails extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //show bottom sheet order
         txtAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
