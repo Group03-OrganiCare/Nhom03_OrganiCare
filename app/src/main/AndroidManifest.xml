@@ -35,7 +35,9 @@
             android:exported="true"></activity>
         <activity
             android:name=".TabHostInvoice"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
 
         <activity
             android:name=".TabHostDelivery"
@@ -43,11 +45,7 @@
         <activity
             android:name=".Point"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".TrackingOrder"
@@ -58,7 +56,11 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Account2"
