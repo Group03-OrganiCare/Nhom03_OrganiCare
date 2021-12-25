@@ -5,14 +5,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.model.MyItemClick;
+import com.example.model.Product;
+import com.example.model.Sale_Item;
 
 import java.util.function.Function;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements MyItemClick {
 
     MeowBottomNavigation bottomNavigation;
 
@@ -23,6 +27,20 @@ public class MainActivity2 extends AppCompatActivity {
 
         linkViews();
         setNavigation();
+    }
+
+    @Override
+    public void click(Product p) {
+        Intent intent = new Intent(MainActivity2.this, ProductDetails.class);
+        intent.putExtra("SelectedItem", p);
+        startActivity(intent);
+    }
+
+    @Override
+    public void clickItem(Sale_Item s) {
+        Intent intent = new Intent(MainActivity2.this, ProductDetails.class);
+        intent.putExtra("SaleItem", s);
+        startActivity(intent);
     }
 
     private void linkViews() {
