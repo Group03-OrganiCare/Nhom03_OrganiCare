@@ -55,12 +55,12 @@ public class Setting extends AppCompatActivity {
         layoutLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                XacNhanLogOut();
+                ConfirmLogOut();
             }
         });
     }
 
-    private void XacNhanLogOut() {
+    private void ConfirmLogOut() {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setTitle("Thông báo !");
         alertBuilder.setMessage("Bạn có muốn đăng xuất ?");
@@ -68,7 +68,7 @@ public class Setting extends AppCompatActivity {
         alertBuilder.setPositiveButton("Đồng ý", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent = new Intent(Setting.this, AccountFragment.class );
+                Intent intent = new Intent(Setting.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -80,5 +80,4 @@ public class Setting extends AppCompatActivity {
         });
         alertBuilder.show();
     }
-
 }

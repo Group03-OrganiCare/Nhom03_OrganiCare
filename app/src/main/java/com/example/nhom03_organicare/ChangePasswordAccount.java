@@ -38,7 +38,7 @@ public class ChangePasswordAccount extends AppCompatActivity {
         imbBackAcc2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChangePasswordAccount.this, Account2.class);
+                Intent intent = new Intent(ChangePasswordAccount.this, Setting.class);
                 startActivity(intent);
             }
         });
