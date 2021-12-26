@@ -4,26 +4,37 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.adapter.CartAdapter;
 import com.example.model.Cart_Item;
-import com.example.model.Sale_Item;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
 
 public class CartFragment extends Fragment {
 
-    ListView lvPickedProduct;
-    ArrayList<Cart_Item> cart_items;
-    CartAdapter adapter;
+    RecyclerView rcvCart;
+    ArrayList<Cart_Item> products;
     Button btnOrder;
+    ImageButton imbBackHome;
+
+    private int numberOrder = 1;
+    ImageView imvPlus, imvMinus;
+    TextView txtQuantity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,12 +42,24 @@ public class CartFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_cart, container, false);
         //linkViews
-        lvPickedProduct = view.findViewById(R.id.lvPickedProduct);
+        rcvCart = view.findViewById(R.id.rcvCart);
         btnOrder = view.findViewById(R.id.btnOrder);
+        imbBackHome = view.findViewById(R.id.imbBackHome);
+
+        imvMinus = view.findViewById(R.id.imvMinus);
+        imvPlus = view.findViewById(R.id.imvPlus);
+        txtQuantity = view.findViewById(R.id.txtQuantity);
+
 
         //loadData
-        adapter = new CartAdapter(getContext(), R.layout.cart_item, initData());
-        lvPickedProduct.setAdapter(adapter);
+        CartAdapter adapter = new CartAdapter(getContext(), R.layout.cart_item, initData());
+        rcvCart.setAdapter(adapter);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        rcvCart.setLayoutManager(linearLayoutManager);
+
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
+        rcvCart.addItemDecoration(itemDecoration);
 
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,17 +69,33 @@ public class CartFragment extends Fragment {
             }
         });
 
+//        imvPlus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                numberOrder = numberOrder + 1 ;
+//                txtQuantity.setText(String.valueOf(numberOrder));
+//            }
+//        });
+//        imvMinus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(numberOrder > 1){
+//                    numberOrder = numberOrder - 1 ;
+//                }
+//                txtQuantity.setText(String.valueOf(numberOrder));
+//            }
+//        });
         return view;
 
     }
 
     private ArrayList<Cart_Item> initData() {
-        cart_items = new ArrayList<Cart_Item>();
-        cart_items.add(new Cart_Item(R.drawable.corn, "Bắp ngọt hữu cơ", "100.000/kg", "1kg"));
-        cart_items.add(new Cart_Item(R.drawable.red_cabbage, "Bắp cải tím hữu cơ", "119.000/kg", "1kg"));
-        cart_items.add(new Cart_Item(R.drawable.green_cabbage, "Bắp cải xanh hữu cơ", "190.000/kg", "1kg"));
-        cart_items.add(new Cart_Item(R.drawable.potato, "Khoai tây hữu cơ", "100.000/kg", "1kg"));
+        products = new ArrayList<Cart_Item>();
+        products.add(new Cart_Item( R.drawable.corn, "Bắp ngọt hữu cơ", "100.000/kg","Trọng lượng: 1kg"));
+        products.add(new Cart_Item(R.drawable.carrot, "Cà rốt hữu cơ", "80.000/kg", "Trọng lượng: 1kg"));
+        products.add(new Cart_Item(R.drawable.potato, "Khoai tây hữu cơ", "120.000/kg", "Trọng lượng: 1kg"));
 
-        return cart_items;
+        return products;
     }
+
 }

@@ -15,4 +15,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#F44336</color>
+    <color name="light_blue_item">#3348A9A6</color>
+    <color name="pink01">#D13B55</color>
 </resources>
