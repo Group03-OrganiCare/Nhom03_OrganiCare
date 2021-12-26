@@ -66,6 +66,14 @@ public class ProductDetails extends AppCompatActivity {
 //
 //        spinnerWeight.setOnItemSelectedListener(this);
 
+
+        txtText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductDetails.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
         //show bottom sheet order
         txtAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,14 +119,6 @@ public class ProductDetails extends AppCompatActivity {
                     }
                 });
 
-                txtText.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(ProductDetails.this, MessageActivity.class);
-                        startActivity(intent);
-                    }
-                });
-
                 imvMinus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -130,7 +130,6 @@ public class ProductDetails extends AppCompatActivity {
                 });
                 bottomSheetOrder.show();
             }
-
         });
     }
 

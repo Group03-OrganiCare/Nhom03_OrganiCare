@@ -1,66 +1,89 @@
 package com.example.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.chauthai.swipereveallayout.SwipeRevealLayout;
+import com.chauthai.swipereveallayout.ViewBinderHelper;
 import com.example.model.Cart_Item;
 import com.example.nhom03_organicare.R;
 
 import java.util.List;
 
-public class CartAdapter extends BaseAdapter {
+public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
+
     Context context;
-    int item_listview;
-    List<Cart_Item> cart_items;
-    public CartAdapter(Context context, int item_listview, List<Cart_Item>productList) {
+    int item_layout;
+
+    private List<Cart_Item> products;
+    private ViewBinderHelper viewBinderHelper = new ViewBinderHelper();
+
+    public CartAdapter(Context context, int item_layout, List<Cart_Item> products) {
         this.context = context;
-        this.cart_items = productList;
-        this.item_listview = item_listview;
+        this.item_layout = item_layout;
+        this.products = products;
     }
+
+    @NonNull
     @Override
-    public int getCount() {
-        return cart_items.size();
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item, parent,false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public Object getItem(int i) {
-        return cart_items.get(i);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Cart_Item p = products.get(position);
+        if(p == null){
+            return;
+        }
+        viewBinderHelper.bind(holder.layoutSwipe, String.valueOf(p.getPickedThumb()));
+        holder.imvPickedThumb.setImageResource(p.getPickedThumb());
+        holder.txtPickedName.setText(p.getPickedName());
+        holder.txtPickedPrice.setText(p.getPickedPrice());
+        holder.txtPickedWeight.setText(p.getPickedWeight());
+
+        holder.imvDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                products.remove(holder.getBindingAdapterPosition());
+                notifyItemRemoved(holder.getBindingAdapterPosition());
+            }
+        });
+
     }
 
     @Override
-    public long getItemId(int i) {
+    public int getItemCount() {
+        if(products != null){
+            return products.size();
+        }
         return 0;
     }
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder holder;
-        if (view == null){
-            holder = new ViewHolder();
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(item_listview, null);
-            holder.txtPickedName = view.findViewById(R.id.txtPickedName);
-            holder.imvPickedThumb = view.findViewById(R.id.imvPickedThumb);
-            holder.txtPickedPrice = view.findViewById(R.id.txtPickedPrice);
-            holder.txtPickedWeight = view.findViewById(R.id.txtPickedWeight);
-            view.setTag(holder);
-        }else {
-            holder = (ViewHolder) view.getTag();
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private SwipeRevealLayout layoutSwipe;
+        private ImageView imvPickedThumb;
+        private TextView txtPickedName, txtPickedPrice, txtPickedWeight;
+        private ImageView imvDel;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            layoutSwipe = itemView.findViewById(R.id.layoutSwipe);
+            imvPickedThumb = itemView.findViewById(R.id.imvPickedThumb);
+            txtPickedName = itemView.findViewById(R.id.txtPickedName);
+            txtPickedPrice = itemView.findViewById(R.id.txtPickedPrice);
+            txtPickedWeight = itemView.findViewById(R.id.txtPickedWeight);
+
+
+            imvDel = itemView.findViewById(R.id.imvDel);
         }
-        Cart_Item b = cart_items .get(i);
-        holder.txtPickedName.setText(b.getPickedName());
-        holder.imvPickedThumb.setImageResource(b.getPickedThumb());
-        holder.txtPickedPrice.setText(b.getPickedPrice());
-        holder.txtPickedWeight.setText(b.getPickedWeight());
-        return view;
-    }
-    public static class ViewHolder{
-        ImageView imvPickedThumb;
-        TextView txtPickedName, txtPickedPrice, txtPickedWeight;
     }
 }

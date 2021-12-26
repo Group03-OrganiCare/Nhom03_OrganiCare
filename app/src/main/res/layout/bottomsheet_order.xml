@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="150.000 VNĐ"
-                android:textColor="#D13B55"
+                android:textColor="@color/pink"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginStart="15dp"/>
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -106,15 +106,17 @@
             android:id="@+id/btnCloseOrder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đóng"
-            android:backgroundTint="#868686"/>
+            android:text="Thêm vào giỏ hàng"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_green"/>
         <Button
             android:id="@+id/btnConfirmOrder"
             android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Đặt hàng"
-            android:backgroundTint="#005959"/>
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_green"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp">
+    android:padding="15dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="274dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:stepSize="1" />
     <EditText
         android:layout_width="match_parent"
@@ -31,16 +31,16 @@
         android:gravity="top"
         android:background="@drawable/light_blue_20_background"
         android:textColorHint="@color/light_black"
-        android:textColor="@color/light_black"
+        android:textColor="@color/grey"
         android:padding="10dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="15dp"/>
     <Button
         android:id="@+id/btnRate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đánh giá"
         android:textColor="@color/white"
-        android:background="@drawable/dark_green_background"
+        android:backgroundTint="@color/dark_green"
         android:layout_marginTop="20dp"/>
 
 </LinearLayout>
