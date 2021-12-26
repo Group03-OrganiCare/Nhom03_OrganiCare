@@ -52,7 +52,7 @@ public class SaleFragment extends Fragment {
         });
 
         //load Data
-        adapter = new SaleAdapter(getContext(), R.layout.sale_item, initData());
+        adapter = new SaleAdapter(getContext(), R.layout.item_sale, initData());
         gvSaleProduct.setAdapter(adapter);
 
         gvSaleProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -1,6 +1,5 @@
 package com.example.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,6 @@ import com.example.model.Sale_Item;
 import com.example.nhom03_organicare.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SaleAdapter extends BaseAdapter {
 
@@ -48,7 +46,7 @@ public class SaleAdapter extends BaseAdapter {
         if (view == null) {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.sale_item, null);
+            view = inflater.inflate(R.layout.item_sale, null);
             holder.imvSaleThumb = view.findViewById(R.id.imvSaleThumb);
             holder.txtSaleProductName = view.findViewById(R.id.txtSaleProductName);
             holder.txtSaleProductPrice = view.findViewById(R.id.txtSaleProductPrice);

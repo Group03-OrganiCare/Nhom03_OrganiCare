@@ -133,8 +133,7 @@ public class ChangePasswordAccount extends AppCompatActivity {
                 if (edtNewPassword.getText().length() == 0 || edtPresentPassword.getText().length() == 0||edtTypePwAgain.getText().length()==0) {
                     Toast.makeText(ChangePasswordAccount.this, "Bạn phải nhập mật khẩu", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(ChangePasswordAccount.this, Account2.class);
-                    startActivity(intent);
+                    onBackPressed();
                 }
             }
         });

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.adapter.SaleAdapter;
@@ -39,7 +38,7 @@ public class FavoriteProducts extends AppCompatActivity {
     }
 
     private void loadData() {
-        adapter = new SaleAdapter(FavoriteProducts.this, R.layout.sale_item, initData());
+        adapter = new SaleAdapter(FavoriteProducts.this, R.layout.item_sale, initData());
         gvFavoriteProduct.setAdapter(adapter);
     }
 

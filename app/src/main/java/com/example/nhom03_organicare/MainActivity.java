@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.model.Category;
 import com.example.model.MyItemClick;
 import com.example.model.Product;
 import com.example.model.Sale_Item;
@@ -76,6 +77,13 @@ public class MainActivity extends AppCompatActivity implements MyItemClick {
     public void clickItem(Sale_Item s) {
         Intent intent = new Intent(MainActivity.this, ProductDetails.class);
         intent.putExtra("SaleItem", s);
+        startActivity(intent);
+    }
+
+    @Override
+    public void clickCat(Category c) {
+        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+        intent.putExtra("CatItem", c);
         startActivity(intent);
     }
 

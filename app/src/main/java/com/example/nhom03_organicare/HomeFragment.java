@@ -31,7 +31,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     EditText edtSearch;
-    TextView txtProductNameDetail, txtProductPriceDetail;
+    TextView txtProductNameDetail, txtProductPriceDetail, txtTitle;
     ImageView imvProductImage;
     GridView gvCategory, gvBestSeller;
     ArrayList<Category> categories;
@@ -51,6 +51,7 @@ public class HomeFragment extends Fragment {
         imvProductImage = view.findViewById(R.id.imvProductImage);
         txtProductNameDetail = view.findViewById(R.id.txtProductNameDetail);
         txtProductPriceDetail = view.findViewById(R.id.txtProductPriceDetail);
+        txtTitle = view.findViewById(R.id.txtTitle);
 
         //loadData
         categoryAdapter = new CategoryAdapter(getContext(), R.layout.category_layout, initData());
@@ -64,6 +65,20 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), SearchActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        gvCategory.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                    itemClick = (MyItemClick) getActivity();
+                    if (itemClick != null) {
+                        itemClick.clickCat(categories.get(position));
+                    }
+                } else {
+                    txtTitle.setText(categories.get(position).getCategoryName());
+                }
             }
         });
 
