@@ -1,11 +1,16 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,8 +18,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
 import com.example.model.Cart_Item;
+import com.example.nhom03_organicare.CartFragment;
+import com.example.nhom03_organicare.OrderDetails;
 import com.example.nhom03_organicare.R;
+import com.example.nhom03_organicare.TabHostInvoice;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
@@ -57,7 +67,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
                 notifyItemRemoved(holder.getBindingAdapterPosition());
             }
         });
-
     }
 
     @Override
@@ -71,7 +80,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
         private SwipeRevealLayout layoutSwipe;
         private ImageView imvPickedThumb;
         private TextView txtPickedName, txtPickedPrice, txtPickedWeight;
-        private ImageView imvDel;
+        private ImageView imvEdit, imvDel;
+        private int numberOrder = 1;
+        Spinner spinnerWeight;
+        ArrayList<String> weight;
+        ArrayAdapter<String> arrayAdapter;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -82,7 +95,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
             txtPickedPrice = itemView.findViewById(R.id.txtPickedPrice);
             txtPickedWeight = itemView.findViewById(R.id.txtPickedWeight);
 
-
+            imvEdit = itemView.findViewById(R.id.imvEdit);
             imvDel = itemView.findViewById(R.id.imvDel);
         }
     }

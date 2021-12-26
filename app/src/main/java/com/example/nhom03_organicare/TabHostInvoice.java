@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,12 +25,16 @@ import java.util.ArrayList;
 
 public class TabHostInvoice extends AppCompatActivity {
 
-    ListView lvDelivering,lvDelivered,lvDeliverCancel;
+    ListView lvDelivering, lvDelivered, lvDeliverCancel;
     LinearLayout layoutItem, layoutItem2, layoutItem3;
     ArrayList<Delivering> deliverings;
-    DeliveringAdapter adapter,adapter1,adapter2;
+    DeliveringAdapter adapter, adapter1, adapter2;
 
-    Button btnOpenRateBtS;
+    Button btnOpenRateBtS, btnReorder, btnBuyAgain;
+    private int numberOrder = 1;
+    Spinner spinnerWeight;
+    ArrayList<String> weight;
+    ArrayAdapter<String> arrayAdapter;
     int customerRating = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +93,8 @@ public class TabHostInvoice extends AppCompatActivity {
         layoutItem2 = findViewById(R.id.layoutItem2);
         layoutItem3 = findViewById(R.id.layoutItem3);
         btnOpenRateBtS = findViewById(R.id.btnOpenRateBtS);
+        btnReorder = findViewById(R.id.btnReOrder);
+        btnBuyAgain = findViewById(R.id.btnBuyAgain);
 
 
     }
@@ -155,6 +164,128 @@ public class TabHostInvoice extends AppCompatActivity {
                     }
                 });
                 bottomSheetRate.show();
+            }
+        });
+
+        btnReorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetDialog bottomSheetOrder = new BottomSheetDialog(TabHostInvoice.this);
+                bottomSheetOrder.setContentView(R.layout.bottomsheet_order);
+
+                Spinner spinnerWeight = bottomSheetOrder.findViewById(R.id.spinnerWeight);
+                weight = new ArrayList<>();
+                weight.add("1kg");
+                weight.add("5kg");
+                weight.add("hộp");
+                weight.add("thùng");
+                arrayAdapter = new ArrayAdapter<String>(TabHostInvoice.this, android.R.layout.simple_spinner_dropdown_item, weight);
+                spinnerWeight.setAdapter(arrayAdapter);
+
+                ImageView imvMinus = bottomSheetOrder.findViewById(R.id.imvMinus),
+                        imvPlus = bottomSheetOrder.findViewById(R.id.imvPlus);
+
+                TextView txtQuantity = bottomSheetOrder.findViewById(R.id.txtQuantity);
+
+                //EditText edtOrderNote;
+                Button btnAddCart = bottomSheetOrder.findViewById(R.id.btnAddCart),
+                        btnOrder =bottomSheetOrder.findViewById(R.id.btnOrder);
+
+
+                btnAddCart.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(TabHostInvoice.this, "Sản phẩm đã được thêm vào giỏ hàng của bạn", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                btnOrder.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(TabHostInvoice.this, OrderDetails.class);
+                        startActivity(intent);
+                    }
+                });
+
+                imvPlus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        numberOrder = numberOrder + 1 ;
+                        txtQuantity.setText(String.valueOf(numberOrder));
+                    }
+                });
+
+                imvMinus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(numberOrder > 1){
+                            numberOrder = numberOrder - 1 ;
+                        }
+                        txtQuantity.setText(String.valueOf(numberOrder));
+                    }
+                });
+                bottomSheetOrder.show();
+            }
+        });
+
+        btnBuyAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetDialog bottomSheetOrder = new BottomSheetDialog(TabHostInvoice.this);
+                bottomSheetOrder.setContentView(R.layout.bottomsheet_order);
+
+                Spinner spinnerWeight = bottomSheetOrder.findViewById(R.id.spinnerWeight);
+                weight = new ArrayList<>();
+                weight.add("1kg");
+                weight.add("5kg");
+                weight.add("hộp");
+                weight.add("thùng");
+                arrayAdapter = new ArrayAdapter<String>(TabHostInvoice.this, android.R.layout.simple_spinner_dropdown_item, weight);
+                spinnerWeight.setAdapter(arrayAdapter);
+
+                ImageView imvMinus = bottomSheetOrder.findViewById(R.id.imvMinus),
+                        imvPlus = bottomSheetOrder.findViewById(R.id.imvPlus);
+
+                TextView txtQuantity = bottomSheetOrder.findViewById(R.id.txtQuantity);
+
+                //EditText edtOrderNote;
+                Button btnAddCart = bottomSheetOrder.findViewById(R.id.btnAddCart),
+                        btnOrder =bottomSheetOrder.findViewById(R.id.btnOrder);
+
+
+                btnAddCart.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(TabHostInvoice.this, "Sản phẩm đã được thêm vào giỏ hàng của bạn", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                btnOrder.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(TabHostInvoice.this, OrderDetails.class);
+                        startActivity(intent);
+                    }
+                });
+
+                imvPlus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        numberOrder = numberOrder + 1 ;
+                        txtQuantity.setText(String.valueOf(numberOrder));
+                    }
+                });
+
+                imvMinus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(numberOrder > 1){
+                            numberOrder = numberOrder - 1 ;
+                        }
+                        txtQuantity.setText(String.valueOf(numberOrder));
+                    }
+                });
+                bottomSheetOrder.show();
             }
         });
 

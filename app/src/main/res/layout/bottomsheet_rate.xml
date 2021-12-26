@@ -30,8 +30,8 @@
         android:inputType="textMultiLine"
         android:gravity="top"
         android:background="@drawable/light_blue_20_background"
-        android:textColorHint="@color/light_black"
-        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/light_black"
         android:padding="10dp"
         android:layout_marginTop="15dp"/>
     <Button

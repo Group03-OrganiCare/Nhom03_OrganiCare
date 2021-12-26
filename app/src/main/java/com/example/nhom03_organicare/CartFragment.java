@@ -32,9 +32,6 @@ public class CartFragment extends Fragment {
     Button btnOrder;
     ImageButton imbBackHome;
 
-    private int numberOrder = 1;
-    ImageView imvPlus, imvMinus;
-    TextView txtQuantity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,11 +42,6 @@ public class CartFragment extends Fragment {
         rcvCart = view.findViewById(R.id.rcvCart);
         btnOrder = view.findViewById(R.id.btnOrder);
         imbBackHome = view.findViewById(R.id.imbBackHome);
-
-        imvMinus = view.findViewById(R.id.imvMinus);
-        imvPlus = view.findViewById(R.id.imvPlus);
-        txtQuantity = view.findViewById(R.id.txtQuantity);
-
 
         //loadData
         CartAdapter adapter = new CartAdapter(getContext(), R.layout.cart_item, initData());
@@ -69,22 +61,8 @@ public class CartFragment extends Fragment {
             }
         });
 
-//        imvPlus.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                numberOrder = numberOrder + 1 ;
-//                txtQuantity.setText(String.valueOf(numberOrder));
-//            }
-//        });
-//        imvMinus.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(numberOrder > 1){
-//                    numberOrder = numberOrder - 1 ;
-//                }
-//                txtQuantity.setText(String.valueOf(numberOrder));
-//            }
-//        });
+
+
         return view;
 
     }

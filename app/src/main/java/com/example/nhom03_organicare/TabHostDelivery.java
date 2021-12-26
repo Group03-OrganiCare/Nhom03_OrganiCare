@@ -2,8 +2,11 @@ package com.example.nhom03_organicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -59,7 +62,9 @@ public class TabHostDelivery extends AppCompatActivity {
         linkViews();
         initData();
         loadData();
+        addEvents();
     }
+
     private void linkViews() {
          lvStore= findViewById(R.id.lvStore);
     }
@@ -79,5 +84,15 @@ public class TabHostDelivery extends AppCompatActivity {
     private void loadData() {
         adapter = new StoreAdapter(TabHostDelivery.this,R.layout.item_layout_store,stores);
         lvStore.setAdapter(adapter);
+    }
+
+    private void addEvents() {
+        lvStore.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(TabHostDelivery.this, OrderDetails.class);
+                startActivity(intent);
+            }
+        });
     }
 }

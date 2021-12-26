@@ -6,27 +6,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:mode="same_level"
     app:dragEdge="right"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_marginBottom="15dp">
 
     <!-- Swipe layout -->
+
     <LinearLayout
-        android:id="@+id/layoutAdjust"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginStart="20dp">
-        <ImageView
-            android:id="@+id/imvDel"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_delete"/>
-        <TextView
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutEdit"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Xóa"
-            android:textColor="@color/pink01"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="20dp">
+            <ImageView
+                android:id="@+id/imvEdit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_edit"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sửa"
+                android:textColor="@color/pink01"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="20dp">
+            <ImageView
+                android:id="@+id/imvDel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_delete"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xóa"
+                android:textColor="@color/pink01"/>
+        </LinearLayout>
     </LinearLayout>
+
 
 
     <!-- Main layout -->
@@ -34,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/light_blue_item">
+        android:background="@drawable/light_blue_20_background">
         <ImageView
             android:id="@+id/imvPickedThumb"
             android:layout_width="170dp"
@@ -71,8 +99,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_gravity="left" />
-        </LinearLayout>
 
+        </LinearLayout>
     </LinearLayout>
 
 </com.chauthai.swipereveallayout.SwipeRevealLayout>
